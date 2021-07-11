@@ -30,6 +30,7 @@ namespace Contactmanager
             Lastname = lastname;
             Age = age;
             Sex = sex;
+            Comment = "";
         }
 
         //neuer Konstruktor:

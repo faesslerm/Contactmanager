@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\Person.cs" />
     <Compile Include="View\View.cs">
       <SubType>Form</SubType>

@@ -3,6 +3,8 @@
 namespace Contactmanager
 {
     [Serializable]
+
+    
     public class Person
     {
         public string Salutation { get; set; }
@@ -22,7 +24,15 @@ namespace Contactmanager
         public int PLZ { get; set; }
         public string Comment { get; set; }
 
+        //alter Konstruktor:
+        public Person(string firstname, string lastname, int age, bool sex) {
+            Firstname = firstname;
+            Lastname = lastname;
+            Age = age;
+            Sex = sex;
+        }
 
+        //neuer Konstruktor:
         public Person(string salutation, string firstname, string lastname, 
             DateTime birthday, int age, bool sex, string title, int mobilenr, 
             int privatenr, string mail, int ahv, string residence, string nationality, 

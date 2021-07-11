@@ -7,21 +7,21 @@ namespace Contactmanager
     
     public class Person
     {
-        public string Salutation { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public DateTime Birthday { get; set; }
-        public int Age { get; set; }
-        public bool Sex { get; set; }
-        public string Title { get; set; }
-        public int MobileNr { get; set; }
+        public string Salutation { get; set; } // Anrede
+        public string Firstname { get; set; } 
+        public string Lastname { get; set; } 
+        public DateTime Birthday { get; set; } 
+        public int Age { get; set; } // Alter Hinweis: Im Auftrag nicht enthalten
+        public bool Sex { get; set; } // Geschlecht
+        public string Title { get; set; } //Titel
+        public int MobileNr { get; set; } 
         public int PrivateNr { get; set; }
-        public string Mail { get; set; }
+        public string Mail { get; set; } 
         public int AHV { get; set; }
-        public string Residence { get; set; }
-        public string Nationality { get; set; }
+        public string Residence { get; set; } // Wohnort
+        public string Nationality { get; set; } // Nationalität
         public string Adress { get; set; }
-        public int PLZ { get; set; }
+        public int PLZ { get; set; } 
         public string Comment { get; set; }
 
         //alter Konstruktor:

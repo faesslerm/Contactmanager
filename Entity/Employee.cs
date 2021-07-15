@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contactmanager
 {
-    class Employee: Person
+    public class Employee : Person
     {
         public int CompanyPhoneNr { get; set; } //Telefonnummer
         public int CompanyFaxNr { get; set; } //Faxnummer

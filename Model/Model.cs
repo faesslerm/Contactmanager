@@ -45,7 +45,10 @@ namespace Contactmanager
                 Person[] temp = new Person[counter];
                 for (int c = 0; c < counter; c++)
                 {
-                    temp[c] = people[c];
+                    if (people[c].IsDisabled == false)
+                    {
+                        temp[c] = people[c];
+                    }
                 }
                 return temp;
             }
@@ -105,6 +108,20 @@ namespace Contactmanager
             people[pos] = update;
             return true;
 
+        }
+
+        public bool Disable(Person p)
+        {
+            int pos = FindPosition(p);
+            people[pos].IsDisabled = true;
+            return true;
+        }
+
+        public bool Enable(Person p)
+        {
+            int pos = FindPosition(p);
+            people[pos].IsDisabled = false;
+            return true;
         }
 
         private void SaveData()

@@ -39,6 +39,24 @@
             return false;
         }
 
+        public bool DisablePerson(Person p)
+        {
+            if (p != null)
+            {
+                return model.Disable(p);
+            }
+            return false;
+        }
+
+        public bool EnablePerson(Person p)
+        {
+            if (p != null)
+            {
+                return model.Enable(p);
+            }
+            return false;
+        }
+
         public void PersonToBeUpdated(Person p)
         {
             personToBeUpdated = p;

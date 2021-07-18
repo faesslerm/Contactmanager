@@ -7,11 +7,10 @@ namespace Contactmanager
 
     public class Person
     {
-        public string Salutation { get; set; } // Anrede
+        public bool IsMen { get; set; } // Anrede
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public DateTime Birthday { get; set; }
-        public int Age { get; set; } // Alter Hinweis: Im Auftrag nicht enthalten
         public bool Sex { get; set; } // Geschlecht
         public string Title { get; set; } //Titel
         public int MobileNr { get; set; }
@@ -26,27 +25,25 @@ namespace Contactmanager
         public bool IsDisabled { get; set; }
 
         //alter Konstruktor:
-        public Person(string firstname, string lastname, int age, bool sex)
+        public Person(string firstname, string lastname, bool sex)
         {
             Firstname = firstname;
             Lastname = lastname;
-            Age = age;
             Sex = sex;
             Comment = "";
             IsDisabled = false;
         }
 
         //neuer Konstruktor:
-        public Person(string salutation, string firstname, string lastname,
-            DateTime birthday, int age, bool sex, string title, int mobilenr,
+        public Person(bool ismen, string firstname, string lastname,
+            DateTime birthday, bool sex, string title, int mobilenr,
             int privatenr, string mail, int ahv, string residence, string nationality,
             string adress, int plz, string comment)
         {
-            Salutation = salutation;
+            IsMen = ismen;
             Firstname = firstname;
             Lastname = lastname;
             Birthday = birthday;
-            Age = age;
             Sex = sex;
             Title = title;
             MobileNr = mobilenr;
@@ -67,7 +64,6 @@ namespace Contactmanager
                 return false;
             if (Firstname.Equals(other.Firstname) &&
                 Lastname.Equals(other.Lastname) &&
-                Age == other.Age &&
                 Sex == other.Sex)
                 return true;
             return false;
@@ -75,7 +71,7 @@ namespace Contactmanager
 
         public override string ToString()
         {
-            string peopleAsString = Firstname + ", " + Lastname + ", " + Age + ", ";
+            string peopleAsString = Firstname + ", " + Lastname + ", " + ", ";
             peopleAsString += Sex == false ? "männlich," : "weiblich,";
             peopleAsString += Comment.Length > 0 ? Comment : " ";
             return peopleAsString;

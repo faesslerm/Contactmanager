@@ -14,7 +14,7 @@ namespace Contactmanager
         public Notes(DateTime timeStamp)
         {
             TimeStamp = timeStamp;
-            Comment = "";
+            Comment = string.Empty; // anstatt ""
         }
 
     }

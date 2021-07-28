@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Contactmanager.View
+namespace Contactmanager
 {
     public partial class MainForm : Form
     {
@@ -17,9 +17,9 @@ namespace Contactmanager.View
             InitializeComponent();
             Controller = controller;
             GridSearchResults.DataSource = Controller.GetAllPeople();
-            searchResult = Controller.GetAllPeople().ToList();
-            controller.SaveNewPerson(new Person("Max", "Muster", 27, true));
-            controller.SaveNewPerson(new Person("Anna", "Ibadette", 85, false));
+            //searchResult = Controller.GetAllPeople().ToList(); // What is this for?
+            controller.SaveNewPerson(new Person("Max", "Muster", true, false));
+            controller.SaveNewPerson(new Person("Anna", "Ibadette", false, false));
         }
 
         public Controller Controller { get; }
@@ -39,7 +39,7 @@ namespace Contactmanager.View
 
             searchResult = Controller
                 .GetAllPeople()
-                .Select(p => new { person = p, searchText = $"{p.Firstname} {p.Lastname} {p.Age} {(p.Sex ? "männlich" : "weiblich")}".ToLowerInvariant() })
+                .Select(p => new { person = p, searchText = $"{p.Firstname} {p.Lastname} {(p.IsMen ? "männlich" : "weiblich")}".ToLowerInvariant() })
                 .Where(p => p.searchText.Contains(textBox.Text))
                 .Select(p => p.person)
                 .ToList();

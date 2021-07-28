@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Contactmanager
 {
+    [Serializable]
+
     public class Address
     {
         //Properties

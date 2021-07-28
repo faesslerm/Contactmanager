@@ -10,35 +10,43 @@ namespace Contactmanager.Persistence
         private const string locationAndName = "./people.data";
         public static bool Save(Person[] data)
         {
+            FileStream fs = new FileStream(@locationAndName, FileMode.Create, FileAccess.Write);
             IFormatter formatter = new BinaryFormatter();
+            bool status = false;
             try
             {
-                Stream stream = new FileStream(@locationAndName, FileMode.Create, FileAccess.Write);
-                formatter.Serialize(stream, data);
-                stream.Close();
-                return true;
+                formatter.Serialize(fs, data);
+                status = true;
             }
-            catch (IOException ex)
+            catch (SerializationException e)
             {
-                Console.WriteLine(ex.Message);
-                return false;
+                Console.WriteLine("Failed to serialize. Reason: " + e.Message);
             }
+            finally
+            {
+                fs.Close();
+            }
+            return status;
         }
 
         public static Person[] Load()
         {
-            IFormatter formatter = new BinaryFormatter();
+            Person[] data = null;
+            FileStream fs = new FileStream(@locationAndName, FileMode.Open, FileAccess.Read);
             try
             {
-                Stream stream = new FileStream(@locationAndName, FileMode.Open, FileAccess.Read);
-                Person[] data = (Person[])formatter.Deserialize(stream);
-                stream.Close();
-                return data;
+                IFormatter formatter = new BinaryFormatter();
+                 data = (Person[])formatter.Deserialize(fs);
             }
-            catch (IOException)
+            catch (SerializationException e)
             {
-                return null;
+                Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
             }
+            finally
+            {
+                fs.Close();
+            }
+            return data;
         }
     }
 }

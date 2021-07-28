@@ -1,4 +1,4 @@
-﻿namespace Contactmanager.View
+﻿namespace Contactmanager
 {
     partial class MainForm
     {

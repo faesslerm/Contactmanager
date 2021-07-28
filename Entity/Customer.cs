@@ -11,9 +11,9 @@ namespace Contactmanager
         public bool Status { get; set; } //Status (aktiv, passiv)
 
         //Konstruktor
-        public Customer(string firstname, string lastname, bool isMen, string company,
+        public Customer(string firstname, string lastname, bool isMen, bool isDisabled, string company,
             string customerType, string contact, bool status) :
-            base(firstname, lastname, isMen)
+            base(firstname, lastname, isMen, isDisabled)
         {
             Company = company;
             CustomerType = customerType;

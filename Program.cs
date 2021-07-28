@@ -13,7 +13,7 @@ namespace Contactmanager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View(new Controller()));
+            Application.Run(new MainForm(new Controller()));
         }
     }
 }

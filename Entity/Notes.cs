@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contactmanager
 {
+    [Serializable]
     public class Notes
     {
         public DateTime TimeStamp { get; set; }

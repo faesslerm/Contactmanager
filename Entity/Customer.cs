@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contactmanager
+﻿namespace Contactmanager
 {
     public class Customer : Person
     {
@@ -20,11 +18,5 @@ namespace Contactmanager
             Contact = contact;
             Status = status;
         }
-
-        
-
-       
-
-        
     }
 }

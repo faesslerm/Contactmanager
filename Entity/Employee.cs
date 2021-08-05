@@ -4,7 +4,7 @@ namespace Contactmanager
 {
     public class Employee : Person
     {
-        
+
         //Properties
         public int CompanyPhoneNr { get; set; } //Telefonnummer
         public int CompanyFaxNr { get; set; } //Faxnummer
@@ -15,10 +15,9 @@ namespace Contactmanager
         public double LevelOfEmployment { get; set; } //Beschäftigungsgrad
         public string Function { get; set; } //Tätigkeitsbezeichnung
         public byte SquadLevel { get; set; } //Kaderstufe (0-5)
-        
 
         // Konstruktor:
-        public Employee(string firstname, string lastname, bool isMen, bool isDisabled, string ahv, int companyPhoneNr, int employeeNr, string department, 
+        public Employee(string firstname, string lastname, bool isMen, bool isDisabled, string ahv, int companyPhoneNr, int employeeNr, string department,
             DateTime entry, double levelOfEmployment, string function, byte squadLevel) :
             base(firstname, lastname, isMen, isDisabled)
         {
@@ -30,10 +29,5 @@ namespace Contactmanager
             Function = function;
             SquadLevel = squadLevel;
         }
-
-        
-
-        
-
     }
 }

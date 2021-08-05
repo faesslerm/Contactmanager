@@ -82,18 +82,19 @@
             this.CmdAddEmployee.TabIndex = 7;
             this.CmdAddEmployee.Text = "Mitarbeiter erfassen";
             this.CmdAddEmployee.UseVisualStyleBackColor = false;
+            this.CmdAddEmployee.Click += new System.EventHandler(this.CmdAddEmployee_Click);
             // 
             // CmdAddCustomer
             // 
             this.CmdAddCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(152)))), ((int)(((byte)(167)))));
             this.CmdAddCustomer.ForeColor = System.Drawing.Color.White;
             this.CmdAddCustomer.Location = new System.Drawing.Point(40, 254);
-            this.CmdAddCustomer.Margin = new System.Windows.Forms.Padding(7);
-            this.CmdAddCustomer.Name = "CmdAddCustomer";
+            this.CmdAddCustomer.Margin = new System.Windows.Forms.Padding(7); this.CmdAddCustomer.Name = "CmdAddCustomer";
             this.CmdAddCustomer.Size = new System.Drawing.Size(355, 69);
             this.CmdAddCustomer.TabIndex = 8;
             this.CmdAddCustomer.Text = "Kunde erfassen";
             this.CmdAddCustomer.UseVisualStyleBackColor = false;
+            this.CmdAddCustomer.Click += new System.EventHandler(this.CmdAddCustomer_Click);
             // 
             // TxtSearchBar
             // 
@@ -104,6 +105,7 @@
             this.TxtSearchBar.Name = "TxtSearchBar";
             this.TxtSearchBar.Size = new System.Drawing.Size(980, 68);
             this.TxtSearchBar.TabIndex = 9;
+            this.TxtSearchBar.TextChanged += new System.EventHandler(this.TxtSearchBar_TextChanged);
             // 
             // pictureBox1
             // 
@@ -127,6 +129,7 @@
             this.ImgDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgDelete.TabIndex = 132;
             this.ImgDelete.TabStop = false;
+            this.ImgDelete.Click += new System.EventHandler(this.CmdDeleteSelected_Click);
             // 
             // ImgEdit
             // 

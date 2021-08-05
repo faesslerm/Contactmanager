@@ -8,7 +8,7 @@ namespace Contactmanager
     public class Person
     {
         //Properties
-        
+
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public bool IsMen { get; set; } // Geschlecht true = männlich, false = weiblich
@@ -18,7 +18,7 @@ namespace Contactmanager
         public int PrivateNr { get; set; }
         public string Mail { get; set; }
         public string AHV { get; set; } // string da es Punkte drin hat
-        public string Nationality { get; set; } 
+        public string Nationality { get; set; }
         public Address Address { get; set; }
         public Notes Notes { get; set; }
         public bool IsDisabled { get; set; }
@@ -31,7 +31,6 @@ namespace Contactmanager
             IsMen = false;
             IsDisabled = false;
         }
-
 
         // Methode zur Überprüfung auf Duplikate
         public bool Equals(Person other)
@@ -46,14 +45,12 @@ namespace Contactmanager
         }
 
         // Methode um Objekt auszugeben
-        public override string ToString() 
+        public override string ToString()
         {
             string peopleAsString = Firstname + ", " + Lastname + ", " + ", ";
-            peopleAsString += IsMen == false ? "weiblich," : "männlich,";
-            peopleAsString += Notes.Comment.Length > 0 ? Notes.Comment : " ";
+            peopleAsString += IsMen == false ? "weiblich, " : "männlich, ";
+            peopleAsString += IsDisabled == false ? "inaktiv" : "aktiv";
             return peopleAsString;
         }
-
-        
     }
 }

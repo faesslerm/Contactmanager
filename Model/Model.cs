@@ -52,7 +52,7 @@ namespace Contactmanager
                 }
                 return temp;
             }
-            return null;
+            return new Person[0];
         }
 
         public string[] GetAllAsString()

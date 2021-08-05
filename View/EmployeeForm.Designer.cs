@@ -639,6 +639,7 @@
             this.CmdSaveEmployee.TabIndex = 67;
             this.CmdSaveEmployee.Text = "Mitarbeiter speichern";
             this.CmdSaveEmployee.UseVisualStyleBackColor = false;
+            this.CmdSaveEmployee.Click += new System.EventHandler(this.CmdSaveEmployee_Click);
             // 
             // ImgAddEmployee
             // 

@@ -141,6 +141,7 @@
             this.ImgEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgEdit.TabIndex = 133;
             this.ImgEdit.TabStop = false;
+            this.ImgEdit.Click += new System.EventHandler(this.CmdEditSelected_Click);
             // 
             // TxtIntro1
             // 

@@ -23,13 +23,17 @@ namespace Contactmanager
         private List<Person> searchResult = new List<Person>();
         private Person delete;
 
+        private void updateGrid(List<Person> data)
+        {
+            GridSearchResults.DataSource = data;
+            GridSearchResults.Update();
+        }
+
         private void CmdAddEmployee_Click(object sender, EventArgs e)
         {
             EmployeeForm employeeForm = new EmployeeForm(Controller);
             employeeForm.ShowDialog();
-            searchResult = Controller.GetAllPeople().ToList();
-            GridSearchResults.DataSource = searchResult;
-            GridSearchResults.Update();
+            updateGrid(Controller.GetAllPeople().ToList());
         }
 
         private void CmdAddCustomer_Click(object sender, EventArgs e)
@@ -49,19 +53,7 @@ namespace Contactmanager
                 .Where(p => p.searchText.Contains(textBox.Text.ToLower()))
                 .Select(p => p.person)
                 .ToList();
-            GridSearchResults.DataSource = searchResult;
-            GridSearchResults.Update();
-        }
-
-        private void CmdOpenSelected_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in GridSearchResults.SelectedRows)
-            {
-                var person = searchResult[row.Index];
-
-                // var form = new EmployeeForm(Controller, person);
-                // form.Show();
-            }
+            updateGrid(searchResult);
         }
 
         private void CmdDeleteSelected_Click(object sender, EventArgs e)
@@ -73,10 +65,16 @@ namespace Contactmanager
                 Controller.DeletePerson(person);
                 Console.WriteLine("Delete Person: " + person);
             }
-            searchResult = Controller.GetAllPeople().ToList();
-            GridSearchResults.DataSource = searchResult;
-            GridSearchResults.Refresh();
+            updateGrid(Controller.GetAllPeople().ToList());
             Console.WriteLine("All done!");
+        }
+
+        private void CmdEditSelected_Click(object sender, EventArgs e)
+        {
+            Person person = searchResult[GridSearchResults.SelectedRows[0].Index];
+            Controller.PersonToBeUpdated(person);
+            new EmployeeForm(Controller, person).ShowDialog();
+            updateGrid(Controller.GetAllPeople().ToList());
         }
     }
 }

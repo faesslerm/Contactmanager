@@ -106,6 +106,7 @@ namespace Contactmanager
         {
             int pos = FindPosition(old);
             people[pos] = update;
+            SaveData();
             return true;
 
         }

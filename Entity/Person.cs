@@ -28,8 +28,8 @@ namespace Contactmanager
         {
             Firstname = firstname;
             Lastname = lastname;
-            IsMen = false;
-            IsDisabled = false;
+            IsMen = isMen;
+            IsDisabled = isDisabled;
         }
 
         // Methode zur Überprüfung auf Duplikate

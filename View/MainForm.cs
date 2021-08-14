@@ -25,6 +25,7 @@ namespace Contactmanager
 
         private void updateGrid(List<Person> data)
         {
+            searchResult = data;
             GridSearchResults.DataSource = data;
             GridSearchResults.Update();
         }
@@ -38,8 +39,9 @@ namespace Contactmanager
 
         private void CmdAddCustomer_Click(object sender, EventArgs e)
         {
-            CustomerForm customerForm = new CustomerForm();
+            CustomerForm customerForm = new CustomerForm(Controller);
             customerForm.ShowDialog();
+            updateGrid(Controller.GetAllPeople().ToList());
         }
 
         private void TxtSearchBar_TextChanged(object sender, EventArgs e)
@@ -47,13 +49,13 @@ namespace Contactmanager
             var textBox = sender as TextBox;
             LblSearch.Visible = textBox.Text.Length == 0;
 
-            searchResult = Controller
+            List<Person> filterData = Controller
                 .GetAllPeople()
                 .Select(p => new { person = p, searchText = $"{p.Firstname} {p.Lastname} {(p.IsMen ? "männlich" : "weiblich")}".ToLower() })
                 .Where(p => p.searchText.Contains(textBox.Text.ToLower()))
                 .Select(p => p.person)
                 .ToList();
-            updateGrid(searchResult);
+            updateGrid(filterData);
         }
 
         private void CmdDeleteSelected_Click(object sender, EventArgs e)
@@ -73,7 +75,18 @@ namespace Contactmanager
         {
             Person person = searchResult[GridSearchResults.SelectedRows[0].Index];
             Controller.PersonToBeUpdated(person);
-            new EmployeeForm(Controller, person).ShowDialog();
+            if (person is Employee)
+            {
+                new EmployeeForm(Controller, person as Employee).ShowDialog();
+            }
+            else if (person is Customer)
+            {
+                new CustomerForm(Controller, person as Customer).ShowDialog();
+            }
+            else
+            {
+                new EmployeeForm(Controller, person).ShowDialog();
+            }
             updateGrid(Controller.GetAllPeople().ToList());
         }
     }

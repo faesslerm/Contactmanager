@@ -44,7 +44,7 @@
             this.LblPrivateNr = new System.Windows.Forms.Label();
             this.LblResidence = new System.Windows.Forms.Label();
             this.TxtResidence = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtPlz = new System.Windows.Forms.TextBox();
             this.TxtAddress = new System.Windows.Forms.TextBox();
             this.TxtTitle = new System.Windows.Forms.TextBox();
             this.LblAddress = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.LblTitle = new System.Windows.Forms.Label();
             this.TxtLastname = new System.Windows.Forms.TextBox();
             this.TxtFirstname = new System.Windows.Forms.TextBox();
-            this.TxtSalutation = new System.Windows.Forms.TextBox();
+            this.TxtCompany = new System.Windows.Forms.TextBox();
             this.LblFirstname = new System.Windows.Forms.Label();
             this.LblLastname = new System.Windows.Forms.Label();
             this.LblCompany = new System.Windows.Forms.Label();
@@ -227,14 +227,14 @@
             this.TxtResidence.Size = new System.Drawing.Size(237, 28);
             this.TxtResidence.TabIndex = 89;
             // 
-            // textBox2
+            // TxtPlz
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(40, 462);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 28);
-            this.textBox2.TabIndex = 87;
+            this.TxtPlz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtPlz.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPlz.Location = new System.Drawing.Point(40, 462);
+            this.TxtPlz.Name = "TxtPlz";
+            this.TxtPlz.Size = new System.Drawing.Size(95, 28);
+            this.TxtPlz.TabIndex = 87;
             // 
             // TxtAddress
             // 
@@ -305,14 +305,14 @@
             this.TxtFirstname.Size = new System.Drawing.Size(350, 28);
             this.TxtFirstname.TabIndex = 78;
             // 
-            // TxtSalutation
+            // TxtCompany
             // 
-            this.TxtSalutation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtSalutation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtSalutation.Location = new System.Drawing.Point(40, 322);
-            this.TxtSalutation.Name = "TxtSalutation";
-            this.TxtSalutation.Size = new System.Drawing.Size(350, 28);
-            this.TxtSalutation.TabIndex = 77;
+            this.TxtCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCompany.Location = new System.Drawing.Point(40, 322);
+            this.TxtCompany.Name = "TxtCompany";
+            this.TxtCompany.Size = new System.Drawing.Size(350, 28);
+            this.TxtCompany.TabIndex = 77;
             // 
             // LblFirstname
             // 
@@ -411,6 +411,7 @@
             this.CmdSaveCustomer.TabIndex = 132;
             this.CmdSaveCustomer.Text = "Kunde speichern";
             this.CmdSaveCustomer.UseVisualStyleBackColor = false;
+            this.CmdSaveCustomer.Click += new System.EventHandler(CmdSaveCustomer_Click);
             // 
             // CustomerForm
             // 
@@ -437,7 +438,7 @@
             this.Controls.Add(this.LblPrivateNr);
             this.Controls.Add(this.LblResidence);
             this.Controls.Add(this.TxtResidence);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtPlz);
             this.Controls.Add(this.TxtAddress);
             this.Controls.Add(this.TxtTitle);
             this.Controls.Add(this.LblAddress);
@@ -445,7 +446,7 @@
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.TxtLastname);
             this.Controls.Add(this.TxtFirstname);
-            this.Controls.Add(this.TxtSalutation);
+            this.Controls.Add(this.TxtCompany);
             this.Controls.Add(this.LblFirstname);
             this.Controls.Add(this.LblLastname);
             this.Controls.Add(this.LblCompany);
@@ -481,7 +482,7 @@
         private System.Windows.Forms.Label LblPrivateNr;
         private System.Windows.Forms.Label LblResidence;
         private System.Windows.Forms.TextBox TxtResidence;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtPlz;
         private System.Windows.Forms.TextBox TxtAddress;
         private System.Windows.Forms.TextBox TxtTitle;
         private System.Windows.Forms.Label LblAddress;
@@ -489,7 +490,7 @@
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.TextBox TxtLastname;
         private System.Windows.Forms.TextBox TxtFirstname;
-        private System.Windows.Forms.TextBox TxtSalutation;
+        private System.Windows.Forms.TextBox TxtCompany;
         private System.Windows.Forms.Label LblFirstname;
         private System.Windows.Forms.Label LblLastname;
         private System.Windows.Forms.Label LblCompany;

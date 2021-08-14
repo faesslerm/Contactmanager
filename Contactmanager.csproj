@@ -52,6 +52,7 @@
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\Notes.cs" />
     <Compile Include="Entity\Person.cs" />
+    <Compile Include="Entity\Trainee.cs" />
     <Compile Include="View\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>

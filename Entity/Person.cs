@@ -14,8 +14,8 @@ namespace Contactmanager
         public bool IsMen { get; set; } // Geschlecht true = männlich, false = weiblich
         public DateTime Birthday { get; set; }
         public string Title { get; set; } //Titel
-        public int MobileNr { get; set; }
-        public int PrivateNr { get; set; }
+        public string MobileNr { get; set; }
+        public string PrivateNr { get; set; }
         public string Mail { get; set; }
         public string AHV { get; set; } // string da es Punkte drin hat
         public string Nationality { get; set; }

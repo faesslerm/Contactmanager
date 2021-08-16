@@ -24,12 +24,13 @@ namespace Contactmanager
         public bool IsDisabled { get; set; }
 
         //Konstruktor:
-        public Person(string firstname, string lastname, bool isMen, bool isDisabled)
+        public Person(string firstname, string lastname, bool isMen, bool isDisabled, Address address)
         {
             Firstname = firstname;
             Lastname = lastname;
             IsMen = isMen;
             IsDisabled = isDisabled;
+            Address = address;
         }
 
         // Methode zur Überprüfung auf Duplikate

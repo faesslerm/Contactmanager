@@ -16,10 +16,13 @@ namespace Contactmanager
         public string Function { get; set; } //Tätigkeitsbezeichnung
         public byte SquadLevel { get; set; } //Kaderstufe (0-5)
 
+        private static int number = 0; // Autoincrement für Mitarbeiternummer
+
+
         // Konstruktor:
-        public Employee(string firstname, string lastname, bool isMen, bool isDisabled, string ahv, int companyPhoneNr, int employeeNr, string department,
+        public Employee(string firstname, string lastname, bool isMen, bool isDisabled, Address address, string ahv, int companyPhoneNr, int employeeNr, string department,
             DateTime entry, double levelOfEmployment, string function, byte squadLevel) :
-            base(firstname, lastname, isMen, isDisabled)
+            base(firstname, lastname, isMen, isDisabled, address)
         {
             CompanyPhoneNr = companyPhoneNr;
             EmployeeNr = employeeNr;
@@ -28,6 +31,12 @@ namespace Contactmanager
             LevelOfEmployment = levelOfEmployment;
             Function = function;
             SquadLevel = squadLevel;
+            number++;
+        }
+
+        public int getNumber()
+        {
+            return number;
         }
     }
 }

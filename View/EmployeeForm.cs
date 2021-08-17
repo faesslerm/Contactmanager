@@ -33,7 +33,7 @@ namespace Contactmanager
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         {
             bool isMen = TxtSalutation.Text.Equals("Herr");
-            Person person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, false);
+            Person person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadActiv.Checked);
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);
             if (success)
             {

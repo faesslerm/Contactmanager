@@ -21,7 +21,6 @@ namespace Contactmanager
         public Controller Controller { get; }
 
         private List<Person> searchResult = new List<Person>();
-        private Person delete;
 
         private void updateGrid(List<Person> data)
         {
@@ -35,6 +34,7 @@ namespace Contactmanager
             EmployeeForm employeeForm = new EmployeeForm(Controller);
             employeeForm.ShowDialog();
             updateGrid(Controller.GetAllPeople().ToList());
+            employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
         }
 
         private void CmdAddCustomer_Click(object sender, EventArgs e)
@@ -42,6 +42,7 @@ namespace Contactmanager
             CustomerForm customerForm = new CustomerForm(Controller);
             customerForm.ShowDialog();
             updateGrid(Controller.GetAllPeople().ToList());
+            customerForm.LblTitleCustomer.Text = "Kunde erfassen";
         }
 
         private void TxtSearchBar_TextChanged(object sender, EventArgs e)

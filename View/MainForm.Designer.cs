@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.GridSearchResults = new System.Windows.Forms.DataGridView();
+            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HouseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Village = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImgLogo = new System.Windows.Forms.PictureBox();
             this.CmdAddEmployee = new System.Windows.Forms.Button();
             this.CmdAddCustomer = new System.Windows.Forms.Button();
@@ -41,23 +48,99 @@
             this.TxtIntro2 = new System.Windows.Forms.TextBox();
             this.LblSearch = new System.Windows.Forms.Label();
             this.ImgSearch = new System.Windows.Forms.PictureBox();
+            this.ImgHistory = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridSearchResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // GridSearchResults
             // 
+            this.GridSearchResults.AllowUserToResizeColumns = false;
+            this.GridSearchResults.AllowUserToResizeRows = false;
+            this.GridSearchResults.BackgroundColor = System.Drawing.Color.White;
+            this.GridSearchResults.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.GridSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridSearchResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Firstname,
+            this.Lastname,
+            this.Street,
+            this.HouseNumber,
+            this.Plz,
+            this.Village,
+            this.Country});
+            this.GridSearchResults.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.GridSearchResults.Location = new System.Drawing.Point(40, 468);
+            this.GridSearchResults.MaximumSize = new System.Drawing.Size(1489, 557);
+            this.GridSearchResults.MinimumSize = new System.Drawing.Size(1489, 557);
             this.GridSearchResults.Name = "GridSearchResults";
-            this.GridSearchResults.RowHeadersWidth = 92;
+            this.GridSearchResults.ReadOnly = true;
+            this.GridSearchResults.RowHeadersVisible = false;
+            this.GridSearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.GridSearchResults.RowTemplate.Height = 37;
+            this.GridSearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridSearchResults.Size = new System.Drawing.Size(1489, 557);
             this.GridSearchResults.TabIndex = 5;
+            // 
+            // Firstname
+            // 
+            this.Firstname.HeaderText = "Vorname";
+            this.Firstname.MinimumWidth = 11;
+            this.Firstname.Name = "Firstname";
+            this.Firstname.ReadOnly = true;
+            this.Firstname.Width = 225;
+            // 
+            // Lastname
+            // 
+            this.Lastname.HeaderText = "Nachname";
+            this.Lastname.MinimumWidth = 11;
+            this.Lastname.Name = "Lastname";
+            this.Lastname.ReadOnly = true;
+            this.Lastname.Width = 225;
+            // 
+            // Street
+            // 
+            this.Street.HeaderText = "Strasse";
+            this.Street.MinimumWidth = 11;
+            this.Street.Name = "Street";
+            this.Street.ReadOnly = true;
+            this.Street.Width = 225;
+            // 
+            // HouseNumber
+            // 
+            this.HouseNumber.HeaderText = "Nr.";
+            this.HouseNumber.MinimumWidth = 11;
+            this.HouseNumber.Name = "HouseNumber";
+            this.HouseNumber.ReadOnly = true;
+            this.HouseNumber.Width = 225;
+            // 
+            // Plz
+            // 
+            this.Plz.HeaderText = "PLZ";
+            this.Plz.MinimumWidth = 11;
+            this.Plz.Name = "Plz";
+            this.Plz.ReadOnly = true;
+            this.Plz.Width = 225;
+            // 
+            // Village
+            // 
+            this.Village.HeaderText = "Ortschaft";
+            this.Village.MinimumWidth = 11;
+            this.Village.Name = "Village";
+            this.Village.ReadOnly = true;
+            this.Village.Width = 225;
+            // 
+            // Country
+            // 
+            this.Country.HeaderText = "Land";
+            this.Country.MinimumWidth = 11;
+            this.Country.Name = "Country";
+            this.Country.ReadOnly = true;
+            this.Country.Width = 225;
             // 
             // ImgLogo
             // 
@@ -89,7 +172,8 @@
             this.CmdAddCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(152)))), ((int)(((byte)(167)))));
             this.CmdAddCustomer.ForeColor = System.Drawing.Color.White;
             this.CmdAddCustomer.Location = new System.Drawing.Point(40, 254);
-            this.CmdAddCustomer.Margin = new System.Windows.Forms.Padding(7); this.CmdAddCustomer.Name = "CmdAddCustomer";
+            this.CmdAddCustomer.Margin = new System.Windows.Forms.Padding(7);
+            this.CmdAddCustomer.Name = "CmdAddCustomer";
             this.CmdAddCustomer.Size = new System.Drawing.Size(355, 69);
             this.CmdAddCustomer.TabIndex = 8;
             this.CmdAddCustomer.Text = "Kunde erfassen";
@@ -101,9 +185,10 @@
             this.TxtSearchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtSearchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.TxtSearchBar.ForeColor = System.Drawing.Color.White;
             this.TxtSearchBar.Location = new System.Drawing.Point(40, 375);
             this.TxtSearchBar.Name = "TxtSearchBar";
-            this.TxtSearchBar.Size = new System.Drawing.Size(980, 68);
+            this.TxtSearchBar.Size = new System.Drawing.Size(1489, 68);
             this.TxtSearchBar.TabIndex = 9;
             this.TxtSearchBar.TextChanged += new System.EventHandler(this.TxtSearchBar_TextChanged);
             // 
@@ -112,7 +197,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1011, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(1060, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(460, 260);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +208,7 @@
             // 
             this.ImgDelete.Image = ((System.Drawing.Image)(resources.GetObject("ImgDelete.Image")));
             this.ImgDelete.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgDelete.InitialImage")));
-            this.ImgDelete.Location = new System.Drawing.Point(1489, 1053);
+            this.ImgDelete.Location = new System.Drawing.Point(1488, 1053);
             this.ImgDelete.Name = "ImgDelete";
             this.ImgDelete.Size = new System.Drawing.Size(40, 40);
             this.ImgDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +220,7 @@
             // 
             this.ImgEdit.Image = ((System.Drawing.Image)(resources.GetObject("ImgEdit.Image")));
             this.ImgEdit.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgEdit.InitialImage")));
-            this.ImgEdit.Location = new System.Drawing.Point(1431, 1053);
+            this.ImgEdit.Location = new System.Drawing.Point(1429, 1053);
             this.ImgEdit.Name = "ImgEdit";
             this.ImgEdit.Size = new System.Drawing.Size(40, 40);
             this.ImgEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,11 +230,14 @@
             // 
             // TxtIntro1
             // 
+            this.TxtIntro1.BackColor = System.Drawing.Color.White;
+            this.TxtIntro1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIntro1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtIntro1.Location = new System.Drawing.Point(450, 63);
             this.TxtIntro1.Multiline = true;
             this.TxtIntro1.Name = "TxtIntro1";
-            this.TxtIntro1.Size = new System.Drawing.Size(519, 157);
+            this.TxtIntro1.ReadOnly = true;
+            this.TxtIntro1.Size = new System.Drawing.Size(453, 157);
             this.TxtIntro1.TabIndex = 135;
             this.TxtIntro1.Text = "Mit Hilfe des CRM manfy sind alle relevanten Daten der Mitarbeiter und Kunden an " +
     "einem zentralen Ort abrufbar, so dass keine wichtigen Informationen verloren geh" +
@@ -157,11 +245,14 @@
             // 
             // TxtIntro2
             // 
+            this.TxtIntro2.BackColor = System.Drawing.Color.White;
+            this.TxtIntro2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIntro2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtIntro2.Location = new System.Drawing.Point(450, 220);
+            this.TxtIntro2.Location = new System.Drawing.Point(450, 254);
             this.TxtIntro2.Multiline = true;
             this.TxtIntro2.Name = "TxtIntro2";
-            this.TxtIntro2.Size = new System.Drawing.Size(519, 103);
+            this.TxtIntro2.ReadOnly = true;
+            this.TxtIntro2.Size = new System.Drawing.Size(519, 69);
             this.TxtIntro2.TabIndex = 136;
             this.TxtIntro2.Text = "Das Produkt wurde entwickelt von Fiona Schmidiger, Markus Fässler und Anina Heinz" +
     "e.";
@@ -183,12 +274,23 @@
             this.ImgSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.ImgSearch.Image = ((System.Drawing.Image)(resources.GetObject("ImgSearch.Image")));
             this.ImgSearch.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgSearch.InitialImage")));
-            this.ImgSearch.Location = new System.Drawing.Point(967, 389);
+            this.ImgSearch.Location = new System.Drawing.Point(1480, 389);
             this.ImgSearch.Name = "ImgSearch";
             this.ImgSearch.Size = new System.Drawing.Size(40, 40);
             this.ImgSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgSearch.TabIndex = 138;
             this.ImgSearch.TabStop = false;
+            // 
+            // ImgHistory
+            // 
+            this.ImgHistory.Image = ((System.Drawing.Image)(resources.GetObject("ImgHistory.Image")));
+            this.ImgHistory.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgHistory.InitialImage")));
+            this.ImgHistory.Location = new System.Drawing.Point(1370, 1053);
+            this.ImgHistory.Name = "ImgHistory";
+            this.ImgHistory.Size = new System.Drawing.Size(40, 40);
+            this.ImgHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgHistory.TabIndex = 139;
+            this.ImgHistory.TabStop = false;
             // 
             // MainForm
             // 
@@ -196,6 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1572, 1131);
+            this.Controls.Add(this.ImgHistory);
             this.Controls.Add(this.ImgSearch);
             this.Controls.Add(this.LblSearch);
             this.Controls.Add(this.TxtIntro2);
@@ -209,7 +312,10 @@
             this.Controls.Add(this.ImgLogo);
             this.Controls.Add(this.GridSearchResults);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1600, 1210);
+            this.MinimumSize = new System.Drawing.Size(1600, 1210);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "manfy";
             ((System.ComponentModel.ISupportInitialize)(this.GridSearchResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();
@@ -217,6 +323,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImgDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +342,13 @@
         private System.Windows.Forms.TextBox TxtIntro2;
         private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.PictureBox ImgSearch;
+        private System.Windows.Forms.PictureBox ImgHistory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Street;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HouseNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plz;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Village;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Country;
     }
 }

@@ -23,7 +23,8 @@ namespace Contactmanager
         private void InitializeCustomer(Customer customer)
         {
             TxtCompany.Text = customer.Company;
-            TxtAddress.Text = customer.Address.Street + " " + customer.Address.HouseNumber;
+            TxtStreet.Text = customer.Address.Street;
+            TxtHouseNr.Text = customer.Address.HouseNumber.ToString();
             TxtPlz.Text = customer.Address.PLZ.ToString();
             TxtResidence.Text = customer.Address.Village;
             TxtTitle.Text = customer.Title;
@@ -37,11 +38,7 @@ namespace Contactmanager
         private Customer getCustomer()
         {
             Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false, TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, TxtCustomerType.Text);
-            string[] addressComponents = TxtAddress.Text.Split(' ');
-            string street = addressComponents[0];
-            int houseNumber = Convert.ToInt32(addressComponents[1]);
-            int plz = Convert.ToInt32(TxtPlz.Text);
-            customer.Address = new Address(street, houseNumber, plz, TxtResidence.Text, "Schweiz");
+            customer.Address = new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text);
             return customer;
         }
 

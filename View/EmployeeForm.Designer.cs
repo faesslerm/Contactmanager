@@ -40,10 +40,10 @@
             this.TxtLastname = new System.Windows.Forms.TextBox();
             this.TxtBirthday = new System.Windows.Forms.TextBox();
             this.TxtNationality = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.TxtAddress = new System.Windows.Forms.TextBox();
+            this.TxtPlz = new System.Windows.Forms.TextBox();
+            this.TxtStreet = new System.Windows.Forms.TextBox();
             this.TxtTitle = new System.Windows.Forms.TextBox();
-            this.LblAddress = new System.Windows.Forms.Label();
+            this.LblStreet = new System.Windows.Forms.Label();
             this.LblPlz = new System.Windows.Forms.Label();
             this.LblNationality = new System.Windows.Forms.Label();
             this.LblTitle = new System.Windows.Forms.Label();
@@ -83,12 +83,16 @@
             this.LblApprenticeshipYears = new System.Windows.Forms.Label();
             this.LblTrainee = new System.Windows.Forms.Label();
             this.CmdSaveEmployee = new System.Windows.Forms.Button();
-            this.ImgAddEmployee = new System.Windows.Forms.PictureBox();
-            this.ImgSearch = new System.Windows.Forms.PictureBox();
             this.ImgBackgroundEmployee = new System.Windows.Forms.PictureBox();
+            this.TxtCountry = new System.Windows.Forms.TextBox();
+            this.LblCountry = new System.Windows.Forms.Label();
+            this.RadActiv = new System.Windows.Forms.RadioButton();
+            this.RadPassiv = new System.Windows.Forms.RadioButton();
+            this.LblStatus = new System.Windows.Forms.Label();
+            this.TxtHouseNr = new System.Windows.Forms.TextBox();
+            this.LblHouseNr = new System.Windows.Forms.Label();
+            this.CmbSalutation = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgAddEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBackgroundEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,84 +167,92 @@
             // 
             this.TxtSalutation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtSalutation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtSalutation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtSalutation.Location = new System.Drawing.Point(40, 322);
             this.TxtSalutation.Name = "TxtSalutation";
-            this.TxtSalutation.Size = new System.Drawing.Size(350, 28);
+            this.TxtSalutation.Size = new System.Drawing.Size(350, 34);
             this.TxtSalutation.TabIndex = 14;
             // 
             // TxtFirstname
             // 
             this.TxtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtFirstname.Location = new System.Drawing.Point(40, 392);
             this.TxtFirstname.Name = "TxtFirstname";
-            this.TxtFirstname.Size = new System.Drawing.Size(350, 28);
+            this.TxtFirstname.Size = new System.Drawing.Size(350, 34);
             this.TxtFirstname.TabIndex = 15;
             // 
             // TxtLastname
             // 
             this.TxtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtLastname.Location = new System.Drawing.Point(40, 462);
             this.TxtLastname.Name = "TxtLastname";
-            this.TxtLastname.Size = new System.Drawing.Size(350, 28);
+            this.TxtLastname.Size = new System.Drawing.Size(350, 34);
             this.TxtLastname.TabIndex = 16;
             // 
             // TxtBirthday
             // 
             this.TxtBirthday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtBirthday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtBirthday.Location = new System.Drawing.Point(40, 532);
             this.TxtBirthday.Name = "TxtBirthday";
-            this.TxtBirthday.Size = new System.Drawing.Size(350, 28);
+            this.TxtBirthday.Size = new System.Drawing.Size(350, 34);
             this.TxtBirthday.TabIndex = 17;
             // 
             // TxtNationality
             // 
             this.TxtNationality.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtNationality.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtNationality.Location = new System.Drawing.Point(414, 532);
+            this.TxtNationality.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtNationality.Location = new System.Drawing.Point(1156, 392);
             this.TxtNationality.Name = "TxtNationality";
-            this.TxtNationality.Size = new System.Drawing.Size(350, 28);
+            this.TxtNationality.Size = new System.Drawing.Size(350, 34);
             this.TxtNationality.TabIndex = 25;
             // 
-            // textBox2
+            // TxtPlz
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(414, 462);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 28);
-            this.textBox2.TabIndex = 24;
+            this.TxtPlz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtPlz.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPlz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtPlz.Location = new System.Drawing.Point(414, 462);
+            this.TxtPlz.Name = "TxtPlz";
+            this.TxtPlz.Size = new System.Drawing.Size(95, 34);
+            this.TxtPlz.TabIndex = 24;
             // 
-            // TxtAddress
+            // TxtStreet
             // 
-            this.TxtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtAddress.Location = new System.Drawing.Point(414, 392);
-            this.TxtAddress.Name = "TxtAddress";
-            this.TxtAddress.Size = new System.Drawing.Size(350, 28);
-            this.TxtAddress.TabIndex = 23;
+            this.TxtStreet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtStreet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtStreet.Location = new System.Drawing.Point(414, 392);
+            this.TxtStreet.Name = "TxtStreet";
+            this.TxtStreet.Size = new System.Drawing.Size(237, 34);
+            this.TxtStreet.TabIndex = 23;
             // 
             // TxtTitle
             // 
             this.TxtTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtTitle.Location = new System.Drawing.Point(414, 322);
             this.TxtTitle.Name = "TxtTitle";
-            this.TxtTitle.Size = new System.Drawing.Size(350, 28);
+            this.TxtTitle.Size = new System.Drawing.Size(350, 34);
             this.TxtTitle.TabIndex = 22;
             // 
-            // LblAddress
+            // LblStreet
             // 
-            this.LblAddress.AutoSize = true;
-            this.LblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.LblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.LblAddress.Location = new System.Drawing.Point(409, 366);
-            this.LblAddress.Name = "LblAddress";
-            this.LblAddress.Size = new System.Drawing.Size(76, 22);
-            this.LblAddress.TabIndex = 21;
-            this.LblAddress.Text = "Adresse";
+            this.LblStreet.AutoSize = true;
+            this.LblStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.LblStreet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.LblStreet.Location = new System.Drawing.Point(409, 366);
+            this.LblStreet.Name = "LblStreet";
+            this.LblStreet.Size = new System.Drawing.Size(71, 22);
+            this.LblStreet.TabIndex = 21;
+            this.LblStreet.Text = "Strasse";
             // 
             // LblPlz
             // 
@@ -258,7 +270,7 @@
             this.LblNationality.AutoSize = true;
             this.LblNationality.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.LblNationality.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.LblNationality.Location = new System.Drawing.Point(410, 506);
+            this.LblNationality.Location = new System.Drawing.Point(1152, 366);
             this.LblNationality.Name = "LblNationality";
             this.LblNationality.Size = new System.Drawing.Size(100, 22);
             this.LblNationality.TabIndex = 19;
@@ -279,9 +291,10 @@
             // 
             this.TxtResidence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtResidence.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtResidence.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtResidence.Location = new System.Drawing.Point(527, 462);
             this.TxtResidence.Name = "TxtResidence";
-            this.TxtResidence.Size = new System.Drawing.Size(237, 28);
+            this.TxtResidence.Size = new System.Drawing.Size(237, 34);
             this.TxtResidence.TabIndex = 26;
             // 
             // LblResidence
@@ -299,36 +312,40 @@
             // 
             this.TxtAhv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtAhv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtAhv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtAhv.Location = new System.Drawing.Point(1156, 322);
             this.TxtAhv.Name = "TxtAhv";
-            this.TxtAhv.Size = new System.Drawing.Size(350, 28);
+            this.TxtAhv.Size = new System.Drawing.Size(350, 34);
             this.TxtAhv.TabIndex = 35;
             // 
             // TxtMail
             // 
             this.TxtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtMail.Location = new System.Drawing.Point(785, 462);
             this.TxtMail.Name = "TxtMail";
-            this.TxtMail.Size = new System.Drawing.Size(350, 28);
+            this.TxtMail.Size = new System.Drawing.Size(350, 34);
             this.TxtMail.TabIndex = 34;
             // 
             // TxtMobilNr
             // 
             this.TxtMobilNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtMobilNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMobilNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtMobilNr.Location = new System.Drawing.Point(785, 392);
             this.TxtMobilNr.Name = "TxtMobilNr";
-            this.TxtMobilNr.Size = new System.Drawing.Size(350, 28);
+            this.TxtMobilNr.Size = new System.Drawing.Size(350, 34);
             this.TxtMobilNr.TabIndex = 33;
             // 
             // TxtPrivateNr
             // 
             this.TxtPrivateNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtPrivateNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPrivateNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtPrivateNr.Location = new System.Drawing.Point(785, 322);
             this.TxtPrivateNr.Name = "TxtPrivateNr";
-            this.TxtPrivateNr.Size = new System.Drawing.Size(350, 28);
+            this.TxtPrivateNr.Size = new System.Drawing.Size(350, 34);
             this.TxtPrivateNr.TabIndex = 32;
             // 
             // LblMobilNr
@@ -390,18 +407,20 @@
             // 
             this.TxtCompanyFaxNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtCompanyFaxNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCompanyFaxNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtCompanyFaxNr.Location = new System.Drawing.Point(785, 764);
             this.TxtCompanyFaxNr.Name = "TxtCompanyFaxNr";
-            this.TxtCompanyFaxNr.Size = new System.Drawing.Size(350, 28);
+            this.TxtCompanyFaxNr.Size = new System.Drawing.Size(350, 34);
             this.TxtCompanyFaxNr.TabIndex = 61;
             // 
             // TxtCompanyPhoneNr
             // 
             this.TxtCompanyPhoneNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtCompanyPhoneNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCompanyPhoneNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtCompanyPhoneNr.Location = new System.Drawing.Point(785, 694);
             this.TxtCompanyPhoneNr.Name = "TxtCompanyPhoneNr";
-            this.TxtCompanyPhoneNr.Size = new System.Drawing.Size(350, 28);
+            this.TxtCompanyPhoneNr.Size = new System.Drawing.Size(350, 34);
             this.TxtCompanyPhoneNr.TabIndex = 60;
             // 
             // LblCompanyFaxNr
@@ -430,27 +449,30 @@
             // 
             this.TxtLeaving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtLeaving.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtLeaving.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtLeaving.Location = new System.Drawing.Point(413, 834);
             this.TxtLeaving.Name = "TxtLeaving";
-            this.TxtLeaving.Size = new System.Drawing.Size(350, 28);
+            this.TxtLeaving.Size = new System.Drawing.Size(350, 34);
             this.TxtLeaving.TabIndex = 53;
             // 
             // TxtEntry
             // 
             this.TxtEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtEntry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtEntry.Location = new System.Drawing.Point(414, 764);
             this.TxtEntry.Name = "TxtEntry";
-            this.TxtEntry.Size = new System.Drawing.Size(350, 28);
+            this.TxtEntry.Size = new System.Drawing.Size(350, 34);
             this.TxtEntry.TabIndex = 51;
             // 
             // TxtLevelOfEmployment
             // 
             this.TxtLevelOfEmployment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtLevelOfEmployment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtLevelOfEmployment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtLevelOfEmployment.Location = new System.Drawing.Point(414, 694);
             this.TxtLevelOfEmployment.Name = "TxtLevelOfEmployment";
-            this.TxtLevelOfEmployment.Size = new System.Drawing.Size(350, 28);
+            this.TxtLevelOfEmployment.Size = new System.Drawing.Size(350, 34);
             this.TxtLevelOfEmployment.TabIndex = 50;
             // 
             // LblEntry
@@ -490,36 +512,40 @@
             // 
             this.TxtSquadLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtSquadLevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtSquadLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtSquadLevel.Location = new System.Drawing.Point(40, 904);
             this.TxtSquadLevel.Name = "TxtSquadLevel";
-            this.TxtSquadLevel.Size = new System.Drawing.Size(350, 28);
+            this.TxtSquadLevel.Size = new System.Drawing.Size(350, 34);
             this.TxtSquadLevel.TabIndex = 45;
             // 
             // TxtFunction
             // 
             this.TxtFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtFunction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtFunction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtFunction.Location = new System.Drawing.Point(40, 834);
             this.TxtFunction.Name = "TxtFunction";
-            this.TxtFunction.Size = new System.Drawing.Size(350, 28);
+            this.TxtFunction.Size = new System.Drawing.Size(350, 34);
             this.TxtFunction.TabIndex = 44;
             // 
             // TxtDepartment
             // 
             this.TxtDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtDepartment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtDepartment.Location = new System.Drawing.Point(40, 764);
             this.TxtDepartment.Name = "TxtDepartment";
-            this.TxtDepartment.Size = new System.Drawing.Size(350, 28);
+            this.TxtDepartment.Size = new System.Drawing.Size(350, 34);
             this.TxtDepartment.TabIndex = 43;
             // 
             // TxtEmployeeNr
             // 
             this.TxtEmployeeNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtEmployeeNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtEmployeeNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtEmployeeNr.Location = new System.Drawing.Point(40, 694);
             this.TxtEmployeeNr.Name = "TxtEmployeeNr";
-            this.TxtEmployeeNr.Size = new System.Drawing.Size(350, 28);
+            this.TxtEmployeeNr.Size = new System.Drawing.Size(350, 34);
             this.TxtEmployeeNr.TabIndex = 42;
             // 
             // LblDepartment
@@ -581,18 +607,20 @@
             // 
             this.TxtCurrentApprenticeshipYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtCurrentApprenticeshipYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCurrentApprenticeshipYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtCurrentApprenticeshipYear.Location = new System.Drawing.Point(1157, 764);
             this.TxtCurrentApprenticeshipYear.Name = "TxtCurrentApprenticeshipYear";
-            this.TxtCurrentApprenticeshipYear.Size = new System.Drawing.Size(350, 28);
+            this.TxtCurrentApprenticeshipYear.Size = new System.Drawing.Size(350, 34);
             this.TxtCurrentApprenticeshipYear.TabIndex = 65;
             // 
             // TxtApprenticeshipYears
             // 
             this.TxtApprenticeshipYears.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtApprenticeshipYears.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtApprenticeshipYears.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtApprenticeshipYears.Location = new System.Drawing.Point(1157, 694);
             this.TxtApprenticeshipYears.Name = "TxtApprenticeshipYears";
-            this.TxtApprenticeshipYears.Size = new System.Drawing.Size(350, 28);
+            this.TxtApprenticeshipYears.Size = new System.Drawing.Size(350, 34);
             this.TxtApprenticeshipYears.TabIndex = 64;
             // 
             // LblCurrentApprenticeshipYear
@@ -641,28 +669,6 @@
             this.CmdSaveEmployee.UseVisualStyleBackColor = false;
             this.CmdSaveEmployee.Click += new System.EventHandler(this.CmdSaveEmployee_Click);
             // 
-            // ImgAddEmployee
-            // 
-            this.ImgAddEmployee.Image = ((System.Drawing.Image)(resources.GetObject("ImgAddEmployee.Image")));
-            this.ImgAddEmployee.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgAddEmployee.InitialImage")));
-            this.ImgAddEmployee.Location = new System.Drawing.Point(1420, 40);
-            this.ImgAddEmployee.Name = "ImgAddEmployee";
-            this.ImgAddEmployee.Size = new System.Drawing.Size(40, 40);
-            this.ImgAddEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgAddEmployee.TabIndex = 68;
-            this.ImgAddEmployee.TabStop = false;
-            // 
-            // ImgSearch
-            // 
-            this.ImgSearch.Image = ((System.Drawing.Image)(resources.GetObject("ImgSearch.Image")));
-            this.ImgSearch.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgSearch.InitialImage")));
-            this.ImgSearch.Location = new System.Drawing.Point(1467, 40);
-            this.ImgSearch.Name = "ImgSearch";
-            this.ImgSearch.Size = new System.Drawing.Size(40, 40);
-            this.ImgSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgSearch.TabIndex = 69;
-            this.ImgSearch.TabStop = false;
-            // 
             // ImgBackgroundEmployee
             // 
             this.ImgBackgroundEmployee.BackColor = System.Drawing.Color.Transparent;
@@ -675,16 +681,114 @@
             this.ImgBackgroundEmployee.TabIndex = 70;
             this.ImgBackgroundEmployee.TabStop = false;
             // 
+            // TxtCountry
+            // 
+            this.TxtCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtCountry.Location = new System.Drawing.Point(413, 532);
+            this.TxtCountry.Name = "TxtCountry";
+            this.TxtCountry.Size = new System.Drawing.Size(350, 34);
+            this.TxtCountry.TabIndex = 72;
+            // 
+            // LblCountry
+            // 
+            this.LblCountry.AutoSize = true;
+            this.LblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.LblCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.LblCountry.Location = new System.Drawing.Point(409, 506);
+            this.LblCountry.Name = "LblCountry";
+            this.LblCountry.Size = new System.Drawing.Size(50, 22);
+            this.LblCountry.TabIndex = 71;
+            this.LblCountry.Text = "Land";
+            // 
+            // RadActiv
+            // 
+            this.RadActiv.AutoSize = true;
+            this.RadActiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.RadActiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.RadActiv.Location = new System.Drawing.Point(565, 910);
+            this.RadActiv.Name = "RadActiv";
+            this.RadActiv.Size = new System.Drawing.Size(80, 26);
+            this.RadActiv.TabIndex = 73;
+            this.RadActiv.TabStop = true;
+            this.RadActiv.Text = "Aktiv";
+            this.RadActiv.UseVisualStyleBackColor = true;
+            // 
+            // RadPassiv
+            // 
+            this.RadPassiv.AutoSize = true;
+            this.RadPassiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.RadPassiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.RadPassiv.Location = new System.Drawing.Point(670, 910);
+            this.RadPassiv.Name = "RadPassiv";
+            this.RadPassiv.Size = new System.Drawing.Size(94, 26);
+            this.RadPassiv.TabIndex = 74;
+            this.RadPassiv.TabStop = true;
+            this.RadPassiv.Text = "Passiv";
+            this.RadPassiv.UseVisualStyleBackColor = true;
+            // 
+            // LblStatus
+            // 
+            this.LblStatus.AutoSize = true;
+            this.LblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.LblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.LblStatus.Location = new System.Drawing.Point(410, 911);
+            this.LblStatus.Name = "LblStatus";
+            this.LblStatus.Size = new System.Drawing.Size(66, 22);
+            this.LblStatus.TabIndex = 75;
+            this.LblStatus.Text = "Status:";
+            // 
+            // TxtHouseNr
+            // 
+            this.TxtHouseNr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtHouseNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtHouseNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtHouseNr.Location = new System.Drawing.Point(668, 392);
+            this.TxtHouseNr.Name = "TxtHouseNr";
+            this.TxtHouseNr.Size = new System.Drawing.Size(95, 34);
+            this.TxtHouseNr.TabIndex = 77;
+            // 
+            // LblHouseNr
+            // 
+            this.LblHouseNr.AutoSize = true;
+            this.LblHouseNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.LblHouseNr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.LblHouseNr.Location = new System.Drawing.Point(663, 366);
+            this.LblHouseNr.Name = "LblHouseNr";
+            this.LblHouseNr.Size = new System.Drawing.Size(34, 22);
+            this.LblHouseNr.TabIndex = 76;
+            this.LblHouseNr.Text = "Nr.";
+            // 
+            // CmbSalutation
+            // 
+            this.CmbSalutation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.CmbSalutation.FormattingEnabled = true;
+            this.CmbSalutation.ItemHeight = 29;
+            this.CmbSalutation.Items.AddRange(new object[] {
+            "Herr",
+            "Frau"});
+            this.CmbSalutation.Location = new System.Drawing.Point(630, 203);
+            this.CmbSalutation.Name = "CmbSalutation";
+            this.CmbSalutation.Size = new System.Drawing.Size(350, 37);
+            this.CmbSalutation.TabIndex = 80;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1572, 1121);
+            this.Controls.Add(this.CmbSalutation);
+            this.Controls.Add(this.TxtHouseNr);
+            this.Controls.Add(this.LblHouseNr);
+            this.Controls.Add(this.LblStatus);
+            this.Controls.Add(this.RadPassiv);
+            this.Controls.Add(this.RadActiv);
+            this.Controls.Add(this.TxtCountry);
+            this.Controls.Add(this.LblCountry);
             this.Controls.Add(this.CmdSaveEmployee);
             this.Controls.Add(this.ImgBackgroundEmployee);
-            this.Controls.Add(this.ImgSearch);
-            this.Controls.Add(this.ImgAddEmployee);
             this.Controls.Add(this.LblTrainee);
             this.Controls.Add(this.TxtCurrentApprenticeshipYear);
             this.Controls.Add(this.TxtApprenticeshipYears);
@@ -721,10 +825,10 @@
             this.Controls.Add(this.LblResidence);
             this.Controls.Add(this.TxtResidence);
             this.Controls.Add(this.TxtNationality);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.TxtAddress);
+            this.Controls.Add(this.TxtPlz);
+            this.Controls.Add(this.TxtStreet);
             this.Controls.Add(this.TxtTitle);
-            this.Controls.Add(this.LblAddress);
+            this.Controls.Add(this.LblStreet);
             this.Controls.Add(this.LblPlz);
             this.Controls.Add(this.LblNationality);
             this.Controls.Add(this.LblTitle);
@@ -740,10 +844,9 @@
             this.Controls.Add(this.ImgLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgAddEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBackgroundEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -763,10 +866,10 @@
         private System.Windows.Forms.TextBox TxtLastname;
         private System.Windows.Forms.TextBox TxtBirthday;
         private System.Windows.Forms.TextBox TxtNationality;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox TxtAddress;
+        private System.Windows.Forms.TextBox TxtPlz;
+        private System.Windows.Forms.TextBox TxtStreet;
         private System.Windows.Forms.TextBox TxtTitle;
-        private System.Windows.Forms.Label LblAddress;
+        private System.Windows.Forms.Label LblStreet;
         private System.Windows.Forms.Label LblPlz;
         private System.Windows.Forms.Label LblNationality;
         private System.Windows.Forms.Label LblTitle;
@@ -780,7 +883,7 @@
         private System.Windows.Forms.Label LblMail;
         private System.Windows.Forms.Label LblAhv;
         private System.Windows.Forms.Label LblPrivateNr;
-        private System.Windows.Forms.Label LblTitleEmployee;
+        public System.Windows.Forms.Label LblTitleEmployee;
         private System.Windows.Forms.TextBox TxtCompanyFaxNr;
         private System.Windows.Forms.TextBox TxtCompanyPhoneNr;
         private System.Windows.Forms.Label LblCompanyFaxNr;
@@ -806,8 +909,14 @@
         private System.Windows.Forms.Label LblApprenticeshipYears;
         private System.Windows.Forms.Label LblTrainee;
         private System.Windows.Forms.Button CmdSaveEmployee;
-        private System.Windows.Forms.PictureBox ImgAddEmployee;
-        private System.Windows.Forms.PictureBox ImgSearch;
         private System.Windows.Forms.PictureBox ImgBackgroundEmployee;
+        private System.Windows.Forms.TextBox TxtCountry;
+        private System.Windows.Forms.Label LblCountry;
+        private System.Windows.Forms.RadioButton RadActiv;
+        private System.Windows.Forms.RadioButton RadPassiv;
+        private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.TextBox TxtHouseNr;
+        private System.Windows.Forms.Label LblHouseNr;
+        private System.Windows.Forms.ComboBox CmbSalutation;
     }
 }

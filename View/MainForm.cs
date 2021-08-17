@@ -12,8 +12,8 @@ namespace Contactmanager
         {
             InitializeComponent();
             Controller = controller;
-            controller.SaveNewPerson(new Person("Max", "Muster", true, false));
-            controller.SaveNewPerson(new Person("Anna", "Ibadette", false, false));
+            controller.SaveNewPerson(new Person("Max", "Muster", true, false, new Address("Musterstrasse", 1, 9000, "St.Gallen", "Schweiz")));
+            controller.SaveNewPerson(new Person("Anna", "Ibadette", false, false, new Address("Gopfweg", 3, 9052, "Niederteufen", "Schweiz")));
             GridSearchResults.DataSource = Controller.GetAllPeople();
             searchResult = Controller.GetAllPeople().ToList();
         }

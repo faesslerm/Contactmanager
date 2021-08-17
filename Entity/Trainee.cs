@@ -15,9 +15,9 @@ namespace Contactmanager
 
 
         //Konstruktor:
-        public Trainee(string firstname, string lastname, bool isMen, bool isDiasabled, string ahv, int companyPhoneNr, int employeeNr, string department,
+        public Trainee(string firstname, string lastname, bool isMen, bool isDiasabled, Address address, string ahv, int companyPhoneNr, int employeeNr, string department,
         DateTime entry, double levelOfEmployment, string function, byte squadLevel, int numberOfApprenticeship, int currentYearOfApprenticeship) :
-        base(firstname, lastname, isMen, isDiasabled, ahv, companyPhoneNr, employeeNr, department, entry, levelOfEmployment, function, squadLevel)
+        base(firstname, lastname, isMen, isDiasabled, address, ahv, companyPhoneNr, employeeNr, department, entry, levelOfEmployment, function, squadLevel)
         {
             NumberOfApprenticeship = numberOfApprenticeship;
             CurrentYearOfApprenticeship = getApprenticeshipYear();

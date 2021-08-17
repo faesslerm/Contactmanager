@@ -25,14 +25,14 @@ namespace Contactmanager
 
         private void InitializePerson(Person person)
         {
-            TxtSalutation.Text = person.IsMen ? "Herr" : "Frau";
+            CmbSalutation.Text = person.IsMen ? "Herr" : "Frau";
             TxtFirstname.Text = person.Firstname;
             TxtLastname.Text = person.Lastname;
         }
 
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         {
-            bool isMen = TxtSalutation.Text.Equals("Herr");
+            bool isMen = CmbSalutation.Text.Equals("Herr");
             Person person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadActiv.Checked, new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text));
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);
             if (success)

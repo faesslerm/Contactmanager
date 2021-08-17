@@ -35,7 +35,6 @@
             this.LblBirthday = new System.Windows.Forms.Label();
             this.LblLastname = new System.Windows.Forms.Label();
             this.LblFirstname = new System.Windows.Forms.Label();
-            this.TxtSalutation = new System.Windows.Forms.TextBox();
             this.TxtFirstname = new System.Windows.Forms.TextBox();
             this.TxtLastname = new System.Windows.Forms.TextBox();
             this.TxtBirthday = new System.Windows.Forms.TextBox();
@@ -68,7 +67,6 @@
             this.LblEntry = new System.Windows.Forms.Label();
             this.LblLeaving = new System.Windows.Forms.Label();
             this.LblLevelOfEmployment = new System.Windows.Forms.Label();
-            this.TxtSquadLevel = new System.Windows.Forms.TextBox();
             this.TxtFunction = new System.Windows.Forms.TextBox();
             this.TxtDepartment = new System.Windows.Forms.TextBox();
             this.TxtEmployeeNr = new System.Windows.Forms.TextBox();
@@ -92,6 +90,7 @@
             this.TxtHouseNr = new System.Windows.Forms.TextBox();
             this.LblHouseNr = new System.Windows.Forms.Label();
             this.CmbSalutation = new System.Windows.Forms.ComboBox();
+            this.CmbSquadLevel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBackgroundEmployee)).BeginInit();
             this.SuspendLayout();
@@ -162,16 +161,6 @@
             this.LblFirstname.Size = new System.Drawing.Size(82, 22);
             this.LblFirstname.TabIndex = 13;
             this.LblFirstname.Text = "Vorname";
-            // 
-            // TxtSalutation
-            // 
-            this.TxtSalutation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtSalutation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtSalutation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TxtSalutation.Location = new System.Drawing.Point(40, 322);
-            this.TxtSalutation.Name = "TxtSalutation";
-            this.TxtSalutation.Size = new System.Drawing.Size(350, 34);
-            this.TxtSalutation.TabIndex = 14;
             // 
             // TxtFirstname
             // 
@@ -508,16 +497,6 @@
             this.LblLevelOfEmployment.TabIndex = 46;
             this.LblLevelOfEmployment.Text = "Beschäftigungsgrad";
             // 
-            // TxtSquadLevel
-            // 
-            this.TxtSquadLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtSquadLevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtSquadLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TxtSquadLevel.Location = new System.Drawing.Point(40, 904);
-            this.TxtSquadLevel.Name = "TxtSquadLevel";
-            this.TxtSquadLevel.Size = new System.Drawing.Size(350, 34);
-            this.TxtSquadLevel.TabIndex = 45;
-            // 
             // TxtFunction
             // 
             this.TxtFunction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
@@ -768,10 +747,27 @@
             this.CmbSalutation.Items.AddRange(new object[] {
             "Herr",
             "Frau"});
-            this.CmbSalutation.Location = new System.Drawing.Point(630, 203);
+            this.CmbSalutation.Location = new System.Drawing.Point(39, 322);
             this.CmbSalutation.Name = "CmbSalutation";
             this.CmbSalutation.Size = new System.Drawing.Size(350, 37);
             this.CmbSalutation.TabIndex = 80;
+            // 
+            // CmbSquadLevel
+            // 
+            this.CmbSquadLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.CmbSquadLevel.FormattingEnabled = true;
+            this.CmbSquadLevel.ItemHeight = 29;
+            this.CmbSquadLevel.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.CmbSquadLevel.Location = new System.Drawing.Point(41, 905);
+            this.CmbSquadLevel.Name = "CmbSquadLevel";
+            this.CmbSquadLevel.Size = new System.Drawing.Size(350, 37);
+            this.CmbSquadLevel.TabIndex = 81;
             // 
             // EmployeeForm
             // 
@@ -779,6 +775,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1572, 1121);
+            this.Controls.Add(this.CmbSquadLevel);
             this.Controls.Add(this.CmbSalutation);
             this.Controls.Add(this.TxtHouseNr);
             this.Controls.Add(this.LblHouseNr);
@@ -804,7 +801,6 @@
             this.Controls.Add(this.LblEntry);
             this.Controls.Add(this.LblLeaving);
             this.Controls.Add(this.LblLevelOfEmployment);
-            this.Controls.Add(this.TxtSquadLevel);
             this.Controls.Add(this.TxtFunction);
             this.Controls.Add(this.TxtDepartment);
             this.Controls.Add(this.TxtEmployeeNr);
@@ -835,7 +831,6 @@
             this.Controls.Add(this.TxtBirthday);
             this.Controls.Add(this.TxtLastname);
             this.Controls.Add(this.TxtFirstname);
-            this.Controls.Add(this.TxtSalutation);
             this.Controls.Add(this.LblFirstname);
             this.Controls.Add(this.LblLastname);
             this.Controls.Add(this.LblBirthday);
@@ -861,7 +856,6 @@
         private System.Windows.Forms.Label LblBirthday;
         private System.Windows.Forms.Label LblLastname;
         private System.Windows.Forms.Label LblFirstname;
-        private System.Windows.Forms.TextBox TxtSalutation;
         private System.Windows.Forms.TextBox TxtFirstname;
         private System.Windows.Forms.TextBox TxtLastname;
         private System.Windows.Forms.TextBox TxtBirthday;
@@ -894,7 +888,6 @@
         private System.Windows.Forms.Label LblEntry;
         private System.Windows.Forms.Label LblLeaving;
         private System.Windows.Forms.Label LblLevelOfEmployment;
-        private System.Windows.Forms.TextBox TxtSquadLevel;
         private System.Windows.Forms.TextBox TxtFunction;
         private System.Windows.Forms.TextBox TxtDepartment;
         private System.Windows.Forms.TextBox TxtEmployeeNr;
@@ -918,5 +911,6 @@
         private System.Windows.Forms.TextBox TxtHouseNr;
         private System.Windows.Forms.Label LblHouseNr;
         private System.Windows.Forms.ComboBox CmbSalutation;
+        private System.Windows.Forms.ComboBox CmbSquadLevel;
     }
 }

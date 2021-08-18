@@ -78,6 +78,7 @@
             this.GridSearchResults.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.GridSearchResults.MaximumSize = new System.Drawing.Size(638, 250);
             this.GridSearchResults.MinimumSize = new System.Drawing.Size(638, 250);
+            this.GridSearchResults.MultiSelect = false;
             this.GridSearchResults.Name = "GridSearchResults";
             this.GridSearchResults.ReadOnly = true;
             this.GridSearchResults.RowHeadersVisible = false;

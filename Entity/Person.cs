@@ -53,5 +53,10 @@ namespace Contactmanager
             peopleAsString += IsDisabled == false ? "inaktiv" : "aktiv";
             return peopleAsString;
         }
+
+        public string[] getGridRow()
+        {
+            return new string[]{Firstname, Lastname, Address.Street, Address.HouseNumber.ToString(), Address.PLZ.ToString(), Address.Village, Address.Country};
+        }
     }
 }

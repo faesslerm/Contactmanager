@@ -37,7 +37,7 @@ namespace Contactmanager
 
         private Customer getCustomer()
         {
-            Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false, new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text), TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, TxtCustomerType.Text);
+            Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false, new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text), TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.Text);
             return customer;
         }
 

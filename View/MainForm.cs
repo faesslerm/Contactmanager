@@ -14,14 +14,14 @@ namespace Contactmanager
             Controller = controller;
             Controller.SaveNewPerson(new Person("Max", "Muster", true, false, new Address("Musterstrasse", 1, 9000, "St.Gallen", "Schweiz")));
             Controller.SaveNewPerson(new Person("Anna", "Ibadette", false, false, new Address("Gopfweg", 3, 9052, "Niederteufen", "Schweiz")));
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
         }
 
         public Controller Controller { get; }
 
         private List<Person> searchResult = new List<Person>();
 
-        private void updateGrid(List<Person> data)
+        private void UpdateGrid(List<Person> data)
         {
             searchResult = data;
             GridSearchResults.Rows.Clear();
@@ -35,7 +35,7 @@ namespace Contactmanager
         {
             EmployeeForm employeeForm = new EmployeeForm(Controller);
             employeeForm.ShowDialog();
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
             employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
         }
 
@@ -43,7 +43,7 @@ namespace Contactmanager
         {
             CustomerForm customerForm = new CustomerForm(Controller);
             customerForm.ShowDialog();
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
             customerForm.LblTitleCustomer.Text = "Kunde erfassen";
         }
 
@@ -58,7 +58,7 @@ namespace Contactmanager
                 .Where(p => p.searchText.Contains(textBox.Text.ToLower()))
                 .Select(p => p.person)
                 .ToList();
-            updateGrid(filterData);
+            UpdateGrid(filterData);
         }
 
         private void CmdDeleteSelected_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace Contactmanager
                 Controller.DeletePerson(person);
                 Console.WriteLine("Delete Person: " + person);
             }
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
             Console.WriteLine("All done!");
         }
 
@@ -80,17 +80,30 @@ namespace Contactmanager
             Controller.PersonToBeUpdated(person);
             if (person is Employee)
             {
+                EmployeeForm employeeForm = new EmployeeForm(Controller);
+                employeeForm.LblTitleEmployee.Text = "Mitarbeiter bearbeiten";
                 new EmployeeForm(Controller, person as Employee).ShowDialog();
+                //new EmployeeForm(Controller, person as Employee).ShowDialog();
             }
             else if (person is Customer)
             {
+                CustomerForm customerForm = new CustomerForm(Controller);
+                customerForm.LblTitleCustomer.Text = "Kunde bearbeiten";
                 new CustomerForm(Controller, person as Customer).ShowDialog();
+                //new CustomerForm(Controller, person as Customer).ShowDialog();
             }
             else
             {
                 new EmployeeForm(Controller, person).ShowDialog();
             }
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
+        }
+
+        private void GridSearchResults_CellClick (object sender, EventArgs e)
+        {
+            ImgHistory.Visible = true;
+            ImgEdit.Visible = true;
+            ImgDelete.Visible = true;
         }
     }
 }

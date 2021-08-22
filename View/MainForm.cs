@@ -34,17 +34,17 @@ namespace Contactmanager
         private void CmdAddEmployee_Click(object sender, EventArgs e)
         {
             EmployeeForm employeeForm = new EmployeeForm(Controller);
+            employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
             employeeForm.ShowDialog();
             updateGrid(Controller.GetAllPeople().ToList());
-            employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
         }
 
         private void CmdAddCustomer_Click(object sender, EventArgs e)
         {
             CustomerForm customerForm = new CustomerForm(Controller);
+            customerForm.LblTitleCustomer.Text = "Kunde erfassen";
             customerForm.ShowDialog();
             updateGrid(Controller.GetAllPeople().ToList());
-            customerForm.LblTitleCustomer.Text = "Kunde erfassen";
         }
 
         private void TxtSearchBar_TextChanged(object sender, EventArgs e)
@@ -80,15 +80,21 @@ namespace Contactmanager
             Controller.PersonToBeUpdated(person);
             if (person is Employee)
             {
-                new EmployeeForm(Controller, person as Employee).ShowDialog();
+                EmployeeForm employeeForm = new EmployeeForm(Controller, person as Employee);
+                employeeForm.LblTitleEmployee.Text = "Mitarbeiter bearbeiten";
+                employeeForm.ShowDialog();
             }
             else if (person is Customer)
             {
-                new CustomerForm(Controller, person as Customer).ShowDialog();
+                CustomerForm customerForm = new CustomerForm(Controller, person as Customer);
+                customerForm.LblTitleCustomer.Text = "Kunde bearbeiten";
+                customerForm.ShowDialog();
             }
             else
             {
-                new EmployeeForm(Controller, person).ShowDialog();
+                EmployeeForm employeeForm = new EmployeeForm(Controller, person);
+                employeeForm.LblTitleEmployee.Text = "Mitarbeiter bearbeiten";
+                employeeForm.ShowDialog();
             }
             updateGrid(Controller.GetAllPeople().ToList());
         }

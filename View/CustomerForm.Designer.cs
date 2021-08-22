@@ -106,7 +106,7 @@
             this.TxtEmployeeNr.Margin = new System.Windows.Forms.Padding(2);
             this.TxtEmployeeNr.Multiline = true;
             this.TxtEmployeeNr.Name = "TxtEmployeeNr";
-            this.TxtEmployeeNr.Size = new System.Drawing.Size(723, 334);
+            this.TxtEmployeeNr.Size = new System.Drawing.Size(311, 151);
             this.TxtEmployeeNr.TabIndex = 105;
             // 
             // LblNotice
@@ -141,7 +141,7 @@
             this.TxtMail.Location = new System.Drawing.Point(1155, 462);
             this.TxtMail.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMail.Name = "TxtMail";
-            this.TxtMail.Size = new System.Drawing.Size(350, 34);
+            this.TxtMail.Size = new System.Drawing.Size(150, 16);
             this.TxtMail.TabIndex = 97;
             // 
             // TxtMobilNr
@@ -152,7 +152,7 @@
             this.TxtMobilNr.Location = new System.Drawing.Point(1155, 393);
             this.TxtMobilNr.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMobilNr.Name = "TxtMobilNr";
-            this.TxtMobilNr.Size = new System.Drawing.Size(350, 34);
+            this.TxtMobilNr.Size = new System.Drawing.Size(150, 16);
             this.TxtMobilNr.TabIndex = 96;
             // 
             // TxtPrivateNr
@@ -163,7 +163,7 @@
             this.TxtPrivateNr.Location = new System.Drawing.Point(1155, 321);
             this.TxtPrivateNr.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPrivateNr.Name = "TxtPrivateNr";
-            this.TxtPrivateNr.Size = new System.Drawing.Size(350, 34);
+            this.TxtPrivateNr.Size = new System.Drawing.Size(150, 16);
             this.TxtPrivateNr.TabIndex = 95;
             // 
             // LblMobilNr
@@ -222,7 +222,7 @@
             this.TxtResidence.Location = new System.Drawing.Point(154, 462);
             this.TxtResidence.Margin = new System.Windows.Forms.Padding(2);
             this.TxtResidence.Name = "TxtResidence";
-            this.TxtResidence.Size = new System.Drawing.Size(238, 34);
+            this.TxtResidence.Size = new System.Drawing.Size(102, 16);
             this.TxtResidence.TabIndex = 89;
             // 
             // TxtPlz
@@ -233,7 +233,7 @@
             this.TxtPlz.Location = new System.Drawing.Point(40, 462);
             this.TxtPlz.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPlz.Name = "TxtPlz";
-            this.TxtPlz.Size = new System.Drawing.Size(96, 34);
+            this.TxtPlz.Size = new System.Drawing.Size(41, 16);
             this.TxtPlz.TabIndex = 87;
             // 
             // TxtTitle
@@ -244,7 +244,7 @@
             this.TxtTitle.Location = new System.Drawing.Point(784, 321);
             this.TxtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTitle.Name = "TxtTitle";
-            this.TxtTitle.Size = new System.Drawing.Size(350, 34);
+            this.TxtTitle.Size = new System.Drawing.Size(150, 16);
             this.TxtTitle.TabIndex = 85;
             // 
             // LblPlz
@@ -279,7 +279,7 @@
             this.TxtLastname.Location = new System.Drawing.Point(784, 462);
             this.TxtLastname.Margin = new System.Windows.Forms.Padding(2);
             this.TxtLastname.Name = "TxtLastname";
-            this.TxtLastname.Size = new System.Drawing.Size(350, 34);
+            this.TxtLastname.Size = new System.Drawing.Size(150, 16);
             this.TxtLastname.TabIndex = 79;
             // 
             // TxtFirstname
@@ -290,7 +290,7 @@
             this.TxtFirstname.Location = new System.Drawing.Point(784, 393);
             this.TxtFirstname.Margin = new System.Windows.Forms.Padding(2);
             this.TxtFirstname.Name = "TxtFirstname";
-            this.TxtFirstname.Size = new System.Drawing.Size(350, 34);
+            this.TxtFirstname.Size = new System.Drawing.Size(150, 16);
             this.TxtFirstname.TabIndex = 78;
             // 
             // TxtCompany
@@ -301,7 +301,7 @@
             this.TxtCompany.Location = new System.Drawing.Point(40, 321);
             this.TxtCompany.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCompany.Name = "TxtCompany";
-            this.TxtCompany.Size = new System.Drawing.Size(350, 34);
+            this.TxtCompany.Size = new System.Drawing.Size(150, 16);
             this.TxtCompany.TabIndex = 77;
             // 
             // LblFirstname
@@ -364,6 +364,17 @@
             this.LblContactPerson.TabIndex = 128;
             this.LblContactPerson.Text = "Kontaktperson";
             // 
+            // TxtCustomerType
+            // 
+            this.TxtCustomerType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtCustomerType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCustomerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtCustomerType.Location = new System.Drawing.Point(177, 144);
+            this.TxtCustomerType.Margin = new System.Windows.Forms.Padding(1);
+            this.TxtCustomerType.Name = "TxtCustomerType";
+            this.TxtCustomerType.Size = new System.Drawing.Size(150, 16);
+            this.TxtCustomerType.TabIndex = 130;
+            // 
             // LblCustomerType
             // 
             this.LblCustomerType.AutoSize = true;
@@ -395,7 +406,7 @@
             this.CmdSaveCustomer.Location = new System.Drawing.Point(1157, 1008);
             this.CmdSaveCustomer.Margin = new System.Windows.Forms.Padding(7);
             this.CmdSaveCustomer.Name = "CmdSaveCustomer";
-            this.CmdSaveCustomer.Size = new System.Drawing.Size(350, 69);
+            this.CmdSaveCustomer.Size = new System.Drawing.Size(150, 31);
             this.CmdSaveCustomer.TabIndex = 132;
             this.CmdSaveCustomer.Text = "Kunde speichern";
             this.CmdSaveCustomer.UseVisualStyleBackColor = false;
@@ -409,7 +420,7 @@
             this.TxtCountry.Location = new System.Drawing.Point(40, 526);
             this.TxtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCountry.Name = "TxtCountry";
-            this.TxtCountry.Size = new System.Drawing.Size(350, 34);
+            this.TxtCountry.Size = new System.Drawing.Size(150, 16);
             this.TxtCountry.TabIndex = 134;
             // 
             // LblCountry
@@ -444,7 +455,7 @@
             this.RadPassiv.Location = new System.Drawing.Point(665, 397);
             this.RadPassiv.Margin = new System.Windows.Forms.Padding(2);
             this.RadPassiv.Name = "RadPassiv";
-            this.RadPassiv.Size = new System.Drawing.Size(94, 26);
+            this.RadPassiv.Size = new System.Drawing.Size(46, 13);
             this.RadPassiv.TabIndex = 136;
             this.RadPassiv.TabStop = true;
             this.RadPassiv.Text = "Passiv";
@@ -458,7 +469,7 @@
             this.RadActiv.Location = new System.Drawing.Point(560, 397);
             this.RadActiv.Margin = new System.Windows.Forms.Padding(2);
             this.RadActiv.Name = "RadActiv";
-            this.RadActiv.Size = new System.Drawing.Size(80, 26);
+            this.RadActiv.Size = new System.Drawing.Size(40, 13);
             this.RadActiv.TabIndex = 135;
             this.RadActiv.TabStop = true;
             this.RadActiv.Text = "Aktiv";
@@ -472,7 +483,7 @@
             this.TxtHouseNr.Location = new System.Drawing.Point(294, 393);
             this.TxtHouseNr.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHouseNr.Name = "TxtHouseNr";
-            this.TxtHouseNr.Size = new System.Drawing.Size(96, 34);
+            this.TxtHouseNr.Size = new System.Drawing.Size(41, 16);
             this.TxtHouseNr.TabIndex = 141;
             // 
             // LblHouseNr
@@ -495,7 +506,7 @@
             this.TxtStreet.Location = new System.Drawing.Point(40, 393);
             this.TxtStreet.Margin = new System.Windows.Forms.Padding(2);
             this.TxtStreet.Name = "TxtStreet";
-            this.TxtStreet.Size = new System.Drawing.Size(238, 34);
+            this.TxtStreet.Size = new System.Drawing.Size(102, 16);
             this.TxtStreet.TabIndex = 139;
             // 
             // LblStreet

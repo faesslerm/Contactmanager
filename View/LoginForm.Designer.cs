@@ -48,14 +48,14 @@
             // 
             // TxtUser
             // 
-            this.TxtUser.BackColor = System.Drawing.Color.White;
-            this.TxtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.TxtUser.Location = new System.Drawing.Point(963, 511);
-            this.TxtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(499, 55);
-            this.TxtUser.TabIndex = 132;
+            this.TxtTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.TxtTitle.Location = new System.Drawing.Point(231, 242);
+            this.TxtTitle.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtTitle.Name = "TxtTitle";
+            this.TxtTitle.Size = new System.Drawing.Size(214, 25);
+            this.TxtTitle.TabIndex = 132;
             // 
             // LblUser
             // 
@@ -72,14 +72,14 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.BackColor = System.Drawing.Color.White;
-            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.TxtPassword.Location = new System.Drawing.Point(963, 628);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(499, 55);
-            this.TxtPassword.TabIndex = 130;
+            this.TxtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.TxtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.TxtFirstname.Location = new System.Drawing.Point(231, 294);
+            this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtFirstname.Name = "TxtFirstname";
+            this.TxtFirstname.Size = new System.Drawing.Size(214, 25);
+            this.TxtFirstname.TabIndex = 130;
             // 
             // LblPassword
             // 
@@ -99,8 +99,8 @@
             this.ImgLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
             this.ImgLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgLogo.InitialImage")));
-            this.ImgLogo.Location = new System.Drawing.Point(963, 373);
-            this.ImgLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImgLogo.Location = new System.Drawing.Point(231, 154);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ImgLogo.Name = "ImgLogo";
             this.ImgLogo.Size = new System.Drawing.Size(180, 71);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "LoginForm";
             this.Text = "Login manfy";
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();

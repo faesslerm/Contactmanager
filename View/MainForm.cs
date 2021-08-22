@@ -25,7 +25,7 @@ namespace Contactmanager
         {
             searchResult = data;
             GridSearchResults.Rows.Clear();
-            foreach(Person person in Controller.GetAllPeople()){
+            foreach(Person person in data){
                 GridSearchResults.Rows.Add(person.getGridRow());
             }
             GridSearchResults.Update();
@@ -34,16 +34,18 @@ namespace Contactmanager
         private void CmdAddEmployee_Click(object sender, EventArgs e)
         {
             EmployeeForm employeeForm = new EmployeeForm(Controller);
+            employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
             employeeForm.ShowDialog();
-            UpdateGrid(Controller.GetAllPeople().ToList());
+            updateGrid(Controller.GetAllPeople().ToList());
             employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
         }
 
         private void CmdAddCustomer_Click(object sender, EventArgs e)
         {
             CustomerForm customerForm = new CustomerForm(Controller);
+            customerForm.LblTitleCustomer.Text = "Kunde erfassen";
             customerForm.ShowDialog();
-            UpdateGrid(Controller.GetAllPeople().ToList());
+            updateGrid(Controller.GetAllPeople().ToList());
             customerForm.LblTitleCustomer.Text = "Kunde erfassen";
         }
 
@@ -80,21 +82,17 @@ namespace Contactmanager
             Controller.PersonToBeUpdated(person);
             if (person is Employee)
             {
-                EmployeeForm employeeForm = new EmployeeForm(Controller);
-                employeeForm.LblTitleEmployee.Text = "Mitarbeiter bearbeiten";
                 new EmployeeForm(Controller, person as Employee).ShowDialog();
-                //new EmployeeForm(Controller, person as Employee).ShowDialog();
             }
             else if (person is Customer)
             {
-                CustomerForm customerForm = new CustomerForm(Controller);
-                customerForm.LblTitleCustomer.Text = "Kunde bearbeiten";
                 new CustomerForm(Controller, person as Customer).ShowDialog();
-                //new CustomerForm(Controller, person as Customer).ShowDialog();
             }
             else
             {
-                new EmployeeForm(Controller, person).ShowDialog();
+                EmployeeForm employeeForm = new EmployeeForm(Controller, person);
+                employeeForm.LblTitleEmployee.Text = "Mitarbeiter bearbeiten";
+                employeeForm.ShowDialog();
             }
             UpdateGrid(Controller.GetAllPeople().ToList());
         }

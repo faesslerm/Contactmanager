@@ -6,13 +6,13 @@ namespace Contactmanager
     {
 
         //Properties
-        public int CompanyPhoneNr { get; set; } //Telefonnummer
-        public int CompanyFaxNr { get; set; } //Faxnummer
+        public string CompanyPhoneNr { get; set; } //Telefonnummer
+        public string CompanyFaxNr { get; set; } //Faxnummer
         public int EmployeeNr { get; set; } //Mitarbeiternummer --> Autoincrement Variable einsetzen?
         public string Department { get; set; } // Abteilung
         public DateTime Entry { get; set; } // Eintritt
         public DateTime Leaving { get; set; } // Austritt
-        public double LevelOfEmployment { get; set; } //Beschäftigungsgrad
+        public string LevelOfEmployment { get; set; } //Beschäftigungsgrad
         public string Function { get; set; } //Tätigkeitsbezeichnung
         public byte SquadLevel { get; set; } //Kaderstufe (0-5)
 
@@ -20,18 +20,17 @@ namespace Contactmanager
 
 
         // Konstruktor:
-        public Employee(string firstname, string lastname, bool isMen, bool isDisabled, Address address, string ahv, int companyPhoneNr, int employeeNr, string department,
-            DateTime entry, double levelOfEmployment, string function, byte squadLevel) :
+        public Employee(string firstname, string lastname, bool isMen, bool isDisabled, Address address, string ahv, string companyPhoneNr, string department,
+            DateTime entry, string levelOfEmployment, string function, byte squadLevel) :
             base(firstname, lastname, isMen, isDisabled, address)
         {
             CompanyPhoneNr = companyPhoneNr;
-            EmployeeNr = employeeNr;
+            EmployeeNr = number++;
             Department = department;
             Entry = entry;
             LevelOfEmployment = levelOfEmployment;
             Function = function;
             SquadLevel = squadLevel;
-            number++;
         }
 
         public int getNumber()

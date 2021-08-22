@@ -76,10 +76,8 @@
             this.Village,
             this.Country});
             this.GridSearchResults.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.GridSearchResults.Location = new System.Drawing.Point(17, 210);
-            this.GridSearchResults.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.GridSearchResults.MaximumSize = new System.Drawing.Size(638, 250);
-            this.GridSearchResults.MinimumSize = new System.Drawing.Size(638, 250);
+            this.GridSearchResults.Location = new System.Drawing.Point(39, 485);
+            this.GridSearchResults.Margin = new System.Windows.Forms.Padding(1);
             this.GridSearchResults.MultiSelect = false;
             this.GridSearchResults.Name = "GridSearchResults";
             this.GridSearchResults.ReadOnly = true;
@@ -87,7 +85,7 @@
             this.GridSearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.GridSearchResults.RowTemplate.Height = 37;
             this.GridSearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridSearchResults.Size = new System.Drawing.Size(638, 250);
+            this.GridSearchResults.Size = new System.Drawing.Size(1498, 543);
             this.GridSearchResults.TabIndex = 5;
             // 
             // Firstname
@@ -151,8 +149,8 @@
             this.ImgLogo.BackColor = System.Drawing.Color.Transparent;
             this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
             this.ImgLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgLogo.InitialImage")));
-            this.ImgLogo.Location = new System.Drawing.Point(17, 18);
-            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgLogo.Location = new System.Drawing.Point(39, 40);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1);
             this.ImgLogo.Name = "ImgLogo";
             this.ImgLogo.Size = new System.Drawing.Size(201, 60);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,10 +161,10 @@
             // 
             this.CmdAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(139)))), ((int)(((byte)(184)))));
             this.CmdAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.CmdAddEmployee.Location = new System.Drawing.Point(40, 163);
+            this.CmdAddEmployee.Location = new System.Drawing.Point(39, 167);
             this.CmdAddEmployee.Margin = new System.Windows.Forms.Padding(7);
             this.CmdAddEmployee.Name = "CmdAddEmployee";
-            this.CmdAddEmployee.Size = new System.Drawing.Size(152, 31);
+            this.CmdAddEmployee.Size = new System.Drawing.Size(350, 69);
             this.CmdAddEmployee.TabIndex = 7;
             this.CmdAddEmployee.Text = "Mitarbeiter erfassen";
             this.CmdAddEmployee.UseVisualStyleBackColor = false;
@@ -176,10 +174,10 @@
             // 
             this.CmdAddCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(152)))), ((int)(((byte)(167)))));
             this.CmdAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.CmdAddCustomer.Location = new System.Drawing.Point(40, 254);
+            this.CmdAddCustomer.Location = new System.Drawing.Point(39, 264);
             this.CmdAddCustomer.Margin = new System.Windows.Forms.Padding(7);
             this.CmdAddCustomer.Name = "CmdAddCustomer";
-            this.CmdAddCustomer.Size = new System.Drawing.Size(152, 31);
+            this.CmdAddCustomer.Size = new System.Drawing.Size(350, 69);
             this.CmdAddCustomer.TabIndex = 8;
             this.CmdAddCustomer.Text = "Kunde erfassen";
             this.CmdAddCustomer.UseVisualStyleBackColor = false;
@@ -191,10 +189,10 @@
             this.TxtSearchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtSearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.TxtSearchBar.ForeColor = System.Drawing.Color.White;
-            this.TxtSearchBar.Location = new System.Drawing.Point(17, 168);
-            this.TxtSearchBar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtSearchBar.Location = new System.Drawing.Point(39, 390);
+            this.TxtSearchBar.Margin = new System.Windows.Forms.Padding(1);
             this.TxtSearchBar.Name = "TxtSearchBar";
-            this.TxtSearchBar.Size = new System.Drawing.Size(638, 31);
+            this.TxtSearchBar.Size = new System.Drawing.Size(1498, 68);
             this.TxtSearchBar.TabIndex = 9;
             this.TxtSearchBar.TextChanged += new System.EventHandler(this.TxtSearchBar_TextChanged);
             // 
@@ -203,10 +201,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(454, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(1007, 40);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(481, 268);
+            this.pictureBox1.Size = new System.Drawing.Size(531, 317);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -215,8 +213,8 @@
             // 
             this.ImgDelete.Image = ((System.Drawing.Image)(resources.GetObject("ImgDelete.Image")));
             this.ImgDelete.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgDelete.InitialImage")));
-            this.ImgDelete.Location = new System.Drawing.Point(638, 472);
-            this.ImgDelete.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgDelete.Location = new System.Drawing.Point(1497, 1053);
+            this.ImgDelete.Margin = new System.Windows.Forms.Padding(1);
             this.ImgDelete.Name = "ImgDelete";
             this.ImgDelete.Size = new System.Drawing.Size(40, 40);
             this.ImgDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -229,8 +227,8 @@
             // 
             this.ImgEdit.Image = ((System.Drawing.Image)(resources.GetObject("ImgEdit.Image")));
             this.ImgEdit.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgEdit.InitialImage")));
-            this.ImgEdit.Location = new System.Drawing.Point(612, 472);
-            this.ImgEdit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgEdit.Location = new System.Drawing.Point(1444, 1053);
+            this.ImgEdit.Margin = new System.Windows.Forms.Padding(1);
             this.ImgEdit.Name = "ImgEdit";
             this.ImgEdit.Size = new System.Drawing.Size(40, 40);
             this.ImgEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,8 +243,8 @@
             this.TxtIntro1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIntro1.Enabled = false;
             this.TxtIntro1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtIntro1.Location = new System.Drawing.Point(193, 28);
-            this.TxtIntro1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtIntro1.Location = new System.Drawing.Point(478, 40);
+            this.TxtIntro1.Margin = new System.Windows.Forms.Padding(1);
             this.TxtIntro1.Multiline = true;
             this.TxtIntro1.Name = "TxtIntro1";
             this.TxtIntro1.ReadOnly = true;
@@ -263,12 +261,12 @@
             this.TxtIntro2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtIntro2.Enabled = false;
             this.TxtIntro2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
-            this.TxtIntro2.Location = new System.Drawing.Point(193, 114);
-            this.TxtIntro2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtIntro2.Location = new System.Drawing.Point(478, 224);
+            this.TxtIntro2.Margin = new System.Windows.Forms.Padding(1);
             this.TxtIntro2.Multiline = true;
             this.TxtIntro2.Name = "TxtIntro2";
             this.TxtIntro2.ReadOnly = true;
-            this.TxtIntro2.Size = new System.Drawing.Size(518, 69);
+            this.TxtIntro2.Size = new System.Drawing.Size(472, 109);
             this.TxtIntro2.TabIndex = 136;
             this.TxtIntro2.TabStop = false;
             this.TxtIntro2.Text = "Das Produkt wurde entwickelt von Fiona Schmidiger, Markus Fässler und Anina Heinz" +
@@ -280,7 +278,7 @@
             this.LblSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.LblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.LblSearch.ForeColor = System.Drawing.Color.White;
-            this.LblSearch.Location = new System.Drawing.Point(58, 393);
+            this.LblSearch.Location = new System.Drawing.Point(51, 406);
             this.LblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblSearch.Name = "LblSearch";
             this.LblSearch.Size = new System.Drawing.Size(141, 36);
@@ -292,8 +290,8 @@
             this.ImgSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.ImgSearch.Image = ((System.Drawing.Image)(resources.GetObject("ImgSearch.Image")));
             this.ImgSearch.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgSearch.InitialImage")));
-            this.ImgSearch.Location = new System.Drawing.Point(634, 174);
-            this.ImgSearch.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgSearch.Location = new System.Drawing.Point(1481, 404);
+            this.ImgSearch.Margin = new System.Windows.Forms.Padding(1);
             this.ImgSearch.Name = "ImgSearch";
             this.ImgSearch.Size = new System.Drawing.Size(40, 40);
             this.ImgSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -304,8 +302,8 @@
             // 
             this.ImgHistory.Image = ((System.Drawing.Image)(resources.GetObject("ImgHistory.Image")));
             this.ImgHistory.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgHistory.InitialImage")));
-            this.ImgHistory.Location = new System.Drawing.Point(587, 472);
-            this.ImgHistory.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgHistory.Location = new System.Drawing.Point(1391, 1053);
+            this.ImgHistory.Margin = new System.Windows.Forms.Padding(1);
             this.ImgHistory.Name = "ImgHistory";
             this.ImgHistory.Size = new System.Drawing.Size(40, 40);
             this.ImgHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,7 +332,7 @@
             this.Controls.Add(this.GridSearchResults);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

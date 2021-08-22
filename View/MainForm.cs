@@ -36,7 +36,7 @@ namespace Contactmanager
             EmployeeForm employeeForm = new EmployeeForm(Controller);
             employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
             employeeForm.ShowDialog();
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
             employeeForm.LblTitleEmployee.Text = "Mitarbeiter erfassen";
         }
 
@@ -45,7 +45,7 @@ namespace Contactmanager
             CustomerForm customerForm = new CustomerForm(Controller);
             customerForm.LblTitleCustomer.Text = "Kunde erfassen";
             customerForm.ShowDialog();
-            updateGrid(Controller.GetAllPeople().ToList());
+            UpdateGrid(Controller.GetAllPeople().ToList());
             customerForm.LblTitleCustomer.Text = "Kunde erfassen";
         }
 

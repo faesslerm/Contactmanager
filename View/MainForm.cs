@@ -25,7 +25,7 @@ namespace Contactmanager
         {
             searchResult = data;
             GridSearchResults.Rows.Clear();
-            foreach(Person person in Controller.GetAllPeople()){
+            foreach(Person person in data){
                 GridSearchResults.Rows.Add(person.getGridRow());
             }
             GridSearchResults.Update();

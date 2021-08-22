@@ -88,7 +88,7 @@
             this.GridSearchResults.RowTemplate.Height = 37;
             this.GridSearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridSearchResults.Size = new System.Drawing.Size(638, 250);
-            this.GridSearchResults.TabIndex = 5;
+            this.GridSearchResults.TabIndex = 3;
             // 
             // Firstname
             // 
@@ -166,7 +166,7 @@
             this.CmdAddEmployee.Location = new System.Drawing.Point(17, 73);
             this.CmdAddEmployee.Name = "CmdAddEmployee";
             this.CmdAddEmployee.Size = new System.Drawing.Size(152, 31);
-            this.CmdAddEmployee.TabIndex = 7;
+            this.CmdAddEmployee.TabIndex = 0;
             this.CmdAddEmployee.Text = "Mitarbeiter erfassen";
             this.CmdAddEmployee.UseVisualStyleBackColor = false;
             this.CmdAddEmployee.Click += new System.EventHandler(this.CmdAddEmployee_Click);
@@ -178,7 +178,7 @@
             this.CmdAddCustomer.Location = new System.Drawing.Point(17, 114);
             this.CmdAddCustomer.Name = "CmdAddCustomer";
             this.CmdAddCustomer.Size = new System.Drawing.Size(152, 31);
-            this.CmdAddCustomer.TabIndex = 8;
+            this.CmdAddCustomer.TabIndex = 1;
             this.CmdAddCustomer.Text = "Kunde erfassen";
             this.CmdAddCustomer.UseVisualStyleBackColor = false;
             this.CmdAddCustomer.Click += new System.EventHandler(this.CmdAddCustomer_Click);
@@ -193,7 +193,7 @@
             this.TxtSearchBar.Margin = new System.Windows.Forms.Padding(1);
             this.TxtSearchBar.Name = "TxtSearchBar";
             this.TxtSearchBar.Size = new System.Drawing.Size(638, 31);
-            this.TxtSearchBar.TabIndex = 9;
+            this.TxtSearchBar.TabIndex = 2;
             this.TxtSearchBar.TextChanged += new System.EventHandler(this.TxtSearchBar_TextChanged);
             // 
             // pictureBox1
@@ -239,6 +239,7 @@
             // 
             this.TxtIntro1.BackColor = System.Drawing.Color.White;
             this.TxtIntro1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtIntro1.Enabled = false;
             this.TxtIntro1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtIntro1.Location = new System.Drawing.Point(193, 28);
             this.TxtIntro1.Margin = new System.Windows.Forms.Padding(1);
@@ -247,6 +248,7 @@
             this.TxtIntro1.ReadOnly = true;
             this.TxtIntro1.Size = new System.Drawing.Size(194, 70);
             this.TxtIntro1.TabIndex = 135;
+            this.TxtIntro1.TabStop = false;
             this.TxtIntro1.Text = "Mit Hilfe des CRM manfy sind alle relevanten Daten der Mitarbeiter und Kunden an " +
     "einem zentralen Ort abrufbar, so dass keine wichtigen Informationen verloren geh" +
     "en.";
@@ -255,6 +257,7 @@
             // 
             this.TxtIntro2.BackColor = System.Drawing.Color.White;
             this.TxtIntro2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtIntro2.Enabled = false;
             this.TxtIntro2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.TxtIntro2.Location = new System.Drawing.Point(193, 114);
             this.TxtIntro2.Margin = new System.Windows.Forms.Padding(1);
@@ -263,6 +266,7 @@
             this.TxtIntro2.ReadOnly = true;
             this.TxtIntro2.Size = new System.Drawing.Size(222, 31);
             this.TxtIntro2.TabIndex = 136;
+            this.TxtIntro2.TabStop = false;
             this.TxtIntro2.Text = "Das Produkt wurde entwickelt von Fiona Schmidiger, Markus Fässler und Anina Heinz" +
     "e.";
             // 

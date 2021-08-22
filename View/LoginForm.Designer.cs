@@ -44,10 +44,10 @@
             this.TxtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.TxtTitle.Location = new System.Drawing.Point(231, 242);
-            this.TxtTitle.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtTitle.Margin = new System.Windows.Forms.Padding(1);
             this.TxtTitle.Name = "TxtTitle";
             this.TxtTitle.Size = new System.Drawing.Size(214, 25);
-            this.TxtTitle.TabIndex = 132;
+            this.TxtTitle.TabIndex = 0;
             // 
             // LblUser
             // 
@@ -67,10 +67,10 @@
             this.TxtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.TxtFirstname.Location = new System.Drawing.Point(231, 294);
-            this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.Size = new System.Drawing.Size(214, 25);
-            this.TxtFirstname.TabIndex = 130;
+            this.TxtFirstname.TabIndex = 2;
             // 
             // LblPassword
             // 
@@ -102,7 +102,7 @@
             this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
             this.ImgLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgLogo.InitialImage")));
             this.ImgLogo.Location = new System.Drawing.Point(231, 154);
-            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1);
             this.ImgLogo.Name = "ImgLogo";
             this.ImgLogo.Size = new System.Drawing.Size(86, 27);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +122,7 @@
             this.Controls.Add(this.LblPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "LoginForm";
             this.Text = "Login manfy";
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();

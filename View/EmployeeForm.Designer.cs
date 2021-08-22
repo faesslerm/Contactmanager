@@ -177,7 +177,7 @@
             this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.Size = new System.Drawing.Size(150, 16);
-            this.TxtFirstname.TabIndex = 15;
+            this.TxtFirstname.TabIndex = 1;
             // 
             // TxtLastname
             // 
@@ -188,7 +188,7 @@
             this.TxtLastname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtLastname.Name = "TxtLastname";
             this.TxtLastname.Size = new System.Drawing.Size(150, 16);
-            this.TxtLastname.TabIndex = 16;
+            this.TxtLastname.TabIndex = 2;
             // 
             // TxtBirthday
             // 
@@ -199,7 +199,7 @@
             this.TxtBirthday.Margin = new System.Windows.Forms.Padding(1);
             this.TxtBirthday.Name = "TxtBirthday";
             this.TxtBirthday.Size = new System.Drawing.Size(150, 16);
-            this.TxtBirthday.TabIndex = 17;
+            this.TxtBirthday.TabIndex = 3;
             // 
             // TxtNationality
             // 
@@ -210,7 +210,7 @@
             this.TxtNationality.Margin = new System.Windows.Forms.Padding(1);
             this.TxtNationality.Name = "TxtNationality";
             this.TxtNationality.Size = new System.Drawing.Size(150, 16);
-            this.TxtNationality.TabIndex = 25;
+            this.TxtNationality.TabIndex = 14;
             // 
             // TxtPlz
             // 
@@ -221,7 +221,7 @@
             this.TxtPlz.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPlz.Name = "TxtPlz";
             this.TxtPlz.Size = new System.Drawing.Size(41, 16);
-            this.TxtPlz.TabIndex = 24;
+            this.TxtPlz.TabIndex = 7;
             // 
             // TxtStreet
             // 
@@ -232,7 +232,7 @@
             this.TxtStreet.Margin = new System.Windows.Forms.Padding(1);
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(102, 16);
-            this.TxtStreet.TabIndex = 23;
+            this.TxtStreet.TabIndex = 5;
             // 
             // TxtTitle
             // 
@@ -243,7 +243,7 @@
             this.TxtTitle.Margin = new System.Windows.Forms.Padding(1);
             this.TxtTitle.Name = "TxtTitle";
             this.TxtTitle.Size = new System.Drawing.Size(150, 16);
-            this.TxtTitle.TabIndex = 22;
+            this.TxtTitle.TabIndex = 4;
             // 
             // LblStreet
             // 
@@ -302,7 +302,7 @@
             this.TxtResidence.Margin = new System.Windows.Forms.Padding(1);
             this.TxtResidence.Name = "TxtResidence";
             this.TxtResidence.Size = new System.Drawing.Size(102, 16);
-            this.TxtResidence.TabIndex = 26;
+            this.TxtResidence.TabIndex = 8;
             // 
             // LblResidence
             // 
@@ -325,7 +325,7 @@
             this.TxtAhv.Margin = new System.Windows.Forms.Padding(1);
             this.TxtAhv.Name = "TxtAhv";
             this.TxtAhv.Size = new System.Drawing.Size(150, 16);
-            this.TxtAhv.TabIndex = 35;
+            this.TxtAhv.TabIndex = 13;
             // 
             // TxtMail
             // 
@@ -336,7 +336,7 @@
             this.TxtMail.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(150, 16);
-            this.TxtMail.TabIndex = 34;
+            this.TxtMail.TabIndex = 12;
             // 
             // TxtMobilNr
             // 
@@ -347,7 +347,7 @@
             this.TxtMobilNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMobilNr.Name = "TxtMobilNr";
             this.TxtMobilNr.Size = new System.Drawing.Size(150, 16);
-            this.TxtMobilNr.TabIndex = 33;
+            this.TxtMobilNr.TabIndex = 11;
             // 
             // TxtPrivateNr
             // 
@@ -358,7 +358,7 @@
             this.TxtPrivateNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPrivateNr.Name = "TxtPrivateNr";
             this.TxtPrivateNr.Size = new System.Drawing.Size(150, 16);
-            this.TxtPrivateNr.TabIndex = 32;
+            this.TxtPrivateNr.TabIndex = 10;
             // 
             // LblMobilNr
             // 
@@ -429,7 +429,7 @@
             this.TxtCompanyFaxNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCompanyFaxNr.Name = "TxtCompanyFaxNr";
             this.TxtCompanyFaxNr.Size = new System.Drawing.Size(150, 16);
-            this.TxtCompanyFaxNr.TabIndex = 61;
+            this.TxtCompanyFaxNr.TabIndex = 25;
             // 
             // TxtCompanyPhoneNr
             // 
@@ -440,7 +440,7 @@
             this.TxtCompanyPhoneNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCompanyPhoneNr.Name = "TxtCompanyPhoneNr";
             this.TxtCompanyPhoneNr.Size = new System.Drawing.Size(150, 16);
-            this.TxtCompanyPhoneNr.TabIndex = 60;
+            this.TxtCompanyPhoneNr.TabIndex = 24;
             // 
             // LblCompanyFaxNr
             // 
@@ -475,7 +475,7 @@
             this.TxtLeaving.Margin = new System.Windows.Forms.Padding(1);
             this.TxtLeaving.Name = "TxtLeaving";
             this.TxtLeaving.Size = new System.Drawing.Size(150, 16);
-            this.TxtLeaving.TabIndex = 53;
+            this.TxtLeaving.TabIndex = 21;
             // 
             // TxtEntry
             // 
@@ -486,7 +486,7 @@
             this.TxtEntry.Margin = new System.Windows.Forms.Padding(1);
             this.TxtEntry.Name = "TxtEntry";
             this.TxtEntry.Size = new System.Drawing.Size(150, 16);
-            this.TxtEntry.TabIndex = 51;
+            this.TxtEntry.TabIndex = 20;
             // 
             // TxtLevelOfEmployment
             // 
@@ -497,7 +497,7 @@
             this.TxtLevelOfEmployment.Margin = new System.Windows.Forms.Padding(1);
             this.TxtLevelOfEmployment.Name = "TxtLevelOfEmployment";
             this.TxtLevelOfEmployment.Size = new System.Drawing.Size(150, 16);
-            this.TxtLevelOfEmployment.TabIndex = 50;
+            this.TxtLevelOfEmployment.TabIndex = 19;
             // 
             // LblEntry
             // 
@@ -544,7 +544,7 @@
             this.TxtFunction.Margin = new System.Windows.Forms.Padding(1);
             this.TxtFunction.Name = "TxtFunction";
             this.TxtFunction.Size = new System.Drawing.Size(150, 16);
-            this.TxtFunction.TabIndex = 44;
+            this.TxtFunction.TabIndex = 17;
             // 
             // TxtDepartment
             // 
@@ -555,7 +555,7 @@
             this.TxtDepartment.Margin = new System.Windows.Forms.Padding(1);
             this.TxtDepartment.Name = "TxtDepartment";
             this.TxtDepartment.Size = new System.Drawing.Size(150, 16);
-            this.TxtDepartment.TabIndex = 43;
+            this.TxtDepartment.TabIndex = 16;
             // 
             // TxtEmployeeNr
             // 
@@ -566,7 +566,7 @@
             this.TxtEmployeeNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtEmployeeNr.Name = "TxtEmployeeNr";
             this.TxtEmployeeNr.Size = new System.Drawing.Size(150, 16);
-            this.TxtEmployeeNr.TabIndex = 42;
+            this.TxtEmployeeNr.TabIndex = 15;
             // 
             // LblDepartment
             // 
@@ -637,7 +637,7 @@
             this.TxtCurrentApprenticeshipYear.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCurrentApprenticeshipYear.Name = "TxtCurrentApprenticeshipYear";
             this.TxtCurrentApprenticeshipYear.Size = new System.Drawing.Size(150, 16);
-            this.TxtCurrentApprenticeshipYear.TabIndex = 65;
+            this.TxtCurrentApprenticeshipYear.TabIndex = 27;
             // 
             // TxtApprenticeshipYears
             // 
@@ -648,7 +648,7 @@
             this.TxtApprenticeshipYears.Margin = new System.Windows.Forms.Padding(1);
             this.TxtApprenticeshipYears.Name = "TxtApprenticeshipYears";
             this.TxtApprenticeshipYears.Size = new System.Drawing.Size(150, 16);
-            this.TxtApprenticeshipYears.TabIndex = 64;
+            this.TxtApprenticeshipYears.TabIndex = 26;
             // 
             // LblCurrentApprenticeshipYear
             // 
@@ -693,7 +693,7 @@
             this.CmdSaveEmployee.Location = new System.Drawing.Point(496, 452);
             this.CmdSaveEmployee.Name = "CmdSaveEmployee";
             this.CmdSaveEmployee.Size = new System.Drawing.Size(150, 31);
-            this.CmdSaveEmployee.TabIndex = 67;
+            this.CmdSaveEmployee.TabIndex = 28;
             this.CmdSaveEmployee.Text = "Mitarbeiter speichern";
             this.CmdSaveEmployee.UseVisualStyleBackColor = false;
             this.CmdSaveEmployee.Click += new System.EventHandler(this.CmdSaveEmployee_Click);
@@ -720,7 +720,7 @@
             this.TxtCountry.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCountry.Name = "TxtCountry";
             this.TxtCountry.Size = new System.Drawing.Size(150, 16);
-            this.TxtCountry.TabIndex = 72;
+            this.TxtCountry.TabIndex = 9;
             // 
             // LblCountry
             // 
@@ -743,7 +743,7 @@
             this.RadActiv.Margin = new System.Windows.Forms.Padding(1);
             this.RadActiv.Name = "RadActiv";
             this.RadActiv.Size = new System.Drawing.Size(40, 13);
-            this.RadActiv.TabIndex = 73;
+            this.RadActiv.TabIndex = 22;
             this.RadActiv.TabStop = true;
             this.RadActiv.Text = "Aktiv";
             this.RadActiv.UseVisualStyleBackColor = true;
@@ -757,7 +757,7 @@
             this.RadPassiv.Margin = new System.Windows.Forms.Padding(1);
             this.RadPassiv.Name = "RadPassiv";
             this.RadPassiv.Size = new System.Drawing.Size(46, 13);
-            this.RadPassiv.TabIndex = 74;
+            this.RadPassiv.TabIndex = 23;
             this.RadPassiv.TabStop = true;
             this.RadPassiv.Text = "Passiv";
             this.RadPassiv.UseVisualStyleBackColor = true;
@@ -783,7 +783,7 @@
             this.TxtHouseNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtHouseNr.Name = "TxtHouseNr";
             this.TxtHouseNr.Size = new System.Drawing.Size(41, 16);
-            this.TxtHouseNr.TabIndex = 77;
+            this.TxtHouseNr.TabIndex = 6;
             // 
             // LblHouseNr
             // 
@@ -809,7 +809,7 @@
             this.CmbSalutation.Margin = new System.Windows.Forms.Padding(1);
             this.CmbSalutation.Name = "CmbSalutation";
             this.CmbSalutation.Size = new System.Drawing.Size(152, 21);
-            this.CmbSalutation.TabIndex = 80;
+            this.CmbSalutation.TabIndex = 0;
             // 
             // CmbSquadLevel
             // 
@@ -827,7 +827,7 @@
             this.CmbSquadLevel.Margin = new System.Windows.Forms.Padding(1);
             this.CmbSquadLevel.Name = "CmbSquadLevel";
             this.CmbSquadLevel.Size = new System.Drawing.Size(152, 21);
-            this.CmbSquadLevel.TabIndex = 81;
+            this.CmbSquadLevel.TabIndex = 18;
             // 
             // EmployeeForm
             // 

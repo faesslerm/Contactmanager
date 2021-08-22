@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contactmanager
 {
@@ -15,9 +11,9 @@ namespace Contactmanager
 
 
         //Konstruktor:
-        public Trainee(string firstname, string lastname, bool isMen, bool isDiasabled, Address address, string ahv, int companyPhoneNr, int employeeNr, string department,
-        DateTime entry, double levelOfEmployment, string function, byte squadLevel, int numberOfApprenticeship, int currentYearOfApprenticeship) :
-        base(firstname, lastname, isMen, isDiasabled, address, ahv, companyPhoneNr, employeeNr, department, entry, levelOfEmployment, function, squadLevel)
+        public Trainee(string firstname, string lastname, bool isMen, bool isDiasabled, Address address, string ahv, string companyPhoneNr, string department,
+        DateTime entry, string levelOfEmployment, string function, byte squadLevel, int numberOfApprenticeship) :
+        base(firstname, lastname, isMen, isDiasabled, address, ahv, companyPhoneNr, department, entry, levelOfEmployment, function, squadLevel)
         {
             NumberOfApprenticeship = numberOfApprenticeship;
             CurrentYearOfApprenticeship = getApprenticeshipYear();

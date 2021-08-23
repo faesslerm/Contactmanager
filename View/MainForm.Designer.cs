@@ -87,6 +87,7 @@
             this.GridSearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridSearchResults.Size = new System.Drawing.Size(1498, 543);
             this.GridSearchResults.TabIndex = 5;
+            this.GridSearchResults.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridSearchResults_CellClick);
             // 
             // Firstname
             // 

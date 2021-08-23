@@ -97,7 +97,7 @@ namespace Contactmanager
             UpdateGrid(Controller.GetAllPeople().ToList());
         }
 
-        private void GridSearchResults_CellClick (object sender, EventArgs e)
+        private void GridSearchResults_CellClick (object sender, DataGridViewCellEventArgs e)
         {
             ImgHistory.Visible = true;
             ImgEdit.Visible = true;

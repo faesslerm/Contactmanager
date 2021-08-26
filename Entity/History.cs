@@ -11,15 +11,17 @@ namespace Contactmanager
         //Properties:
 
         public DateTime Editing { get; set; }
-        public string Target { get; set; } //Was wurde geändert? vgl. Note unten
+        public string Target { get; set; } //Was wurde geändert? vgl. Note unten --> bspw. Vorname
+        public string Oldvalue { get; set; } // Alter Wert
 
         //Konstruktor:
-        public History(DateTime editing, string target)
+        public History(DateTime editing, string target, string oldvalue)
         {
             Editing = editing;
             Target = target;
+            Oldvalue = oldvalue;
         }
 
-        //Methode zur Überprüng, was geändert wurde --> mit SwitchCase bspw. Adressänderung oderso?
+       
     }
 }

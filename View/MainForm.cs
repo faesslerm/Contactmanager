@@ -49,6 +49,9 @@ namespace Contactmanager
             customerForm.LblTitleCustomer.Text = "Kunde erfassen";
         }
 
+        /*************************************
+         * Das ist ein Kommentar
+         * **********************************/
         private void TxtSearchBar_TextChanged(object sender, EventArgs e)
         {
             var textBox = sender as TextBox;
@@ -63,6 +66,9 @@ namespace Contactmanager
             UpdateGrid(filterData);
         }
 
+        /*************************************
+         * Das ist ein Kommentar
+         * **********************************/
         private void CmdDeleteSelected_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Selected rows: " + GridSearchResults.SelectedRows.Count);
@@ -102,6 +108,12 @@ namespace Contactmanager
             ImgHistory.Visible = true;
             ImgEdit.Visible = true;
             ImgDelete.Visible = true;
+        }
+
+        private void CmdHistorySelected_Click(object sender, EventArgs e)
+        {
+            //HistoryForm historyForm = new HistoryForm(Controller);
+            //historyForm.ShowDialog();
         }
     }
 }

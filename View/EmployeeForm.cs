@@ -30,6 +30,11 @@ namespace Contactmanager
             TxtLastname.Text = person.Lastname;
         }
 
+        private void InitializeEmployee(Employee employee)
+        {
+            TxtEmployeeNr.Text = Convert.ToString(employee.EmployeeNr);
+        }
+
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         {
             Person person;

@@ -138,6 +138,27 @@
   <metadata name="Country.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Firstname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Lastname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Street.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HouseNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Plz.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Village.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Country.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ImgLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2855,12 +2876,24 @@
   </data>
   <data name="ImgHistory.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

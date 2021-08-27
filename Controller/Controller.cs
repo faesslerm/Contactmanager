@@ -66,5 +66,50 @@
         {
             return model.Update(personToBeUpdated, p);
         }
+
+
+        //Eingabe wird überprüft, ob es ausschliesslich Buchstaben beinhaltet.
+
+        public bool CheckIsItLetter(this string inputText)
+        {
+            foreach (char c in inputText)
+            {
+                if (!char.IsDigit(c) && c != '.')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Eingabe wird überprüft, ob es ausschlisslich Zahlen beinhaltet.
+
+        public bool CheckIsItNumeric(this string inputZahl) 
+        {
+            foreach (char c in inputZahl)
+            {
+                if (!char.IsLetter(c) && c != '.')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Eingabe wird überprüft, ob die E-Mail Adresse grundsätzlich eine gültige Schreibweise erfüllt.
+
+        public bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

@@ -7,6 +7,7 @@
         public string CustomerType { get; set; } // Kundentyp (A-E)
         public string Contact { get; set; } // Firmenkontakt
         public bool Status { get; set; } //Status (aktiv, passiv)
+        public Notes Notes { get; set; }
 
         //Konstruktor
         public Customer(string title, string firstname, string lastname, bool isMen, bool isDisabled, Address address, string privateNr, string mail, string company,

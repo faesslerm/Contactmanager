@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.ImgLogo = new System.Windows.Forms.PictureBox();
             this.ImgBackgroundCustomer = new System.Windows.Forms.PictureBox();
-            this.TxtEmployeeNr = new System.Windows.Forms.TextBox();
+            this.TxtNotes = new System.Windows.Forms.TextBox();
             this.LblNotice = new System.Windows.Forms.Label();
             this.LblTitleCustomer = new System.Windows.Forms.Label();
             this.TxtMail = new System.Windows.Forms.TextBox();
@@ -78,7 +78,7 @@
             this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
             this.ImgLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgLogo.InitialImage")));
             this.ImgLogo.Location = new System.Drawing.Point(17, 17);
-            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1);
             this.ImgLogo.Name = "ImgLogo";
             this.ImgLogo.Size = new System.Drawing.Size(120, 40);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,23 +91,23 @@
             this.ImgBackgroundCustomer.Image = ((System.Drawing.Image)(resources.GetObject("ImgBackgroundCustomer.Image")));
             this.ImgBackgroundCustomer.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgBackgroundCustomer.InitialImage")));
             this.ImgBackgroundCustomer.Location = new System.Drawing.Point(620, 513);
-            this.ImgBackgroundCustomer.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgBackgroundCustomer.Margin = new System.Windows.Forms.Padding(1);
             this.ImgBackgroundCustomer.Name = "ImgBackgroundCustomer";
             this.ImgBackgroundCustomer.Size = new System.Drawing.Size(250, 150);
             this.ImgBackgroundCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgBackgroundCustomer.TabIndex = 127;
             this.ImgBackgroundCustomer.TabStop = false;
             // 
-            // TxtEmployeeNr
+            // TxtNotes
             // 
-            this.TxtEmployeeNr.BackColor = System.Drawing.Color.White;
-            this.TxtEmployeeNr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtEmployeeNr.Location = new System.Drawing.Point(17, 393);
-            this.TxtEmployeeNr.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.TxtEmployeeNr.Multiline = true;
-            this.TxtEmployeeNr.Name = "TxtEmployeeNr";
-            this.TxtEmployeeNr.Size = new System.Drawing.Size(464, 250);
-            this.TxtEmployeeNr.TabIndex = 105;
+            this.TxtNotes.BackColor = System.Drawing.Color.White;
+            this.TxtNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtNotes.Location = new System.Drawing.Point(17, 393);
+            this.TxtNotes.Margin = new System.Windows.Forms.Padding(1);
+            this.TxtNotes.Multiline = true;
+            this.TxtNotes.Name = "TxtNotes";
+            this.TxtNotes.Size = new System.Drawing.Size(464, 250);
+            this.TxtNotes.TabIndex = 105;
             // 
             // LblNotice
             // 
@@ -139,7 +139,7 @@
             this.TxtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtMail.Location = new System.Drawing.Point(748, 265);
-            this.TxtMail.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtMail.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(220, 19);
             this.TxtMail.TabIndex = 97;
@@ -150,7 +150,7 @@
             this.TxtMobilNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtMobilNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtMobilNr.Location = new System.Drawing.Point(748, 221);
-            this.TxtMobilNr.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtMobilNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMobilNr.Name = "TxtMobilNr";
             this.TxtMobilNr.Size = new System.Drawing.Size(220, 19);
             this.TxtMobilNr.TabIndex = 96;
@@ -161,7 +161,7 @@
             this.TxtPrivateNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPrivateNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtPrivateNr.Location = new System.Drawing.Point(748, 175);
-            this.TxtPrivateNr.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtPrivateNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPrivateNr.Name = "TxtPrivateNr";
             this.TxtPrivateNr.Size = new System.Drawing.Size(220, 19);
             this.TxtPrivateNr.TabIndex = 95;
@@ -220,7 +220,7 @@
             this.TxtResidence.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtResidence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtResidence.Location = new System.Drawing.Point(97, 265);
-            this.TxtResidence.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtResidence.Margin = new System.Windows.Forms.Padding(1);
             this.TxtResidence.Name = "TxtResidence";
             this.TxtResidence.Size = new System.Drawing.Size(140, 19);
             this.TxtResidence.TabIndex = 89;
@@ -231,7 +231,7 @@
             this.TxtPlz.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPlz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtPlz.Location = new System.Drawing.Point(18, 265);
-            this.TxtPlz.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtPlz.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPlz.Name = "TxtPlz";
             this.TxtPlz.Size = new System.Drawing.Size(70, 19);
             this.TxtPlz.TabIndex = 87;
@@ -242,7 +242,7 @@
             this.TxtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtTitle.Location = new System.Drawing.Point(505, 175);
-            this.TxtTitle.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtTitle.Margin = new System.Windows.Forms.Padding(1);
             this.TxtTitle.Name = "TxtTitle";
             this.TxtTitle.Size = new System.Drawing.Size(220, 19);
             this.TxtTitle.TabIndex = 85;
@@ -277,7 +277,7 @@
             this.TxtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtLastname.Location = new System.Drawing.Point(505, 265);
-            this.TxtLastname.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtLastname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtLastname.Name = "TxtLastname";
             this.TxtLastname.Size = new System.Drawing.Size(220, 19);
             this.TxtLastname.TabIndex = 79;
@@ -288,7 +288,7 @@
             this.TxtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtFirstname.Location = new System.Drawing.Point(505, 221);
-            this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.Size = new System.Drawing.Size(220, 19);
             this.TxtFirstname.TabIndex = 78;
@@ -299,7 +299,7 @@
             this.TxtCompany.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtCompany.Location = new System.Drawing.Point(18, 175);
-            this.TxtCompany.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtCompany.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCompany.Name = "TxtCompany";
             this.TxtCompany.Size = new System.Drawing.Size(220, 19);
             this.TxtCompany.TabIndex = 77;
@@ -381,7 +381,7 @@
             this.ImgNoticeHistory.Image = ((System.Drawing.Image)(resources.GetObject("ImgNoticeHistory.Image")));
             this.ImgNoticeHistory.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgNoticeHistory.InitialImage")));
             this.ImgNoticeHistory.Location = new System.Drawing.Point(493, 393);
-            this.ImgNoticeHistory.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgNoticeHistory.Margin = new System.Windows.Forms.Padding(1);
             this.ImgNoticeHistory.Name = "ImgNoticeHistory";
             this.ImgNoticeHistory.Size = new System.Drawing.Size(25, 25);
             this.ImgNoticeHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -407,7 +407,7 @@
             this.TxtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtCountry.Location = new System.Drawing.Point(18, 312);
-            this.TxtCountry.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtCountry.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCountry.Name = "TxtCountry";
             this.TxtCountry.Size = new System.Drawing.Size(220, 19);
             this.TxtCountry.TabIndex = 134;
@@ -442,7 +442,7 @@
             this.RadPassiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.RadPassiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.RadPassiv.Location = new System.Drawing.Point(425, 220);
-            this.RadPassiv.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.RadPassiv.Margin = new System.Windows.Forms.Padding(1);
             this.RadPassiv.Name = "RadPassiv";
             this.RadPassiv.Size = new System.Drawing.Size(56, 17);
             this.RadPassiv.TabIndex = 136;
@@ -456,7 +456,7 @@
             this.RadActiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.RadActiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
             this.RadActiv.Location = new System.Drawing.Point(362, 220);
-            this.RadActiv.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.RadActiv.Margin = new System.Windows.Forms.Padding(1);
             this.RadActiv.Name = "RadActiv";
             this.RadActiv.Size = new System.Drawing.Size(49, 17);
             this.RadActiv.TabIndex = 135;
@@ -470,7 +470,7 @@
             this.TxtHouseNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHouseNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtHouseNr.Location = new System.Drawing.Point(167, 221);
-            this.TxtHouseNr.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtHouseNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtHouseNr.Name = "TxtHouseNr";
             this.TxtHouseNr.Size = new System.Drawing.Size(70, 19);
             this.TxtHouseNr.TabIndex = 141;
@@ -493,7 +493,7 @@
             this.TxtStreet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TxtStreet.Location = new System.Drawing.Point(18, 221);
-            this.TxtStreet.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtStreet.Margin = new System.Windows.Forms.Padding(1);
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(140, 19);
             this.TxtStreet.TabIndex = 139;
@@ -522,7 +522,7 @@
             "D",
             "E"});
             this.CmbCustomerType.Location = new System.Drawing.Point(261, 175);
-            this.CmbCustomerType.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CmbCustomerType.Margin = new System.Windows.Forms.Padding(1);
             this.CmbCustomerType.Name = "CmbCustomerType";
             this.CmbCustomerType.Size = new System.Drawing.Size(220, 21);
             this.CmbCustomerType.TabIndex = 142;
@@ -545,7 +545,7 @@
             this.Controls.Add(this.LblCountry);
             this.Controls.Add(this.CmdSaveCustomer);
             this.Controls.Add(this.ImgNoticeHistory);
-            this.Controls.Add(this.TxtEmployeeNr);
+            this.Controls.Add(this.TxtNotes);
             this.Controls.Add(this.LblCustomerType);
             this.Controls.Add(this.LblContactPerson);
             this.Controls.Add(this.ImgBackgroundCustomer);
@@ -573,7 +573,7 @@
             this.Controls.Add(this.ImgLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -590,7 +590,7 @@
 
         private System.Windows.Forms.PictureBox ImgLogo;
         private System.Windows.Forms.PictureBox ImgBackgroundCustomer;
-        private System.Windows.Forms.TextBox TxtEmployeeNr;
+        private System.Windows.Forms.TextBox TxtNotes;
         private System.Windows.Forms.Label LblNotice;
         public System.Windows.Forms.Label LblTitleCustomer;
         private System.Windows.Forms.TextBox TxtMail;

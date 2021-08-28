@@ -20,7 +20,6 @@ namespace Contactmanager
         public string AHV { get; set; } // string da es Punkte drin hat
         public string Nationality { get; set; }
         public Address Address { get; set; }
-        public Notes Notes { get; set; }
         public bool IsDisabled { get; set; }
 
         //Konstruktor:
@@ -56,7 +55,7 @@ namespace Contactmanager
 
         public string[] getGridRow()
         {
-            return new string[]{Firstname, Lastname, Address.Street, Address.HouseNumber.ToString(), Address.PLZ.ToString(), Address.Village, Address.Country};
+            return new string[] { Firstname, Lastname, Address.Street, Address.HouseNumber.ToString(), Address.PLZ.ToString(), Address.Village, Address.Country };
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Contactmanager
         public DateTime TimeStamp { get; set; }
         public string Comment { get; set; }
 
-        public Notes(DateTime timeStamp)
+        public Notes(DateTime timeStamp, string comment)
         {
             TimeStamp = timeStamp;
-            Comment = string.Empty; // anstatt ""
+            Comment = comment;
         }
     }
 }

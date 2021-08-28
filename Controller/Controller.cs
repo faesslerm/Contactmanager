@@ -1,4 +1,6 @@
-﻿namespace Contactmanager
+﻿using System;
+
+namespace Contactmanager
 {
     public class Controller
     {
@@ -70,11 +72,11 @@
 
         //Eingabe wird überprüft, ob es ausschliesslich Buchstaben beinhaltet.
 
-        public bool CheckIsItLetter(this string inputText)
+        public bool CheckIsItLetter(string inputText)
         {
             foreach (char c in inputText)
             {
-                if (!char.IsDigit(c) && c != '.')
+                if (!Char.IsDigit(c) && c != '.')
                 {
                     return false;
                 }
@@ -84,11 +86,11 @@
 
         // Eingabe wird überprüft, ob es ausschlisslich Zahlen beinhaltet.
 
-        public bool CheckIsItNumeric(this string inputZahl) 
+        public bool CheckIsItNumeric(string inputZahl)
         {
             foreach (char c in inputZahl)
             {
-                if (!char.IsLetter(c) && c != '.')
+                if (!Char.IsLetter(c) && c != '.')
                 {
                     return false;
                 }
@@ -110,6 +112,5 @@
                 return false;
             }
         }
-
     }
 }

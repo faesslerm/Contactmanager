@@ -2,6 +2,7 @@
 
 namespace Contactmanager
 {
+    [Serializable]
     public class Employee : Person
     {
 

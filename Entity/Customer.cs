@@ -1,5 +1,9 @@
-﻿namespace Contactmanager
+﻿using System;
+using System.Collections.Generic;
+
+namespace Contactmanager
 {
+    [Serializable]
     public class Customer : Person
     {
         //Properties
@@ -8,6 +12,7 @@
         public string Contact { get; set; } // Firmenkontakt
         public bool Status { get; set; } //Status (aktiv, passiv)
         public Notes Notes { get; set; }
+        public List<History> Histories { get; }
 
         //Konstruktor
         public Customer(string title, string firstname, string lastname, bool isMen, bool isDisabled, Address address, string privateNr, string mail, string company,
@@ -22,6 +27,8 @@
             //Customer
             Company = company;
             CustomerType = customerType;
+
+            Histories = new List<History>();
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Contactmanager
     {
         private Controller Controller { get; }
         private bool IsUpdate { get; }
+        private Customer InitCustomer { get; }
         public CustomerForm(Controller controller)
         {
             InitializeComponent();
@@ -16,7 +17,8 @@ namespace Contactmanager
 
         public CustomerForm(Controller controller, Customer customer) : this(controller)
         {
-            InitializeCustomer(customer);
+            InitCustomer = customer;
+            InitializeCustomer(InitCustomer);
             IsUpdate = true;
         }
 
@@ -46,16 +48,24 @@ namespace Contactmanager
                 new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                 TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.Text);
             customer.IsDisabled = RadPassiv.Checked;
+            if (TxtNotes.TextLength > 0)
+            {
+                customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
+                if(InitCustomer != null && !InitCustomer.Notes.Comment.Equals(TxtNotes.Text))
+                {
+                    InitCustomer.Histories.Add(new History(DateTime.Now, "History", InitCustomer.Notes.Comment));
+                    customer.Histories.AddRange(InitCustomer.Histories);
+                } else if(InitCustomer != null)
+                {
+                    customer.Histories.AddRange(InitCustomer.Histories);
+                }
+            }
             return customer;
         }
 
         private void CmdSaveCustomer_Click(object sender, EventArgs e)
         {
             Customer customer = getCustomer();
-            if (TxtNotes.TextLength > 0)
-            {
-                customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
-            }
             bool success = IsUpdate ? Controller.UpdatePerson(customer) : Controller.SaveNewPerson(customer);
             if (success)
             {
@@ -65,6 +75,14 @@ namespace Contactmanager
             else
             {
                 MessageBox.Show("Kunde existiert bereits!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CmdHistory_Click(object sender, EventArgs e)
+        {
+            if(InitCustomer != null)
+            {
+                new HistoryForm(InitCustomer.Histories).ShowDialog();
             }
         }
     }

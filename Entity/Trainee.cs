@@ -2,6 +2,7 @@
 
 namespace Contactmanager
 {
+    [Serializable]
     class Trainee : Employee
     {
 

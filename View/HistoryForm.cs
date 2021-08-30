@@ -12,9 +12,16 @@ namespace Contactmanager
 {
     public partial class HistoryForm : Form
     {
-        public HistoryForm()
+        public HistoryForm(List<History> histories)
         {
             InitializeComponent();
+            List<History> sortedHistory = new List<History>(histories);
+            sortedHistory.Reverse();
+            foreach(History history in sortedHistory)
+            {
+                TxtHistory.Text += history.ToString();
+                TxtHistory.Text += "\r\n";
+            }
         }
     }
 }

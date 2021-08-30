@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryForm));
             this.ImgLogo = new System.Windows.Forms.PictureBox();
-            this.TxtEmployeeNr = new System.Windows.Forms.TextBox();
+            this.TxtHistory = new System.Windows.Forms.TextBox();
             this.LblTitleHistory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
             this.SuspendLayout();
@@ -41,23 +41,23 @@
             this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
             this.ImgLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgLogo.InitialImage")));
             this.ImgLogo.Location = new System.Drawing.Point(17, 17);
-            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(1);
             this.ImgLogo.Name = "ImgLogo";
             this.ImgLogo.Size = new System.Drawing.Size(120, 40);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgLogo.TabIndex = 8;
             this.ImgLogo.TabStop = false;
             // 
-            // TxtEmployeeNr
+            // TxtHistory
             // 
-            this.TxtEmployeeNr.BackColor = System.Drawing.Color.White;
-            this.TxtEmployeeNr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtEmployeeNr.Location = new System.Drawing.Point(18, 122);
-            this.TxtEmployeeNr.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.TxtEmployeeNr.Multiline = true;
-            this.TxtEmployeeNr.Name = "TxtEmployeeNr";
-            this.TxtEmployeeNr.Size = new System.Drawing.Size(946, 519);
-            this.TxtEmployeeNr.TabIndex = 106;
+            this.TxtHistory.BackColor = System.Drawing.Color.White;
+            this.TxtHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtHistory.Location = new System.Drawing.Point(18, 122);
+            this.TxtHistory.Margin = new System.Windows.Forms.Padding(1);
+            this.TxtHistory.Multiline = true;
+            this.TxtHistory.Name = "TxtHistory";
+            this.TxtHistory.Size = new System.Drawing.Size(946, 519);
+            this.TxtHistory.TabIndex = 106;
             // 
             // LblTitleHistory
             // 
@@ -77,11 +77,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.LblTitleHistory);
-            this.Controls.Add(this.TxtEmployeeNr);
+            this.Controls.Add(this.TxtHistory);
             this.Controls.Add(this.ImgLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.Name = "HistoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -95,7 +95,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox ImgLogo;
-        private System.Windows.Forms.TextBox TxtEmployeeNr;
+        private System.Windows.Forms.TextBox TxtHistory;
         private System.Windows.Forms.Label LblTitleHistory;
     }
 }

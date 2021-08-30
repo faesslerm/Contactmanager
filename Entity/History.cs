@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Contactmanager
 {
-    class History
+    [Serializable]
+    public class History
     {
         //Properties:
-
         public DateTime Editing { get; set; }
         public string Target { get; set; } //Was wurde geändert? vgl. Note unten --> bspw. Vorname
         public string Oldvalue { get; set; } // Alter Wert
@@ -22,6 +22,9 @@ namespace Contactmanager
             Oldvalue = oldvalue;
         }
 
-       
+        public override string ToString()
+        {
+            return $"Datum: {Editing.ToString()} Feld: {Target} Alter Wert: {Oldvalue}";
+        }
     }
 }

@@ -387,6 +387,7 @@
             this.ImgNoticeHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgNoticeHistory.TabIndex = 131;
             this.ImgNoticeHistory.TabStop = false;
+            this.ImgNoticeHistory.Click += new System.EventHandler(this.CmdHistory_Click);
             // 
             // CmdSaveCustomer
             // 

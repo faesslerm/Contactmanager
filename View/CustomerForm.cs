@@ -51,13 +51,14 @@ namespace Contactmanager
             if (TxtNotes.TextLength > 0)
             {
                 customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
-                if(InitCustomer != null && !InitCustomer.Notes.Comment.Equals(TxtNotes.Text))
+                if (InitCustomer != null && !InitCustomer.Notes.Comment.Equals(TxtNotes.Text))
                 {
-                    InitCustomer.Histories.Add(new History(DateTime.Now, "History", InitCustomer.Notes.Comment));
-                    customer.Histories.AddRange(InitCustomer.Histories);
-                } else if(InitCustomer != null)
+                    InitCustomer.NotesHistory.Add(new History(DateTime.Now, "History", InitCustomer.Notes.Comment));
+                    customer.NotesHistory.AddRange(InitCustomer.NotesHistory);
+                }
+                else if (InitCustomer != null)
                 {
-                    customer.Histories.AddRange(InitCustomer.Histories);
+                    customer.NotesHistory.AddRange(InitCustomer.NotesHistory);
                 }
             }
             return customer;
@@ -80,9 +81,9 @@ namespace Contactmanager
 
         private void CmdHistory_Click(object sender, EventArgs e)
         {
-            if(InitCustomer != null)
+            if (InitCustomer != null)
             {
-                new HistoryForm(InitCustomer.Histories).ShowDialog();
+                new HistoryForm(InitCustomer.NotesHistory).ShowDialog();
             }
         }
     }

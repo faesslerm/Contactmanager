@@ -9,7 +9,7 @@ namespace Contactmanager
         //Properties
         public string CompanyPhoneNr { get; set; } //Telefonnummer
         public string CompanyFaxNr { get; set; } //Faxnummer
-        public int EmployeeNr { get; set; } //Mitarbeiternummer --> Autoincrement Variable einsetzen?
+        public int EmployeeNr { get; } //Mitarbeiternummer --> Autoincrement Variable einsetzen?
         public string Department { get; set; } // Abteilung
         public DateTime Entry { get; set; } // Eintritt
         public DateTime Leaving { get; set; } // Austritt
@@ -17,7 +17,7 @@ namespace Contactmanager
         public string Function { get; set; } //Tätigkeitsbezeichnung
         public byte SquadLevel { get; set; } //Kaderstufe (0-5)
 
-        private static int number = 0; // Autoincrement für Mitarbeiternummer
+        private static int number = 1; // Autoincrement für Mitarbeiternummer
 
 
         // Konstruktor:

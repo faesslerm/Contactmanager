@@ -28,6 +28,42 @@ namespace Contactmanager
             CmbSalutation.Text = person.IsMen ? "Herr" : "Frau";
             TxtFirstname.Text = person.Firstname;
             TxtLastname.Text = person.Lastname;
+            if (person.Birthday.Year > 1)
+            {
+                TxtBirthday.Text = person.Birthday.ToShortDateString();
+            }
+            TxtTitle.Text = person.Title;
+            TxtMobilNr.Text = person.MobileNr;
+            TxtPrivateNr.Text = person.PrivateNr;
+            TxtMail.Text = person.Mail;
+            TxtAhv.Text = person.AHV;
+            TxtNationality.Text = person.Nationality;
+            TxtStreet.Text = person.Address.Street;
+            TxtHouseNr.Text = person.Address.HouseNumber.ToString();
+            TxtPlz.Text = person.Address.PLZ.ToString();
+            TxtResidence.Text = person.Address.Village;
+            TxtCountry.Text = person.Address.Country;
+            RadActiv.Checked = !person.IsDisabled;
+            RadPassiv.Checked = person.IsDisabled;
+            if (person is Employee)
+            {
+                Employee employee = person as Employee;
+                TxtCompanyPhoneNr.Text = employee.CompanyPhoneNr;
+                TxtCompanyFaxNr.Text = employee.CompanyFaxNr;
+                TxtEmployeeNr.Text = employee.EmployeeNr.ToString();
+                TxtDepartment.Text = employee.Department;
+                if (employee.Entry.Year > 1)
+                {
+                    TxtEntry.Text = employee.Entry.ToShortDateString();
+                }
+                if (employee.Leaving.Year > 1)
+                {
+                    TxtLeaving.Text = employee.Leaving.ToShortDateString();
+                }
+                TxtLevelOfEmployment.Text = employee.LevelOfEmployment;
+                TxtFunction.Text = employee.Function;
+                CmbSquadLevel.Text = employee.SquadLevel.ToString();
+            }
         }
 
         private void InitializeEmployee(Employee employee)
@@ -44,6 +80,7 @@ namespace Contactmanager
                 person = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.Text));
+                person.Birthday = DateTime.Parse(TxtBirthday.Text);
             }
             else if (TxtApprenticeshipYears.Text.Length > 0)
             {
@@ -57,6 +94,7 @@ namespace Contactmanager
                 person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadActiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
                     TxtResidence.Text, TxtCountry.Text));
+                person.Birthday = DateTime.Parse(TxtBirthday.Text);
             }
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);
             if (success)

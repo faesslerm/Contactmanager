@@ -108,6 +108,7 @@ namespace Contactmanager
             int pos = FindPosition(old);
             update.Histories.AddRange(old.Histories);
             UpdateHistory(old, update);
+            UpdateNotesHistory(old, update);
             people[pos] = update;
             SaveData();
             return true;
@@ -179,6 +180,19 @@ namespace Contactmanager
             if (old.IsDisabled != update.IsDisabled)
             {
                 update.Histories.Add(new History(DateTime.Now, "Aktiv / Deaktiv", old.IsDisabled.ToString()));
+            }
+        }
+
+        private void UpdateNotesHistory(Person old, Person update)
+        {
+            if (old is Customer && update is Customer)
+            {
+                Customer oldCustomer = old as Customer;
+                Customer updateCustomer = update as Customer;
+                updateCustomer.NotesHistory.AddRange(oldCustomer.NotesHistory);
+                if (!oldCustomer.Notes.Comment.Equals(updateCustomer.Notes.Comment)){
+                    updateCustomer.NotesHistory.Add(new History(DateTime.Now, "Notizen", oldCustomer.Notes.Comment));
+                }
             }
         }
 

@@ -48,19 +48,7 @@ namespace Contactmanager
                 new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                 TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.Text);
             customer.IsDisabled = RadPassiv.Checked;
-            if (TxtNotes.TextLength > 0)
-            {
-                customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
-                if (InitCustomer != null && !InitCustomer.Notes.Comment.Equals(TxtNotes.Text))
-                {
-                    InitCustomer.NotesHistory.Add(new History(DateTime.Now, "History", InitCustomer.Notes.Comment));
-                    customer.NotesHistory.AddRange(InitCustomer.NotesHistory);
-                }
-                else if (InitCustomer != null)
-                {
-                    customer.NotesHistory.AddRange(InitCustomer.NotesHistory);
-                }
-            }
+            customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
             return customer;
         }
 

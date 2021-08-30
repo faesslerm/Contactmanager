@@ -13,7 +13,13 @@ namespace Contactmanager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm(new Controller()));
+            Controller controller = new Controller();
+            LoginForm loginForm = new LoginForm(controller);
+            Application.Run(loginForm);
+            if (loginForm.IsLoggedIn)
+            {
+                Application.Run(new MainForm(controller));
+            }
         }
     }
 }

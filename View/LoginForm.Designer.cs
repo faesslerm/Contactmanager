@@ -50,7 +50,7 @@
             // 
             this.TxtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.TxtUser.Location = new System.Drawing.Point(607, 279);
-            this.TxtUser.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtUser.Margin = new System.Windows.Forms.Padding(1);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(300, 29);
             this.TxtUser.TabIndex = 144;
@@ -72,8 +72,9 @@
             // 
             this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.TxtPassword.Location = new System.Drawing.Point(607, 343);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(300, 29);
             this.TxtPassword.TabIndex = 145;
             // 
@@ -96,7 +97,7 @@
             this.ImgLogo.Image = ((System.Drawing.Image)(resources.GetObject("ImgLogo.Image")));
             this.ImgLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgLogo.InitialImage")));
             this.ImgLogo.Location = new System.Drawing.Point(607, 189);
-            this.ImgLogo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(0);
             this.ImgLogo.Name = "ImgLogo";
             this.ImgLogo.Size = new System.Drawing.Size(120, 40);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +110,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1017, 720);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,6 +128,7 @@
             this.CmdLogin.TabIndex = 136;
             this.CmdLogin.Text = "ANMELDEN";
             this.CmdLogin.UseVisualStyleBackColor = false;
+            this.CmdLogin.Click += new System.EventHandler(this.CmdLogin_Click);
             // 
             // ImgPassword
             // 
@@ -134,7 +136,7 @@
             this.ImgPassword.Image = ((System.Drawing.Image)(resources.GetObject("ImgPassword.Image")));
             this.ImgPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgPassword.InitialImage")));
             this.ImgPassword.Location = new System.Drawing.Point(881, 349);
-            this.ImgPassword.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgPassword.Margin = new System.Windows.Forms.Padding(1);
             this.ImgPassword.Name = "ImgPassword";
             this.ImgPassword.Size = new System.Drawing.Size(18, 18);
             this.ImgPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -148,7 +150,7 @@
             this.ImgUser.Image = ((System.Drawing.Image)(resources.GetObject("ImgUser.Image")));
             this.ImgUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("ImgUser.InitialImage")));
             this.ImgUser.Location = new System.Drawing.Point(881, 285);
-            this.ImgUser.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ImgUser.Margin = new System.Windows.Forms.Padding(1);
             this.ImgUser.Name = "ImgUser";
             this.ImgUser.Size = new System.Drawing.Size(18, 18);
             this.ImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,8 +203,10 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login manfy";
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

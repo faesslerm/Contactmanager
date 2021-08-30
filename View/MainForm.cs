@@ -25,7 +25,8 @@ namespace Contactmanager
         {
             searchResult = data;
             GridSearchResults.Rows.Clear();
-            foreach(Person person in data){
+            foreach (Person person in data)
+            {
                 GridSearchResults.Rows.Add(person.getGridRow());
             }
             GridSearchResults.Update();
@@ -103,7 +104,7 @@ namespace Contactmanager
             UpdateGrid(Controller.GetAllPeople().ToList());
         }
 
-        private void GridSearchResults_CellClick (object sender, DataGridViewCellEventArgs e)
+        private void GridSearchResults_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ImgHistory.Visible = true;
             ImgEdit.Visible = true;
@@ -112,8 +113,12 @@ namespace Contactmanager
 
         private void CmdHistorySelected_Click(object sender, EventArgs e)
         {
-            //HistoryForm historyForm = new HistoryForm(Controller);
-            //historyForm.ShowDialog();
+            Person person = searchResult[GridSearchResults.SelectedRows[0].Index];
+            if (person.Histories != null && person.Histories.Count > 0)
+            {
+                HistoryForm historyForm = new HistoryForm(person.Histories);
+                historyForm.ShowDialog();
+            }
         }
     }
 }

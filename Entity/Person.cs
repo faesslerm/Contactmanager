@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Contactmanager
 {
@@ -21,6 +22,7 @@ namespace Contactmanager
         public string Nationality { get; set; }
         public Address Address { get; set; }
         public bool IsDisabled { get; set; }
+        public List<History> Histories { get; }
 
         //Konstruktor:
         public Person(string firstname, string lastname, bool isMen, bool isDisabled, Address address)
@@ -30,6 +32,7 @@ namespace Contactmanager
             IsMen = isMen;
             IsDisabled = isDisabled;
             Address = address;
+            Histories = new List<History>();
         }
 
         // Methode zur Überprüfung auf Duplikate

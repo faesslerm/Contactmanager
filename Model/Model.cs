@@ -1,4 +1,5 @@
 ﻿using Contactmanager.Persistence;
+using System;
 
 namespace Contactmanager
 {
@@ -105,10 +106,80 @@ namespace Contactmanager
         public bool Update(Person old, Person update)
         {
             int pos = FindPosition(old);
+            update.Histories.AddRange(old.Histories);
+            UpdateHistory(old, update);
             people[pos] = update;
             SaveData();
             return true;
 
+        }
+
+        private void UpdateHistory(Person old, Person update)
+        {
+            if (old.Firstname != null && !old.Firstname.Equals(update.Firstname))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Vorname", old.Firstname));
+            }
+            if (old.Lastname != null && !old.Lastname.Equals(update.Lastname))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Nachname", old.Lastname));
+            }
+            if (old.IsMen != update.IsMen)
+            {
+                update.Histories.Add(new History(DateTime.Now, "IsMen", old.IsMen.ToString()));
+            }
+            if (old.Birthday != null && !old.Birthday.Equals(update.Birthday))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Geburtstag", old.Birthday.ToString()));
+            }
+            if (old.Title != null && !old.Title.Equals(update.Title))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Titel", old.Title));
+            }
+            if (old.MobileNr != null && !old.MobileNr.Equals(update.MobileNr))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Telefon Mobil", old.MobileNr));
+            }
+            if (old.PrivateNr != null && !old.PrivateNr.Equals(update.PrivateNr))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Telefon Privat", old.PrivateNr));
+            }
+            if (old.Mail != null && !old.Mail.Equals(update.Mail))
+            {
+                update.Histories.Add(new History(DateTime.Now, "E-Mail", old.Mail));
+            }
+            if (old.AHV != null && !old.AHV.Equals(update.AHV))
+            {
+                update.Histories.Add(new History(DateTime.Now, "AHV Nummer", old.AHV));
+            }
+            if (old.Nationality != null && !old.Nationality.Equals(update.Nationality))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Nationalität", old.Nationality));
+            }
+            if (old.Address.Street != null && !old.Address.Street.Equals(update.Address.Street))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Strasse", old.Address.Street));
+            }
+            if (old.Address.HouseNumber != update.Address.HouseNumber)
+            {
+                update.Histories.Add(new History(DateTime.Now, "Hausnummer", old.Address.HouseNumber.ToString()));
+            }
+            if (old.Address.PLZ != update.Address.PLZ)
+            {
+                update.Histories.Add(new History(DateTime.Now, "Postleitzahl", old.Address.PLZ.ToString()));
+            }
+            if (old.Address.Village != null && !old.Address.Village.Equals(update.Address.Village))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Ort", old.Address.Village));
+            }
+            if (old.Address.Country != null && !old.Address.Country.Equals(update.Address.Country))
+            {
+                update.Histories.Add(new History(DateTime.Now, "Land", old.Address.Country));
+            }
+            if (old.IsDisabled != update.IsDisabled)
+            {
+                update.Histories.Add(new History(DateTime.Now, "Aktiv / Deaktiv", old.IsDisabled.ToString()));
+            }
         }
 
         public bool Disable(Person p)

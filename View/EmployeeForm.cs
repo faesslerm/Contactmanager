@@ -7,6 +7,7 @@ namespace Contactmanager
     {
         public Controller Controller { get; }
         private bool IsUpdate { get; set; }
+        private Person InitPerson { get; }
 
         public EmployeeForm(Controller controller)
         {
@@ -15,11 +16,10 @@ namespace Contactmanager
             IsUpdate = false;
         }
 
-        public EmployeeForm(Controller controller, Person person)
+        public EmployeeForm(Controller controller, Person person) : this(controller)
         {
-            InitializeComponent();
-            Controller = controller;
-            InitializePerson(person);
+            InitPerson = person;
+            InitializePerson(InitPerson);
             IsUpdate = true;
         }
 

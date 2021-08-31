@@ -53,7 +53,7 @@
             this.TxtUser.Margin = new System.Windows.Forms.Padding(1);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(300, 29);
-            this.TxtUser.TabIndex = 144;
+            this.TxtUser.TabIndex = 0;
             // 
             // LblUser
             // 
@@ -76,7 +76,7 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(300, 29);
-            this.TxtPassword.TabIndex = 145;
+            this.TxtPassword.TabIndex = 1;
             // 
             // LblPassword
             // 
@@ -125,7 +125,7 @@
             this.CmdLogin.Location = new System.Drawing.Point(607, 389);
             this.CmdLogin.Name = "CmdLogin";
             this.CmdLogin.Size = new System.Drawing.Size(300, 40);
-            this.CmdLogin.TabIndex = 136;
+            this.CmdLogin.TabIndex = 2;
             this.CmdLogin.Text = "ANMELDEN";
             this.CmdLogin.UseVisualStyleBackColor = false;
             this.CmdLogin.Click += new System.EventHandler(this.CmdLogin_Click);

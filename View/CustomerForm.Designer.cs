@@ -107,7 +107,7 @@
             this.TxtNotes.Multiline = true;
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.Size = new System.Drawing.Size(464, 250);
-            this.TxtNotes.TabIndex = 105;
+            this.TxtNotes.TabIndex = 15;
             // 
             // LblNotice
             // 
@@ -142,7 +142,7 @@
             this.TxtMail.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(220, 19);
-            this.TxtMail.TabIndex = 97;
+            this.TxtMail.TabIndex = 14;
             // 
             // TxtMobilNr
             // 
@@ -153,7 +153,7 @@
             this.TxtMobilNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMobilNr.Name = "TxtMobilNr";
             this.TxtMobilNr.Size = new System.Drawing.Size(220, 19);
-            this.TxtMobilNr.TabIndex = 96;
+            this.TxtMobilNr.TabIndex = 13;
             // 
             // TxtPrivateNr
             // 
@@ -164,7 +164,7 @@
             this.TxtPrivateNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPrivateNr.Name = "TxtPrivateNr";
             this.TxtPrivateNr.Size = new System.Drawing.Size(220, 19);
-            this.TxtPrivateNr.TabIndex = 95;
+            this.TxtPrivateNr.TabIndex = 12;
             // 
             // LblMobilNr
             // 
@@ -223,7 +223,7 @@
             this.TxtResidence.Margin = new System.Windows.Forms.Padding(1);
             this.TxtResidence.Name = "TxtResidence";
             this.TxtResidence.Size = new System.Drawing.Size(140, 19);
-            this.TxtResidence.TabIndex = 89;
+            this.TxtResidence.TabIndex = 4;
             // 
             // TxtPlz
             // 
@@ -234,7 +234,7 @@
             this.TxtPlz.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPlz.Name = "TxtPlz";
             this.TxtPlz.Size = new System.Drawing.Size(70, 19);
-            this.TxtPlz.TabIndex = 87;
+            this.TxtPlz.TabIndex = 3;
             // 
             // TxtTitle
             // 
@@ -245,7 +245,7 @@
             this.TxtTitle.Margin = new System.Windows.Forms.Padding(1);
             this.TxtTitle.Name = "TxtTitle";
             this.TxtTitle.Size = new System.Drawing.Size(220, 19);
-            this.TxtTitle.TabIndex = 85;
+            this.TxtTitle.TabIndex = 9;
             // 
             // LblPlz
             // 
@@ -280,7 +280,7 @@
             this.TxtLastname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtLastname.Name = "TxtLastname";
             this.TxtLastname.Size = new System.Drawing.Size(220, 19);
-            this.TxtLastname.TabIndex = 79;
+            this.TxtLastname.TabIndex = 11;
             // 
             // TxtFirstname
             // 
@@ -291,7 +291,7 @@
             this.TxtFirstname.Margin = new System.Windows.Forms.Padding(1);
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.Size = new System.Drawing.Size(220, 19);
-            this.TxtFirstname.TabIndex = 78;
+            this.TxtFirstname.TabIndex = 10;
             // 
             // TxtCompany
             // 
@@ -302,7 +302,7 @@
             this.TxtCompany.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCompany.Name = "TxtCompany";
             this.TxtCompany.Size = new System.Drawing.Size(220, 19);
-            this.TxtCompany.TabIndex = 77;
+            this.TxtCompany.TabIndex = 0;
             // 
             // LblFirstname
             // 
@@ -397,7 +397,7 @@
             this.CmdSaveCustomer.Location = new System.Drawing.Point(770, 603);
             this.CmdSaveCustomer.Name = "CmdSaveCustomer";
             this.CmdSaveCustomer.Size = new System.Drawing.Size(200, 40);
-            this.CmdSaveCustomer.TabIndex = 132;
+            this.CmdSaveCustomer.TabIndex = 16;
             this.CmdSaveCustomer.Text = "Kunde speichern";
             this.CmdSaveCustomer.UseVisualStyleBackColor = false;
             this.CmdSaveCustomer.Click += new System.EventHandler(this.CmdSaveCustomer_Click);
@@ -411,7 +411,7 @@
             this.TxtCountry.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCountry.Name = "TxtCountry";
             this.TxtCountry.Size = new System.Drawing.Size(220, 19);
-            this.TxtCountry.TabIndex = 134;
+            this.TxtCountry.TabIndex = 5;
             // 
             // LblCountry
             // 
@@ -446,7 +446,7 @@
             this.RadPassiv.Margin = new System.Windows.Forms.Padding(1);
             this.RadPassiv.Name = "RadPassiv";
             this.RadPassiv.Size = new System.Drawing.Size(56, 17);
-            this.RadPassiv.TabIndex = 136;
+            this.RadPassiv.TabIndex = 8;
             this.RadPassiv.TabStop = true;
             this.RadPassiv.Text = "Passiv";
             this.RadPassiv.UseVisualStyleBackColor = true;
@@ -460,7 +460,7 @@
             this.RadActiv.Margin = new System.Windows.Forms.Padding(1);
             this.RadActiv.Name = "RadActiv";
             this.RadActiv.Size = new System.Drawing.Size(49, 17);
-            this.RadActiv.TabIndex = 135;
+            this.RadActiv.TabIndex = 7;
             this.RadActiv.TabStop = true;
             this.RadActiv.Text = "Aktiv";
             this.RadActiv.UseVisualStyleBackColor = true;
@@ -474,7 +474,7 @@
             this.TxtHouseNr.Margin = new System.Windows.Forms.Padding(1);
             this.TxtHouseNr.Name = "TxtHouseNr";
             this.TxtHouseNr.Size = new System.Drawing.Size(70, 19);
-            this.TxtHouseNr.TabIndex = 141;
+            this.TxtHouseNr.TabIndex = 2;
             // 
             // LblHouseNr
             // 
@@ -497,7 +497,7 @@
             this.TxtStreet.Margin = new System.Windows.Forms.Padding(1);
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(140, 19);
-            this.TxtStreet.TabIndex = 139;
+            this.TxtStreet.TabIndex = 1;
             // 
             // LblStreet
             // 
@@ -526,7 +526,7 @@
             this.CmbCustomerType.Margin = new System.Windows.Forms.Padding(1);
             this.CmbCustomerType.Name = "CmbCustomerType";
             this.CmbCustomerType.Size = new System.Drawing.Size(220, 21);
-            this.CmbCustomerType.TabIndex = 142;
+            this.CmbCustomerType.TabIndex = 6;
             // 
             // CustomerForm
             // 

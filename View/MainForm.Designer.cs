@@ -167,7 +167,7 @@
             this.CmdAddEmployee.Location = new System.Drawing.Point(766, 128);
             this.CmdAddEmployee.Name = "CmdAddEmployee";
             this.CmdAddEmployee.Size = new System.Drawing.Size(200, 40);
-            this.CmdAddEmployee.TabIndex = 7;
+            this.CmdAddEmployee.TabIndex = 0;
             this.CmdAddEmployee.Text = "Mitarbeiter erfassen";
             this.CmdAddEmployee.UseVisualStyleBackColor = false;
             this.CmdAddEmployee.Click += new System.EventHandler(this.CmdAddEmployee_Click);
@@ -180,7 +180,7 @@
             this.CmdAddCustomer.Location = new System.Drawing.Point(766, 177);
             this.CmdAddCustomer.Name = "CmdAddCustomer";
             this.CmdAddCustomer.Size = new System.Drawing.Size(200, 40);
-            this.CmdAddCustomer.TabIndex = 8;
+            this.CmdAddCustomer.TabIndex = 1;
             this.CmdAddCustomer.Text = "Kunde erfassen";
             this.CmdAddCustomer.UseVisualStyleBackColor = false;
             this.CmdAddCustomer.Click += new System.EventHandler(this.CmdAddCustomer_Click);
@@ -195,7 +195,7 @@
             this.TxtSearchBar.Margin = new System.Windows.Forms.Padding(0);
             this.TxtSearchBar.Name = "TxtSearchBar";
             this.TxtSearchBar.Size = new System.Drawing.Size(950, 31);
-            this.TxtSearchBar.TabIndex = 9;
+            this.TxtSearchBar.TabIndex = 2;
             this.TxtSearchBar.TextChanged += new System.EventHandler(this.TxtSearchBar_TextChanged);
             // 
             // pictureBox1

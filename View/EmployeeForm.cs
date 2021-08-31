@@ -71,8 +71,37 @@ namespace Contactmanager
             TxtEmployeeNr.Text = Convert.ToString(employee.EmployeeNr);
         }
 
-        private void CmdSaveEmployee_Click(object sender, EventArgs e)
+        public bool CheckNumber(TextBox text)
         {
+            if (!Controller.CheckIsItNumeric(text.Text))
+            {
+                MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Zahlen.", "Achtung!", MessageBoxButtons.OK);
+                text.Text = String.Empty;
+            }
+            return true;
+        }
+
+        public bool CheckLabel(TextBox text)
+        {
+            if(!Controller.CheckIsItLetter(text.Text))
+            {
+                MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Buchstaben.", "Achtung!", MessageBoxButtons.OK);
+                text.Text = String.Empty; 
+            }
+            return true;
+        }
+
+        private void CmdSaveEmployee_Click(object sender, EventArgs e)
+        { 
+            CheckLabel(TxtFirstname);
+            CheckLabel(TxtLastname);
+
+            CheckNumber(TxtPlz);
+            CheckNumber(TxtPrivateNr);
+            CheckNumber(TxtMobilNr);
+            CheckNumber(TxtHouseNr);
+            
+
             Person person;
             bool isMen = CmbSalutation.Text.Equals("Herr");
             if (TxtDepartment.Text.Length > 0)

@@ -76,7 +76,7 @@ namespace Contactmanager
         {
             foreach (char c in inputText)
             {
-                if (!Char.IsDigit(c) && c != '.')
+                if (Char.IsDigit(c) || c == '.')
                 {
                     return false;
                 }
@@ -90,7 +90,7 @@ namespace Contactmanager
         {
             foreach (char c in inputZahl)
             {
-                if (!Char.IsLetter(c) && c != '.')
+                if (Char.IsLetter(c) || c == '.')
                 {
                     return false;
                 }

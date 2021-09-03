@@ -514,9 +514,10 @@
             // CmbCustomerType
             // 
             this.CmbCustomerType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.CmbCustomerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCustomerType.FormattingEnabled = true;
             this.CmbCustomerType.ItemHeight = 13;
-            this.CmbCustomerType.Items.AddRange(new object[] {
+            this.CmbCustomerType.Items.AddRange(new string[] {
             "A",
             "B",
             "C",

@@ -30,7 +30,7 @@ namespace Contactmanager
             TxtPlz.Text = customer.Address.PLZ.ToString();
             TxtResidence.Text = customer.Address.Village;
             TxtCountry.Text = customer.Address.Country;
-            CmbCustomerType.Text = customer.CustomerType;
+            CmbCustomerType.SelectedItem = customer.CustomerType;
             RadActiv.Checked = !customer.IsDisabled;
             RadPassiv.Checked = customer.IsDisabled;
             TxtTitle.Text = customer.Title;
@@ -46,7 +46,7 @@ namespace Contactmanager
         {
             Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false,
                 new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
-                TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.Text);
+                TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.SelectedItem as string);
             customer.IsDisabled = RadPassiv.Checked;
             customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
             return customer;

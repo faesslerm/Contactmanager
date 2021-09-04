@@ -817,6 +817,7 @@
             // CmbSquadLevel
             // 
             this.CmbSquadLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.CmbSquadLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSquadLevel.FormattingEnabled = true;
             this.CmbSquadLevel.ItemHeight = 13;
             this.CmbSquadLevel.Items.AddRange(new object[] {

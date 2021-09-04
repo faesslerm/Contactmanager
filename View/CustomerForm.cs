@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace Contactmanager
 {
+    /*************************************************************************
+     * 
+     * **********************************************************************/
     public partial class CustomerForm : Form
     {
         private Controller Controller { get; }
@@ -15,6 +18,9 @@ namespace Contactmanager
             IsUpdate = false;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         public CustomerForm(Controller controller, Customer customer) : this(controller)
         {
             InitCustomer = customer;
@@ -22,6 +28,9 @@ namespace Contactmanager
             IsUpdate = true;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         private void InitializeCustomer(Customer customer)
         {
             TxtCompany.Text = customer.Company;
@@ -42,6 +51,9 @@ namespace Contactmanager
             TxtNotes.Text = customer.Notes.Comment;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         private Customer GetCustomer()
         {
             Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false,
@@ -52,6 +64,9 @@ namespace Contactmanager
             return customer;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         private void CmdSaveCustomer_Click(object sender, EventArgs e)
         {
             Customer customer = GetCustomer();
@@ -67,6 +82,9 @@ namespace Contactmanager
             }
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         private void CmdHistory_Click(object sender, EventArgs e)
         {
             if (InitCustomer != null)

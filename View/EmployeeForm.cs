@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace Contactmanager
 {
+    /*************************************************************************
+     * 
+     * **********************************************************************/
     public partial class EmployeeForm : Form
     {
         public Controller Controller { get; }
@@ -16,6 +19,9 @@ namespace Contactmanager
             IsUpdate = false;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         public EmployeeForm(Controller controller, Person person) : this(controller)
         {
             InitPerson = person;
@@ -23,6 +29,9 @@ namespace Contactmanager
             IsUpdate = true;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         private void InitializePerson(Person person)
         {
             CmbSalutation.SelectedItem = person.IsMen ? "Herr" : "Frau";
@@ -66,6 +75,9 @@ namespace Contactmanager
             }
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         public bool CheckNumber(TextBox text)
         {
             if (!Controller.CheckIsItNumeric(text.Text))
@@ -76,6 +88,9 @@ namespace Contactmanager
             return true;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         public bool CheckLabel(TextBox text)
         {
             if(!Controller.CheckIsItLetter(text.Text))
@@ -86,6 +101,9 @@ namespace Contactmanager
             return true;
         }
 
+        /*************************************************************************
+         * 
+         * **********************************************************************/
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         { 
             CheckLabel(TxtFirstname);

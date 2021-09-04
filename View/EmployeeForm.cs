@@ -25,7 +25,7 @@ namespace Contactmanager
 
         private void InitializePerson(Person person)
         {
-            CmbSalutation.Text = person.IsMen ? "Herr" : "Frau";
+            CmbSalutation.SelectedItem = person.IsMen ? "Herr" : "Frau";
             TxtFirstname.Text = person.Firstname;
             TxtLastname.Text = person.Lastname;
             if (person.Birthday.Year > 1)
@@ -66,11 +66,6 @@ namespace Contactmanager
             }
         }
 
-        private void InitializeEmployee(Employee employee)
-        {
-            TxtEmployeeNr.Text = Convert.ToString(employee.EmployeeNr);
-        }
-
         public bool CheckNumber(TextBox text)
         {
             if (!Controller.CheckIsItNumeric(text.Text))
@@ -103,7 +98,7 @@ namespace Contactmanager
             
 
             Person person;
-            bool isMen = CmbSalutation.Text.Equals("Herr");
+            bool isMen = "Herr".Equals(CmbSalutation.SelectedItem as string);
             if (TxtDepartment.Text.Length > 0)
             {
                 person = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
@@ -120,9 +115,9 @@ namespace Contactmanager
             }
             else
             {
-                person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadActiv.Checked,
+                person = new Person(TxtFirstname.Text, TxtLastname.Text,isMen, RadActiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
-                    TxtResidence.Text, TxtCountry.Text));
+                    TxtResidence.Text, TxtCountry.Text), TxtAhv.Text);
                 person.Birthday = DateTime.Parse(TxtBirthday.Text);
             }
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);

@@ -802,6 +802,7 @@
             // CmbSalutation
             // 
             this.CmbSalutation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(202)))), ((int)(((byte)(204)))));
+            this.CmbSalutation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSalutation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.CmbSalutation.FormattingEnabled = true;
             this.CmbSalutation.ItemHeight = 13;

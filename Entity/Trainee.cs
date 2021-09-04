@@ -17,12 +17,12 @@ namespace Contactmanager
         base(firstname, lastname, isMen, isDiasabled, address, ahv, companyPhoneNr, department, entry, levelOfEmployment, function, squadLevel)
         {
             NumberOfApprenticeship = numberOfApprenticeship;
-            CurrentYearOfApprenticeship = getApprenticeshipYear();
+            CurrentYearOfApprenticeship = GetApprenticeshipYear();
 
         }
 
 
-        public int getApprenticeshipYear()
+        public int GetApprenticeshipYear()
         {
             int anzahlTage = Convert.ToInt32(DateTime.Now - Entry);
 

@@ -12,8 +12,8 @@ namespace Contactmanager
         {
             InitializeComponent();
             Controller = controller;
-            Controller.SaveNewPerson(new Person("Max", "Muster", true, false, new Address("Musterstrasse", 1, 9000, "St.Gallen", "Schweiz")));
-            Controller.SaveNewPerson(new Person("Anna", "Ibadette", false, false, new Address("Gopfweg", 3, 9052, "Niederteufen", "Schweiz")));
+            Controller.SaveNewPerson(new Person("Markus", "Fässler", true, false, new Address("Bucheggstrasse", 3, 9008, "St.Gallen", "Schweiz"), "756.1234.1234.12"));
+            Controller.SaveNewPerson(new Person("Fiona", "Schmidiger", false, false, new Address("Gopfweg", 3, 9052, "Niederteufen", "Schweiz"), "756.1234.1234.12"));
             UpdateGrid(Controller.GetAllPeople().ToList());
         }
 
@@ -27,7 +27,7 @@ namespace Contactmanager
             GridSearchResults.Rows.Clear();
             foreach (Person person in data)
             {
-                GridSearchResults.Rows.Add(person.getGridRow());
+                GridSearchResults.Rows.Add(person.GetGridRow());
             }
             GridSearchResults.Update();
         }

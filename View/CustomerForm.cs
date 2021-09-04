@@ -42,10 +42,10 @@ namespace Contactmanager
             TxtNotes.Text = customer.Notes.Comment;
         }
 
-        private Customer getCustomer()
+        private Customer GetCustomer()
         {
             Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false,
-                new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
+                new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text), string.Empty,
                 TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.SelectedItem as string);
             customer.IsDisabled = RadPassiv.Checked;
             customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
@@ -54,7 +54,7 @@ namespace Contactmanager
 
         private void CmdSaveCustomer_Click(object sender, EventArgs e)
         {
-            Customer customer = getCustomer();
+            Customer customer = GetCustomer();
             bool success = IsUpdate ? Controller.UpdatePerson(customer) : Controller.SaveNewPerson(customer);
             if (success)
             {

@@ -15,9 +15,9 @@ namespace Contactmanager
         public List<History> NotesHistory { get; }
 
         //Konstruktor
-        public Customer(string title, string firstname, string lastname, bool isMen, bool isDisabled, Address address, string privateNr, string mail, string company,
+        public Customer(string title, string firstname, string lastname, bool isMen, bool isDisabled, Address address, string ahv, string privateNr, string mail, string company,
             string customerType) :
-            base(firstname, lastname, isMen, isDisabled, address)
+            base(firstname, lastname, isMen, isDisabled, address, ahv)
         {
             //Person
             Title = title;

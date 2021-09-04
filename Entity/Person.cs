@@ -25,13 +25,14 @@ namespace Contactmanager
         public List<History> Histories { get; }
 
         //Konstruktor:
-        public Person(string firstname, string lastname, bool isMen, bool isDisabled, Address address)
+        public Person(string firstname, string lastname, bool isMen, bool isDisabled, Address address, string ahv)
         {
             Firstname = firstname;
             Lastname = lastname;
             IsMen = isMen;
             IsDisabled = isDisabled;
             Address = address;
+            AHV = ahv;
             Histories = new List<History>();
         }
 
@@ -56,7 +57,7 @@ namespace Contactmanager
             return peopleAsString;
         }
 
-        public string[] getGridRow()
+        public string[] GetGridRow()
         {
             return new string[] { Firstname, Lastname, Address.Street, Address.HouseNumber.ToString(), Address.PLZ.ToString(), Address.Village, Address.Country };
         }

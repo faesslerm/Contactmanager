@@ -15,6 +15,7 @@ namespace Contactmanager
             LoadData();
         }
 
+        // Person hinzufügen
         public bool Add(Person p)
         {
             if (people.Length > counter)
@@ -26,6 +27,7 @@ namespace Contactmanager
             return false;
         }
 
+        // Person suchen
         public Person Get(Person p)
         {
             if (counter > 0)
@@ -39,6 +41,7 @@ namespace Contactmanager
             return null;
         }
 
+        // Gibt die geammte Personenliste aus
         public Person[] GetAll()
         {
             if (counter > 0)
@@ -56,6 +59,7 @@ namespace Contactmanager
             return new Person[0];
         }
 
+        // Konvertiert alle Daten zu String
         public string[] GetAllAsString()
         {
             if (counter > 0)
@@ -70,6 +74,7 @@ namespace Contactmanager
             return null;
         }
 
+        // Ist die Person vorhanden
         public bool Find(Person p)
         {
             if (Get(p) != null)
@@ -77,6 +82,7 @@ namespace Contactmanager
             return false;
         }
 
+        // Gibt den Index der Person aus
         public int FindPosition(Person p)
         {
             for (int c = 0; c < counter; c++)
@@ -87,6 +93,7 @@ namespace Contactmanager
             return -1;
         }
 
+        // Löscht eine Person
         public bool Delete(Person p)
         {
             int pos = FindPosition(p);
@@ -103,6 +110,7 @@ namespace Contactmanager
             return false;
         }
 
+        // Update der Personenliste
         public bool Update(Person old, Person update)
         {
             int pos = FindPosition(old);
@@ -115,6 +123,7 @@ namespace Contactmanager
 
         }
 
+        // Update der History
         private void UpdateHistory(Person old, Person update)
         {
             if (old.Firstname != null && !old.Firstname.Equals(update.Firstname))
@@ -183,6 +192,7 @@ namespace Contactmanager
             }
         }
 
+        // Update der History-Notizen
         private void UpdateNotesHistory(Person old, Person update)
         {
             if (old is Customer && update is Customer)
@@ -196,6 +206,7 @@ namespace Contactmanager
             }
         }
 
+        // Person auf inaktiv setzen
         public bool Disable(Person p)
         {
             int pos = FindPosition(p);
@@ -203,6 +214,7 @@ namespace Contactmanager
             return true;
         }
 
+        // Person auf aktiv setzen
         public bool Enable(Person p)
         {
             int pos = FindPosition(p);
@@ -210,11 +222,13 @@ namespace Contactmanager
             return true;
         }
 
+        // Personenliste in File speichern
         private void SaveData()
         {
             IO.Save(people);
         }
 
+        // Daten aus dem File laden
         private void LoadData()
         {
             Person[] p = IO.Load();

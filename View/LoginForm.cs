@@ -15,7 +15,8 @@ namespace Contactmanager
         private bool loggedIn = false;
 
         /*************************************************************************
-         * Der Controller wird aufgerufen.
+         * Der Controller wird an dieser Stelle übergeben, damit dieser 
+         * verwendet werden kann.
          * **********************************************************************/
         public LoginForm(Controller controller)
         {

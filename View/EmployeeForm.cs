@@ -3,9 +3,6 @@ using System.Windows.Forms;
 
 namespace Contactmanager
 {
-    /*************************************************************************
-     * 
-     * **********************************************************************/
     public partial class EmployeeForm : Form
     {
         public Controller Controller { get; }
@@ -20,7 +17,8 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Controller und Person wird übergeben, damit die Personendaten in der
+         * Form ausgefüllt werden.
          * **********************************************************************/
         public EmployeeForm(Controller controller, Person person) : this(controller)
         {
@@ -30,7 +28,7 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Die Properties werden dem entsprechenden Textfeld zugewiesen.
          * **********************************************************************/
         private void InitializePerson(Person person)
         {
@@ -76,7 +74,7 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Die Eingabe wird auf Zahlen überpfügt.
          * **********************************************************************/
         public bool CheckNumber(TextBox text)
         {
@@ -89,7 +87,7 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Die Eingabe wird auf Buchstaben überpfrüft.
          * **********************************************************************/
         public bool CheckLabel(TextBox text)
         {
@@ -102,7 +100,12 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Die einzelnen Textfelder werden überprüft und anschliessend abge-
+         * speichert. Falls die Person schon existiert, erscheint eine Fehler-
+         * meldung. Wenn das Feld "Abteilung" ausgefüllt wurde, wird ein
+         * neuer Employee erstellt. Ist das Feld "Lehrjahre" ausgefüllt, wird ein
+         * neuer Trainee erfasst. Falls keines der zuvor erwähnten Felder gegeben
+         * wurde, wird eine Person erstellt.
          * **********************************************************************/
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         { 

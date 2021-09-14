@@ -11,7 +11,7 @@ namespace Contactmanager
     {
         //Properties:
         public DateTime Editing { get; set; }
-        public string Target { get; set; } //Was wurde geändert? vgl. Note unten --> bspw. Vorname
+        public string Target { get; set; }
         public string Oldvalue { get; set; } // Alter Wert
 
         //Konstruktor:

@@ -7,6 +7,7 @@ namespace Contactmanager.Persistence
 {
     public static class IO
     {
+        // Speichert das gesammte Personen-Array in seperatem File "people.data"
         private const string locationAndName = @"./people.data";
         public static bool Save(Person[] data)
         {
@@ -29,6 +30,11 @@ namespace Contactmanager.Persistence
             return status;
         }
 
+        /**************************************************************************
+         * Lädt das gesammte Personen-Array aus dem File "people.data", falls
+         * es bereits vorhanden ist. Falls es nicht vorhanden ist, wird dieses
+         * File erstellt.
+         * ***********************************************************************/
         public static Person[] Load()
         {
             Person[] data = null;

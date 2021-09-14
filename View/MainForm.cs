@@ -28,7 +28,8 @@ namespace Contactmanager
         private List<Person> searchResult = new List<Person>();
 
         /*************************************************************************
-         * 
+         * Wenn eine neue Person erfasst wird, wird diese wiederum im Grid neu
+         * geladen.
          * **********************************************************************/
         private void UpdateGrid(List<Person> data)
         {

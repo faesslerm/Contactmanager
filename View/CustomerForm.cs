@@ -3,9 +3,6 @@ using System.Windows.Forms;
 
 namespace Contactmanager
 {
-    /*************************************************************************
-     * 
-     * **********************************************************************/
     public partial class CustomerForm : Form
     {
         private Controller Controller { get; }
@@ -19,7 +16,8 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Controller und Customer wird übergeben, damit die Personendaten in der
+         * Form ausgefüllt werden.
          * **********************************************************************/
         public CustomerForm(Controller controller, Customer customer) : this(controller)
         {
@@ -29,7 +27,7 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Die Properties werden dem entsprechenden Textfeld zugewiesen.
          * **********************************************************************/
         private void InitializeCustomer(Customer customer)
         {
@@ -52,7 +50,7 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Es wird ein neues Customer-Objekt mit allen Textfeldern erstellt.
          * **********************************************************************/
         private Customer GetCustomer()
         {
@@ -65,7 +63,9 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Die einzelnen Textfelder werden überprüft und anschliessen abge-
+         * speichert. Falls der Kunde schon existiert, erscheint eine Fehler-
+         * meldung.
          * **********************************************************************/
         private void CmdSaveCustomer_Click(object sender, EventArgs e)
         {
@@ -83,7 +83,8 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * 
+         * Wenn auf das History-Icon geklickt wird, öffnet sich die HistoryForm
+         * mit den entsprechenden Notizen.
          * **********************************************************************/
         private void CmdHistory_Click(object sender, EventArgs e)
         {

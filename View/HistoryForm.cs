@@ -13,7 +13,8 @@ namespace Contactmanager
     public partial class HistoryForm : Form
     {
         /*************************************************************************
-         * 
+         * Hier wird eine Liste der History übergeben und danach in der TextBox
+         * mit Hilfe der ToString-Methode ausgegeben.
          * **********************************************************************/
         public HistoryForm(List<History> histories)
         {

@@ -5,10 +5,13 @@ namespace Contactmanager
 {
     static class Program
     {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
         [STAThread]
+        /**********************************************************
+         * Hier wird definiert, dass beim Starten der Applikation,
+         * zuerst das LoginForm geöffnet wird. Wenn diese ge-
+         * schlossen wird (Login erfolgreich), wird die MainForm
+         * gestartet.
+         * *******************************************************/
         static void Main()
         {
             Application.EnableVisualStyles();

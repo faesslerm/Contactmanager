@@ -100,6 +100,20 @@ namespace Contactmanager
         }
 
         /*************************************************************************
+         * Die Eingabe wird auf eine valide Mail-Adresse überpfrüft.
+         * **********************************************************************/
+        public bool CheckMail(TextBox text)
+        {
+            if (!Controller.IsValidEmail(text.Text))
+            {
+                MessageBox.Show("Bitte verwende eine gültige E-Mail Adresse.", "Achtung!", MessageBoxButtons.OK);
+                text.Text = String.Empty;
+                return false;
+            }
+            return true;
+        }
+
+        /*************************************************************************
          * Die einzelnen Textfelder werden überprüft und anschliessend abge-
          * speichert. Falls die Person schon existiert, erscheint eine Fehler-
          * meldung. Wenn das Feld "Abteilung" ausgefüllt wurde, wird ein
@@ -116,7 +130,11 @@ namespace Contactmanager
             CheckNumber(TxtPrivateNr);
             CheckNumber(TxtMobilNr);
             CheckNumber(TxtHouseNr);
-            
+
+            if (!CheckMail(TxtMail))
+            {
+                return;
+            };
 
             Person person;
             bool isMen = "Herr".Equals(CmbSalutation.SelectedItem as string);
@@ -139,7 +157,16 @@ namespace Contactmanager
                 person = new Person(TxtFirstname.Text, TxtLastname.Text,isMen, RadActiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
                     TxtResidence.Text, TxtCountry.Text), TxtAhv.Text);
-                person.Birthday = DateTime.Parse(TxtBirthday.Text);
+
+                if (TxtBirthday.Text != String.Empty)
+                {
+                    person.Birthday = DateTime.Parse(TxtBirthday.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Es wird ein Geburtsdatum benötigt!", "Achtung", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);
             if (success)

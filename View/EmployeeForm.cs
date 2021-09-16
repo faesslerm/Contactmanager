@@ -91,10 +91,10 @@ namespace Contactmanager
          * **********************************************************************/
         public bool CheckLabel(TextBox text)
         {
-            if(!Controller.CheckIsItLetter(text.Text))
+            if (!Controller.CheckIsItLetter(text.Text))
             {
                 MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Buchstaben.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty; 
+                text.Text = String.Empty;
             }
             return true;
         }
@@ -122,7 +122,7 @@ namespace Contactmanager
          * wurde, wird eine Person erstellt.
          * **********************************************************************/
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
-        { 
+        {
             CheckLabel(TxtFirstname);
             CheckLabel(TxtLastname);
 
@@ -144,6 +144,7 @@ namespace Contactmanager
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string));
                 person.Birthday = DateTime.Parse(TxtBirthday.Text);
+                person.Mail = TxtMail.Text;
             }
             else if (TxtApprenticeshipYears.Text.Length > 0)
             {
@@ -151,13 +152,13 @@ namespace Contactmanager
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string),
                     Convert.ToInt32(TxtApprenticeshipYears.Text));
+                person.Mail = TxtMail.Text;
             }
             else
             {
-                person = new Person(TxtFirstname.Text, TxtLastname.Text,isMen, RadActiv.Checked,
+                person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
                     TxtResidence.Text, TxtCountry.Text), TxtAhv.Text);
-
                 if (TxtBirthday.Text != String.Empty)
                 {
                     person.Birthday = DateTime.Parse(TxtBirthday.Text);
@@ -167,6 +168,7 @@ namespace Contactmanager
                     MessageBox.Show("Es wird ein Geburtsdatum benötigt!", "Achtung", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                person.Mail = TxtMail.Text;
             }
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);
             if (success)

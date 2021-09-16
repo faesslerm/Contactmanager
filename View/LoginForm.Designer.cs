@@ -75,7 +75,7 @@
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(300, 29);
             this.TxtPassword.TabIndex = 1;
-            this.TxtPassword.Enter += new System.EventHandler(this.CmdLogin_Click);
+            this.TxtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
             // 
             // LblPassword
             // 

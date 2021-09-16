@@ -42,5 +42,17 @@ namespace Contactmanager
                 MessageBox.Show("Falscher Benutzer oder Passwort!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /*************************************************************************
+         * Wird im Password-Feld die Enter-Taste (Zeilenumbruch => 13) betätigt,
+         * wird die Login Methode aufgerufen. Ansonsten wird nichts ausgeführt!
+         * **********************************************************************/
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                CmdLogin_Click(sender, e);
+            }
+        }
     }
 }

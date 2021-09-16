@@ -89,6 +89,7 @@
             this.GridSearchResults.Size = new System.Drawing.Size(950, 290);
             this.GridSearchResults.TabIndex = 5;
             this.GridSearchResults.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridSearchResults_CellClick);
+            this.GridSearchResults.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CmdEditSelected_Click);
             // 
             // Firstname
             // 

@@ -637,6 +637,7 @@
             this.TxtCurrentApprenticeshipYear.Location = new System.Drawing.Point(748, 464);
             this.TxtCurrentApprenticeshipYear.Margin = new System.Windows.Forms.Padding(1);
             this.TxtCurrentApprenticeshipYear.Name = "TxtCurrentApprenticeshipYear";
+            this.TxtCurrentApprenticeshipYear.ReadOnly = true;
             this.TxtCurrentApprenticeshipYear.Size = new System.Drawing.Size(220, 19);
             this.TxtCurrentApprenticeshipYear.TabIndex = 27;
             // 

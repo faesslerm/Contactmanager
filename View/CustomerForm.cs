@@ -97,6 +97,7 @@ namespace Contactmanager
             Customer customer = new Customer(TxtTitle.Text, TxtFirstname.Text, TxtLastname.Text, false, false,
                 new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text), string.Empty,
                 TxtPrivateNr.Text, TxtMail.Text, TxtCompany.Text, CmbCustomerType.SelectedItem as string);
+            customer.MobileNr = TxtMobilNr.Text;
             customer.IsDisabled = RadPassiv.Checked;
             customer.Notes = new Notes(DateTime.Now, TxtNotes.Text);
             return customer;

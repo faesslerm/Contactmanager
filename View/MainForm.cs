@@ -118,11 +118,15 @@ namespace Contactmanager
             Controller.PersonToBeUpdated(person);
             if (person is Employee)
             {
-                new EmployeeForm(Controller, person as Employee).ShowDialog();
+                EmployeeForm employeeForm = new EmployeeForm(Controller, person as Employee);
+                employeeForm.LblTitleEmployee.Text = "Mitarbeiter bearbeiten";
+                employeeForm.ShowDialog();
             }
             else if (person is Customer)
             {
-                new CustomerForm(Controller, person as Customer).ShowDialog();
+                CustomerForm customerForm = new CustomerForm(Controller, person as Customer);
+                customerForm.LblTitleCustomer.Text = "Kunde bearbeiten";
+                customerForm.ShowDialog();
             }
             else
             {

@@ -50,46 +50,6 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * Die Eingabe wird auf Zahlen überpfügt.
-         * **********************************************************************/
-        public bool CheckNumber(TextBox text)
-        {
-            if (!Controller.CheckIsItNumeric(text.Text))
-            {
-                MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Zahlen.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty;
-            }
-            return true;
-        }
-
-        /*************************************************************************
-         * Die Eingabe wird auf Buchstaben überpfrüft.
-         * **********************************************************************/
-        public bool CheckLabel(TextBox text)
-        {
-            if (!Controller.CheckIsItLetter(text.Text))
-            {
-                MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Buchstaben.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty;
-            }
-            return true;
-        }
-
-        /*************************************************************************
-         * Die Eingabe wird auf eine valide Mail-Adresse überpfrüft.
-         * **********************************************************************/
-        public bool CheckMail(TextBox text)
-        {
-            if (!Controller.IsValidEmail(text.Text))
-            {
-                MessageBox.Show("Bitte verwende eine gültige E-Mail Adresse.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty;
-                return false;
-            }
-            return true;
-        }
-
-        /*************************************************************************
          * Es wird ein neues Customer-Objekt mit allen Textfeldern erstellt.
          * **********************************************************************/
         private Customer GetCustomer()
@@ -104,26 +64,36 @@ namespace Contactmanager
         }
 
         /*************************************************************************
+         * Die einzelnen Textfelder werden überprüft und wenn alle valide sind,
+         * wird true zurückgegeben.
+         *************************************************************************/
+        private bool checkFields()
+        {
+            return Validation.CheckText(TxtCompany)
+                    && Validation.CheckText(TxtStreet)
+                    && Validation.CheckNumber(TxtHouseNr)
+                    && Validation.CheckNumber(TxtPlz)
+                    && Validation.CheckText(TxtResidence)
+                    && Validation.CheckText(TxtCountry)
+                    && Validation.CheckText(TxtTitle)
+                    && Validation.CheckText(TxtFirstname)
+                    && Validation.CheckText(TxtLastname)
+                    && Validation.CheckNumber(TxtPrivateNr)
+                    && Validation.CheckNumber(TxtMobilNr)
+                    && Validation.CheckMail(TxtMail);
+        }
+
+        /*************************************************************************
          * Die einzelnen Textfelder werden überprüft und anschliessen abge-
          * speichert. Falls der Kunde schon existiert, erscheint eine Fehler-
          * meldung.
          * **********************************************************************/
         private void CmdSaveCustomer_Click(object sender, EventArgs e)
         {
-            CheckLabel(TxtStreet);
-            CheckLabel(TxtCountry);
-            CheckLabel(TxtFirstname);
-            CheckLabel(TxtLastname);
-
-            CheckNumber(TxtPlz);
-            CheckNumber(TxtPrivateNr);
-            CheckNumber(TxtMobilNr);
-            CheckNumber(TxtHouseNr);
-
-            if (!CheckMail(TxtMail))
+            if (!checkFields())
             {
                 return;
-            };
+            }
 
             Customer customer = GetCustomer();
             bool success = IsUpdate ? Controller.UpdatePerson(customer) : Controller.SaveNewPerson(customer);

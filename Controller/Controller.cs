@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contactmanager
+﻿namespace Contactmanager
 {
     public class Controller
     {
@@ -99,56 +97,6 @@ namespace Contactmanager
         public bool UpdatePerson(Person p)
         {
             return model.Update(personToBeUpdated, p);
-        }
-
-
-        /**************************************************
-         * Eingabe wird überprüft, ob es ausschliesslich 
-         * Buchstaben beinhaltet.
-         * ***********************************************/
-        public bool CheckIsItLetter(string inputText)
-        {
-            foreach (char c in inputText)
-            {
-                if (Char.IsDigit(c) || c == '.')
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        /**************************************************
-         * Eingabe wird überprüft, ob es ausschlisslich 
-         * Zahlen beinhaltet.
-         * ***********************************************/
-        public bool CheckIsItNumeric(string inputZahl)
-        {
-            foreach (char c in inputZahl)
-            {
-                if (Char.IsLetter(c) || c == '.')
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        /***************************************************
-         * Eingabe wird überprüft, ob die E-Mail Adresse 
-         * grundsätzlich eine gültige Schreibweise erfüllt.
-         * ************************************************/
-        public bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
         }
     }
 }

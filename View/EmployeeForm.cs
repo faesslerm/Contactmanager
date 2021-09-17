@@ -80,43 +80,23 @@ namespace Contactmanager
         }
 
         /*************************************************************************
-         * Die Eingabe wird auf Zahlen überpfügt.
-         * **********************************************************************/
-        public bool CheckNumber(TextBox text)
+         * Die einzelnen Textfelder werden überprüft und wenn alle valide sind,
+         * wird true zurückgegeben.
+         *************************************************************************/
+        private bool checkFields()
         {
-            if (!Controller.CheckIsItNumeric(text.Text))
-            {
-                MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Zahlen.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty;
-            }
-            return true;
-        }
-
-        /*************************************************************************
-         * Die Eingabe wird auf Buchstaben überpfrüft.
-         * **********************************************************************/
-        public bool CheckLabel(TextBox text)
-        {
-            if (!Controller.CheckIsItLetter(text.Text))
-            {
-                MessageBox.Show("Bitte verwende für " + (text.Name) + " nur Buchstaben.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty;
-            }
-            return true;
-        }
-
-        /*************************************************************************
-         * Die Eingabe wird auf eine valide Mail-Adresse überpfrüft.
-         * **********************************************************************/
-        public bool CheckMail(TextBox text)
-        {
-            if (!Controller.IsValidEmail(text.Text))
-            {
-                MessageBox.Show("Bitte verwende eine gültige E-Mail Adresse.", "Achtung!", MessageBoxButtons.OK);
-                text.Text = String.Empty;
-                return false;
-            }
-            return true;
+            return Validation.CheckText(TxtFirstname)
+                    && Validation.CheckText(TxtLastname)
+                    && Validation.CheckText(TxtTitle)
+                    && Validation.CheckText(TxtStreet)
+                    && Validation.CheckNumber(TxtHouseNr)
+                    && Validation.CheckNumber(TxtPlz)
+                    && Validation.CheckText(TxtResidence)
+                    && Validation.CheckText(TxtCountry)
+                    && Validation.CheckNumber(TxtPrivateNr)
+                    && Validation.CheckNumber(TxtMobilNr)
+                    && Validation.CheckMail(TxtMail)
+                    && Validation.CheckText(TxtNationality);
         }
 
         /*************************************************************************
@@ -129,19 +109,10 @@ namespace Contactmanager
          * **********************************************************************/
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         {
-            CheckLabel(TxtFirstname);
-            CheckLabel(TxtLastname);
-
-            CheckNumber(TxtPlz);
-            CheckNumber(TxtPrivateNr);
-            CheckNumber(TxtMobilNr);
-            CheckNumber(TxtHouseNr);
-
-            if (!CheckMail(TxtMail))
+            if (!checkFields())
             {
                 return;
-            };
-
+            }
             Person person;
             bool isMen = "Herr".Equals(CmbSalutation.SelectedItem as string);
             if (TxtDepartment.Text.Length > 0)
@@ -149,7 +120,7 @@ namespace Contactmanager
                 Employee employee = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string));
-                if (TxtBirthday.Text != string.Empty)
+                if (Validation.CheckDate(TxtBirthday))
                 {
                     employee.Birthday = DateTime.Parse(TxtBirthday.Text);
                 }
@@ -159,7 +130,7 @@ namespace Contactmanager
                 employee.PrivateNr = TxtPrivateNr.Text;
                 employee.Nationality = TxtNationality.Text;
                 employee.CompanyFaxNr = TxtCompanyFaxNr.Text;
-                if (TxtLeaving.Text != string.Empty)
+                if (Validation.CheckDate(TxtLeaving))
                 {
                     employee.Leaving = DateTime.Parse(TxtLeaving.Text);
                 }
@@ -171,7 +142,7 @@ namespace Contactmanager
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string),
                     Convert.ToInt32(TxtApprenticeshipYears.Text));
-                if (TxtBirthday.Text != string.Empty)
+                if (Validation.CheckDate(TxtBirthday))
                 {
                     person.Birthday = DateTime.Parse(TxtBirthday.Text);
                 }
@@ -186,14 +157,9 @@ namespace Contactmanager
                 person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
                     TxtResidence.Text, TxtCountry.Text), TxtAhv.Text);
-                if (TxtBirthday.Text != string.Empty)
+                if (Validation.CheckDate(TxtBirthday))
                 {
                     person.Birthday = DateTime.Parse(TxtBirthday.Text);
-                }
-                else
-                {
-                    MessageBox.Show("Es wird ein Geburtsdatum benötigt!", "Achtung", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
                 }
                 person.Mail = TxtMail.Text;
                 person.Title = TxtTitle.Text;

@@ -24,7 +24,7 @@ namespace Contactmanager
         // Rechnet aus, in welchem Lehrjahr sich der Trainee befindet
         public int GetApprenticeshipYear()
         {
-            int anzahlTage = Convert.ToInt32(DateTime.Now - Entry);
+            double anzahlTage = DateTime.Now.Subtract(Entry).TotalDays;
 
             if (anzahlTage < 365)
                 return 1;

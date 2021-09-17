@@ -69,7 +69,13 @@ namespace Contactmanager
                 }
                 TxtLevelOfEmployment.Text = employee.LevelOfEmployment;
                 TxtFunction.Text = employee.Function;
-                CmbSquadLevel.SelectedItem = employee.SquadLevel;
+                CmbSquadLevel.SelectedItem = Convert.ToString(employee.SquadLevel);
+            }
+            if (person is Trainee)
+            {
+                Trainee trainee = person as Trainee;
+                TxtApprenticeshipYears.Text = trainee.NumberOfApprenticeship.ToString();
+                TxtCurrentApprenticeshipYear.Text = trainee.GetApprenticeshipYear().ToString();
             }
         }
 
@@ -140,11 +146,24 @@ namespace Contactmanager
             bool isMen = "Herr".Equals(CmbSalutation.SelectedItem as string);
             if (TxtDepartment.Text.Length > 0)
             {
-                person = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
+                Employee employee = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string));
-                person.Birthday = DateTime.Parse(TxtBirthday.Text);
-                person.Mail = TxtMail.Text;
+                if (TxtBirthday.Text != string.Empty)
+                {
+                    employee.Birthday = DateTime.Parse(TxtBirthday.Text);
+                }
+                employee.Mail = TxtMail.Text;
+                employee.Title = TxtTitle.Text;
+                employee.MobileNr = TxtMobilNr.Text;
+                employee.PrivateNr = TxtPrivateNr.Text;
+                employee.Nationality = TxtNationality.Text;
+                employee.CompanyFaxNr = TxtCompanyFaxNr.Text;
+                if (TxtLeaving.Text != string.Empty)
+                {
+                    employee.Leaving = DateTime.Parse(TxtLeaving.Text);
+                }
+                person = employee;
             }
             else if (TxtApprenticeshipYears.Text.Length > 0)
             {
@@ -152,14 +171,22 @@ namespace Contactmanager
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string),
                     Convert.ToInt32(TxtApprenticeshipYears.Text));
+                if (TxtBirthday.Text != string.Empty)
+                {
+                    person.Birthday = DateTime.Parse(TxtBirthday.Text);
+                }
                 person.Mail = TxtMail.Text;
+                person.Title = TxtTitle.Text;
+                person.MobileNr = TxtMobilNr.Text;
+                person.PrivateNr = TxtPrivateNr.Text;
+                person.Nationality = TxtNationality.Text;
             }
             else
             {
                 person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
                     TxtResidence.Text, TxtCountry.Text), TxtAhv.Text);
-                if (TxtBirthday.Text != String.Empty)
+                if (TxtBirthday.Text != string.Empty)
                 {
                     person.Birthday = DateTime.Parse(TxtBirthday.Text);
                 }
@@ -169,6 +196,10 @@ namespace Contactmanager
                     return;
                 }
                 person.Mail = TxtMail.Text;
+                person.Title = TxtTitle.Text;
+                person.MobileNr = TxtMobilNr.Text;
+                person.PrivateNr = TxtPrivateNr.Text;
+                person.Nationality = TxtNationality.Text;
             }
             bool success = IsUpdate ? Controller.UpdatePerson(person) : Controller.SaveNewPerson(person);
             if (success)

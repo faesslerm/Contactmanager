@@ -54,7 +54,7 @@ namespace Contactmanager
                 var mail = new System.Net.Mail.MailAddress(input);
                 return mail.Address == input;
             }
-            catch(FormatException)
+            catch(Exception)
             {
                 return false;
             }
@@ -111,7 +111,7 @@ namespace Contactmanager
             {
                 DateTime.Parse(text.Text);
             }
-            catch (FormatException)
+            catch (Exception)
             {
                 MessageBox.Show("Bitte verwende für das Feld " + text.Name.Substring(3) + " eine gültiges Datum-Format.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 text.Text = string.Empty;

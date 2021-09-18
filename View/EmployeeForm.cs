@@ -115,14 +115,44 @@ namespace Contactmanager
             }
             Person person;
             bool isMen = "Herr".Equals(CmbSalutation.SelectedItem as string);
-            if (TxtDepartment.Text.Length > 0)
+            if (TxtApprenticeshipYears.Text.Length > 0)
             {
+                if (!Validation.CheckDate(TxtEntry))
+                {
+                    return;
+                }
+                person = new Trainee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
+                    new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
+                    TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string),
+                    Convert.ToInt32(TxtApprenticeshipYears.Text));
+                if (Validation.CheckDate(TxtBirthday))
+                {
+                    person.Birthday = DateTime.Parse(TxtBirthday.Text);
+                } else
+                {
+                    return;
+                }
+                person.Mail = TxtMail.Text;
+                person.Title = TxtTitle.Text;
+                person.MobileNr = TxtMobilNr.Text;
+                person.PrivateNr = TxtPrivateNr.Text;
+                person.Nationality = TxtNationality.Text;
+            }
+            else if (TxtDepartment.Text.Length > 0)
+            {
+                if (!Validation.CheckDate(TxtEntry))
+                {
+                    return;
+                }
                 Employee employee = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string));
                 if (Validation.CheckDate(TxtBirthday))
                 {
                     employee.Birthday = DateTime.Parse(TxtBirthday.Text);
+                } else
+                {
+                    return;
                 }
                 employee.Mail = TxtMail.Text;
                 employee.Title = TxtTitle.Text;
@@ -136,22 +166,6 @@ namespace Contactmanager
                 }
                 person = employee;
             }
-            else if (TxtApprenticeshipYears.Text.Length > 0)
-            {
-                person = new Trainee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
-                    new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
-                    TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string),
-                    Convert.ToInt32(TxtApprenticeshipYears.Text));
-                if (Validation.CheckDate(TxtBirthday))
-                {
-                    person.Birthday = DateTime.Parse(TxtBirthday.Text);
-                }
-                person.Mail = TxtMail.Text;
-                person.Title = TxtTitle.Text;
-                person.MobileNr = TxtMobilNr.Text;
-                person.PrivateNr = TxtPrivateNr.Text;
-                person.Nationality = TxtNationality.Text;
-            }
             else
             {
                 person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
@@ -160,6 +174,10 @@ namespace Contactmanager
                 if (Validation.CheckDate(TxtBirthday))
                 {
                     person.Birthday = DateTime.Parse(TxtBirthday.Text);
+                }
+                else
+                {
+                    return;
                 }
                 person.Mail = TxtMail.Text;
                 person.Title = TxtTitle.Text;

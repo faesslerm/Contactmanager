@@ -43,7 +43,8 @@ namespace Contactmanager
                 return false;
             if (Firstname.Equals(other.Firstname) &&
                 Lastname.Equals(other.Lastname) &&
-                IsMen == other.IsMen)
+                IsMen == other.IsMen &&
+                Address.Equals(other.Address))
                 return true;
             return false;
         }

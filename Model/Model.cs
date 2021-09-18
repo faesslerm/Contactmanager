@@ -49,10 +49,7 @@ namespace Contactmanager
                 Person[] temp = new Person[counter];
                 for (int c = 0; c < counter; c++)
                 {
-                    if (people[c].IsDisabled == false)
-                    {
-                        temp[c] = people[c];
-                    }
+                    temp[c] = people[c];
                 }
                 return temp;
             }
@@ -200,7 +197,8 @@ namespace Contactmanager
                 Customer oldCustomer = old as Customer;
                 Customer updateCustomer = update as Customer;
                 updateCustomer.NotesHistory.AddRange(oldCustomer.NotesHistory);
-                if (!oldCustomer.Notes.Comment.Equals(updateCustomer.Notes.Comment)){
+                if (!oldCustomer.Notes.Comment.Equals(updateCustomer.Notes.Comment))
+                {
                     updateCustomer.NotesHistory.Add(new History(DateTime.Now, "Notizen", oldCustomer.Notes.Comment));
                 }
             }

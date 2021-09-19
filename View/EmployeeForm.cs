@@ -83,7 +83,7 @@ namespace Contactmanager
          * Die einzelnen Textfelder werden überprüft und wenn alle valide sind,
          * wird true zurückgegeben.
          *************************************************************************/
-        private bool checkFields()
+        private bool CheckFields()
         {
             return Validation.CheckText(TxtFirstname)
                     && Validation.CheckText(TxtLastname)
@@ -96,7 +96,8 @@ namespace Contactmanager
                     && Validation.CheckNumber(TxtPrivateNr)
                     && Validation.CheckNumber(TxtMobilNr)
                     && Validation.CheckMail(TxtMail)
-                    && Validation.CheckText(TxtNationality);
+                    && Validation.CheckText(TxtNationality)
+                    && Validation.CheckDate(TxtBirthday);
         }
 
         /*************************************************************************
@@ -109,7 +110,7 @@ namespace Contactmanager
          * **********************************************************************/
         private void CmdSaveEmployee_Click(object sender, EventArgs e)
         {
-            if (!checkFields())
+            if (!CheckFields())
             {
                 return;
             }
@@ -117,7 +118,7 @@ namespace Contactmanager
             bool isMen = "Herr".Equals(CmbSalutation.SelectedItem as string);
             if (TxtApprenticeshipYears.Text.Length > 0)
             {
-                if (!Validation.CheckDate(TxtEntry))
+                if (!Validation.CheckDate(TxtEntry) && !Validation.CheckNumber(TxtApprenticeshipYears))
                 {
                     return;
                 }
@@ -125,13 +126,7 @@ namespace Contactmanager
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string),
                     Convert.ToInt32(TxtApprenticeshipYears.Text));
-                if (Validation.CheckDate(TxtBirthday))
-                {
-                    person.Birthday = DateTime.Parse(TxtBirthday.Text);
-                } else
-                {
-                    return;
-                }
+                person.Birthday = DateTime.Parse(TxtBirthday.Text);
                 person.Mail = TxtMail.Text;
                 person.Title = TxtTitle.Text;
                 person.MobileNr = TxtMobilNr.Text;
@@ -147,20 +142,14 @@ namespace Contactmanager
                 Employee employee = new Employee(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text), TxtResidence.Text, TxtCountry.Text),
                     TxtAhv.Text, TxtCompanyPhoneNr.Text, TxtDepartment.Text, DateTime.Parse(TxtEntry.Text), TxtLevelOfEmployment.Text, TxtFunction.Text, Convert.ToByte(CmbSquadLevel.SelectedItem as string));
-                if (Validation.CheckDate(TxtBirthday))
-                {
-                    employee.Birthday = DateTime.Parse(TxtBirthday.Text);
-                } else
-                {
-                    return;
-                }
+                employee.Birthday = DateTime.Parse(TxtBirthday.Text);
                 employee.Mail = TxtMail.Text;
                 employee.Title = TxtTitle.Text;
                 employee.MobileNr = TxtMobilNr.Text;
                 employee.PrivateNr = TxtPrivateNr.Text;
                 employee.Nationality = TxtNationality.Text;
                 employee.CompanyFaxNr = TxtCompanyFaxNr.Text;
-                if (Validation.CheckDate(TxtLeaving))
+                if (TxtLeaving.Text != string.Empty && Validation.CheckDate(TxtLeaving))
                 {
                     employee.Leaving = DateTime.Parse(TxtLeaving.Text);
                 }
@@ -171,14 +160,7 @@ namespace Contactmanager
                 person = new Person(TxtFirstname.Text, TxtLastname.Text, isMen, RadPassiv.Checked,
                     new Address(TxtStreet.Text, Convert.ToInt32(TxtHouseNr.Text), Convert.ToInt32(TxtPlz.Text),
                     TxtResidence.Text, TxtCountry.Text), TxtAhv.Text);
-                if (Validation.CheckDate(TxtBirthday))
-                {
-                    person.Birthday = DateTime.Parse(TxtBirthday.Text);
-                }
-                else
-                {
-                    return;
-                }
+                person.Birthday = DateTime.Parse(TxtBirthday.Text);
                 person.Mail = TxtMail.Text;
                 person.Title = TxtTitle.Text;
                 person.MobileNr = TxtMobilNr.Text;

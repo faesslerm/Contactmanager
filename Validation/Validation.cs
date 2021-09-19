@@ -54,7 +54,7 @@ namespace Contactmanager
                 var mail = new System.Net.Mail.MailAddress(input);
                 return mail.Address == input;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }

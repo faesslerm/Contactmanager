@@ -19,7 +19,6 @@ namespace Contactmanager
 
         private static int number = 1; // Autoincrement für Mitarbeiternummer
 
-
         // Konstruktor:
         public Employee(string firstname, string lastname, bool isMen, bool isDisabled, Address address, string ahv, string companyPhoneNr, string department,
             DateTime entry, string levelOfEmployment, string function, byte squadLevel) :
@@ -32,11 +31,6 @@ namespace Contactmanager
             LevelOfEmployment = levelOfEmployment;
             Function = function;
             SquadLevel = squadLevel;
-        }
-
-        public int GetNumber()
-        {
-            return number;
         }
     }
 }
